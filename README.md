@@ -53,8 +53,6 @@ All 8 plugins install automatically. You get both commands (`/discover`, `/strat
 
 ![Installing PM Skills in Claude Cowork](.docs/images/pm-skills-install.gif)
 
-For a full walkthrough, see [Claude Cowork: The Ultimate Guide for PMs](https://www.productcompass.pm/p/claude-cowork-guide).
-
 ### Claude Code (CLI)
 
 ```bash
