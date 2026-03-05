@@ -22,7 +22,7 @@ import os
 import re
 import sys
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Any, Dict, List
 
 
 # ─── Configuration ───────────────────────────────────────────────────────────
@@ -42,6 +42,9 @@ RECOMMENDED_COMMAND_FIELDS = ["argument-hint"]
 
 # Expected README sections (case-insensitive substring match)
 EXPECTED_README_SECTIONS = ["overview", "install", "skill", "command"]
+
+# Vague language / buzzwords to avoid in descriptions
+VAGUE_BUZZWORDS = ["strategic thinker", "team player", "passionate", "innovative", "synergy", "paradigm", "cutting-edge"]
 
 
 # ─── ANSI Colors ─────────────────────────────────────────────────────────────
@@ -68,7 +71,7 @@ def parse_yaml_frontmatter(content: str) -> Optional[dict]:
         return None
     fm_text = content[3:end].strip()
     # Simple YAML parser for flat key-value pairs
-    result = {}
+    result: Dict[str, str] = {}
     for line in fm_text.split("\n"):
         line = line.strip()
         if not line or line.startswith("#"):
@@ -168,10 +171,15 @@ def validate_manifest(plugin_dir: str) -> ValidationResult:
     elif not isinstance(keywords, list):
         result.error("Keywords must be an array")
 
-    # Description length check
+    # Description quality
     desc = data.get("description", "")
-    if desc and len(desc) < 20:
-        result.warn(f"Description is very short ({len(desc)} chars)")
+    if desc:
+        if len(desc) < 20:
+            result.warn(f"Description is very short ({len(desc)} chars)")
+        # Check for vague buzzwords
+        found_buzz = [b for b in VAGUE_BUZZWORDS if b in desc.lower()]
+        if found_buzz:
+            result.note(f"Description contains vague buzzwords: {', '.join(found_buzz)}")
 
     result.note(f"Version: {version}")
     result.note(f"Keywords: {len(keywords) if isinstance(keywords, list) else 0}")
@@ -212,6 +220,11 @@ def validate_skill(skill_dir: str) -> ValidationResult:
     if desc:
         if len(desc) < 30:
             result.warn(f"Description is very short ({len(desc)} chars)")
+        # Check for vague buzzwords
+        found_buzz = [b for b in VAGUE_BUZZWORDS if b in desc.lower()]
+        if found_buzz:
+            result.note(f"Description contains vague buzzwords: {', '.join(found_buzz)}")
+
         # Check for trigger phrases (recommended)
         trigger_keywords = ["trigger", "use when", "use for"]
         has_triggers = any(kw in desc.lower() for kw in trigger_keywords)
@@ -286,8 +299,8 @@ def validate_readme(plugin_dir: str) -> ValidationResult:
     return result
 
 
-def validate_cross_references(plugin_dir: str, skill_names: list[str]) -> ValidationResult:
-    """Check that commands reference skills that actually exist in this plugin."""
+def validate_cross_references(plugin_dir: str, local_skill_names: List[str], all_skill_names: Optional[List[str]] = None) -> ValidationResult:
+    """Check that commands reference skills. Warnings if local doesn't exist."""
     result = ValidationResult()
     cmds_dir = os.path.join(plugin_dir, "commands")
 
@@ -301,21 +314,44 @@ def validate_cross_references(plugin_dir: str, skill_names: list[str]) -> Valida
         with open(cmd_path, "r", encoding="utf-8") as f:
             content = f.read()
 
-        # Find skill references like **skill-name** skill
-        refs = re.findall(r'\*\*(\w[\w-]+)\*\*\s+skill', content)
-        for ref in refs:
-            if ref not in skill_names:
-                result.warn(f"Command {cmd_file} references skill '{ref}' not found in this plugin")
+        # Find skill references like **skill-name**
+        # We use a smarter logic:
+        # 1. Any **bold** word that is in all_known_skills is a skill
+        # 2. Any **bold** word followed by "skill" or "command" is a skill
+        
+        # Regex for all bolded words
+        bold_pattern = re.compile(r'\*\*([\w-]+)\*\*(\s+(?:skill|command))?')
+        for match in bold_pattern.finditer(content):
+            ref, suffix = match.groups()
+            
+            # Skip if common words that are NOT followed by 'skill' or 'command'
+            is_common = ref in ["existing", "new", "plan", "retro", "summary", "topic", "ideas", "experiments", "detail", "prioritize", "prep", "summarize"]
+            if is_common and not suffix:
+                continue
+
+            # If it's in known skills, it's definitely a skill reference
+            if all_skill_names and ref in all_skill_names:
+                if ref not in local_skill_names:
+                    result.note(f"Command {cmd_file} references external skill '{ref}'")
+                continue # Valid reference (either local or external)
+            
+            # If it's NOT in known skills:
+            # - If followed by "skill"/"command", it's definitely broken
+            # - If it looks like a skill name (hyphenated-lowercase), it's likely a typo/missing
+            is_skill_format = "-" in ref and re.match(r'^[a-z0-9-]+$', ref)
+            if suffix or is_skill_format:
+                result.warn(f"Command {cmd_file} references skill '{ref}' not found in any plugin")
+            # Otherwise, just a bolded word, ignore.
 
     return result
 
 
 # ─── Main Validator ──────────────────────────────────────────────────────────
 
-def validate_plugin(plugin_dir: str) -> dict:
+def validate_plugin(plugin_dir: str, all_skill_names: Optional[List[str]] = None) -> Dict[str, Any]:
     """Run all validations on a single plugin."""
     plugin_name = os.path.basename(plugin_dir)
-    results = {"name": plugin_name, "sections": {}}
+    results: Dict[str, Any] = {"name": plugin_name, "sections": {}}
 
     # 1. Manifest
     results["sections"]["manifest"] = validate_manifest(plugin_dir)
@@ -348,7 +384,7 @@ def validate_plugin(plugin_dir: str) -> dict:
     results["sections"]["readme"] = validate_readme(plugin_dir)
 
     # 5. Cross-references
-    results["sections"]["cross-refs"] = validate_cross_references(plugin_dir, skill_names)
+    results["sections"]["cross-refs"] = validate_cross_references(plugin_dir, skill_names, all_skill_names)
 
     return results
 
@@ -367,7 +403,7 @@ def print_validation_result(label: str, vr: ValidationResult, indent: int = 4):
             print(f"{prefix}{C.DIM}ℹ {i}{C.RESET}")
 
 
-def print_report(all_results: list[dict]):
+def print_report(all_results: list[dict], duration: float = 0):
     """Print the full validation report."""
     total_errors = 0
     total_warnings = 0
@@ -397,8 +433,8 @@ def print_report(all_results: list[dict]):
                     p_errors += len(vr.errors)
                     p_warnings += len(vr.warnings)
 
-        total_errors += p_errors
-        total_warnings += p_warnings
+        total_errors += int(p_errors)
+        total_warnings += int(p_warnings)
 
         # Plugin header
         status = f"{C.GREEN}✓ PASS{C.RESET}" if p_errors == 0 else f"{C.RED}✗ FAIL{C.RESET}"
@@ -451,6 +487,8 @@ def print_report(all_results: list[dict]):
     print(f"  Skills:    {total_skills}")
     print(f"  Commands:  {total_commands}")
     print(f"  Total:     {total_skills + total_commands} components")
+    if duration > 0:
+        print(f"  Time:      {duration:.2f}s")
     print()
     if total_errors == 0:
         print(f"  {C.GREEN}{C.BOLD}✓ ALL CHECKS PASSED{C.RESET} ({total_warnings} warnings)")
@@ -492,13 +530,25 @@ def main():
 
     print(f"Found {len(plugin_dirs)} plugins in {base_path}\n")
 
+    import time
+    start_time = time.time()
+
+    # First pass: collect all skill names for cross-plugin validation
+    all_known_skills = []
+    for pd in plugin_dirs:
+        skills_dir = os.path.join(pd, "skills")
+        if os.path.isdir(skills_dir):
+            for entry in os.listdir(skills_dir):
+                if os.path.isdir(os.path.join(skills_dir, entry)):
+                    all_known_skills.append(entry)
+
     # Validate each plugin
     all_results = []
     for pd in plugin_dirs:
-        all_results.append(validate_plugin(pd))
+        all_results.append(validate_plugin(pd, all_known_skills))
 
     # Print report
-    errors = print_report(all_results)
+    errors = print_report(all_results, duration=time.time() - start_time)
 
     sys.exit(1 if errors > 0 else 0)
 
