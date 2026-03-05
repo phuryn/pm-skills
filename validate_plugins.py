@@ -463,6 +463,11 @@ def print_report(all_results: list[dict]):
 
 def main():
     """Find and validate all plugins in the collection."""
+    # Ensure UTF-8 output on Windows
+    if sys.platform == 'win32':
+        import io
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
     # Determine base path
     if len(sys.argv) > 1:
         base_path = sys.argv[1]
