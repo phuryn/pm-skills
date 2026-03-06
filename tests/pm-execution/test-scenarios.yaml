@@ -1,0 +1,81 @@
+name: test-scenarios-tests
+description: Behavior tests for the test-scenarios skill — verifies it produces executable QA scenarios with objectives, starting conditions, step-by-step actions, and expected outcomes.
+
+skill: ../../pm-execution/skills/test-scenarios/SKILL.md
+model: claude-sonnet-4-5-20251001
+min_pass_rate: 0.8
+
+tests:
+  - name: includes-all-required-scenario-components
+    description: Every scenario must have objective, conditions, steps, and expected outcomes
+    input: |
+      Product: Mobile banking app
+      User story: As a customer, I want to transfer money to another account so that I can pay people without visiting a branch.
+      Acceptance criteria: Transfer completes within 30 seconds. User receives confirmation. Insufficient balance shows an error.
+      Context: iOS and Android, registered users only
+    expected:
+      output_contains:
+        - "Objective"
+        - "Starting Condition"
+        - "Expected Outcome"
+      output_not_contains:
+        - "I cannot generate"
+        - "need more information"
+
+  - name: covers-happy-path-and-edge-cases
+    description: Should produce both a success scenario and at least one failure/edge case
+    input: |
+      Product: SaaS project management tool
+      User story: As a project manager, I want to invite teammates by email so that they can join my workspace.
+      Acceptance criteria: Valid email triggers invite. Invalid email shows inline error. Already-member email shows warning. Invite expires in 7 days.
+      Context: Web app, admin role only
+    expected:
+      output_contains:
+        - "invalid"
+      output_not_contains:
+        - "happy path only"
+        - "no edge cases"
+
+  - name: steps-are-numbered-and-sequential
+    description: Test steps must be numbered and describe a discrete user action per step
+    input: |
+      Product: E-learning platform
+      User story: As a student, I want to resume a video where I left off so that I don't lose my progress.
+      Acceptance criteria: Progress is saved every 10 seconds. Reopening the video starts from the last saved position.
+      Context: Desktop web, authenticated users
+    expected:
+      output_contains:
+        - "1."
+        - "2."
+      output_not_contains:
+        - "click around"
+        - "do stuff"
+
+  - name: expected-outcomes-are-observable
+    description: Expected outcomes must describe what the user or system visibly does — not internal states
+    input: |
+      Product: Food delivery app
+      User story: As a customer, I want to track my order in real time so that I know when to expect delivery.
+      Acceptance criteria: Map shows driver location. ETA updates every 60 seconds. Notification fires when driver is 2 minutes away.
+      Context: Native mobile app
+    expected:
+      output_contains:
+        - "displays"
+      output_not_contains:
+        - "internally"
+        - "database"
+        - "backend"
+
+  - name: identifies-user-role-performing-test
+    description: Each scenario must specify which user role performs the test actions
+    input: |
+      Product: HR management system
+      User story: As an HR manager, I want to export employee records to CSV so that I can share data with payroll.
+      Acceptance criteria: Export includes all active employees. File downloads with today's date in the filename.
+      Context: Web app, HR manager role
+    expected:
+      output_contains:
+        - "HR"
+      output_not_contains:
+        - "any user"
+        - "someone"

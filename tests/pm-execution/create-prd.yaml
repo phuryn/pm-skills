@@ -1,0 +1,84 @@
+name: create-prd-tests
+description: Behavior tests for the create-prd skill — verifies it produces all 8 required PRD sections with substance, not just headings.
+
+skill: ../../pm-execution/skills/create-prd/SKILL.md
+model: claude-sonnet-4-5-20251001
+min_pass_rate: 0.8
+
+tests:
+  - name: produces-all-eight-sections
+    description: PRD must contain all 8 required sections from the template
+    input: |
+      Build a feature that lets e-commerce shoppers save items to a wishlist and share it with friends.
+    expected:
+      output_contains:
+        - "Summary"
+        - "Background"
+        - "Objective"
+        - "Market Segment"
+        - "Value Proposition"
+        - "Solution"
+        - "Release"
+      output_not_contains:
+        - "I cannot"
+        - "need more information"
+
+  - name: includes-measurable-key-results
+    description: Objective section must contain measurable KRs, not vague goals
+    input: |
+      Add push notification support to a B2B SaaS project management app to increase daily active usage.
+    expected:
+      output_contains:
+        - "%"
+      output_not_contains:
+        - "improve engagement"
+        - "increase usage"
+
+  - name: flags-assumptions-explicitly
+    description: Solution section must call out assumptions clearly
+    input: |
+      Build an AI-powered onboarding flow that personalizes the setup experience based on user role.
+    expected:
+      output_contains:
+        - "ssumption"
+      output_not_contains:
+        - "guaranteed"
+        - "will definitely"
+
+  - name: targets-specific-market-segment
+    description: Market segment must define a specific group, not "all users"
+    input: |
+      Create a bulk import feature for a CRM that lets sales teams upload contacts from CSV files.
+    expected:
+      output_contains:
+        - "sales"
+      output_not_contains:
+        - "all users"
+        - "everyone"
+        - "general public"
+
+  - name: release-section-avoids-hard-dates
+    description: Release planning should use relative timeframes per skill instructions
+    input: |
+      Add two-factor authentication to a consumer fintech app.
+    expected:
+      output_contains:
+        - "Release"
+      output_not_contains:
+        - "January"
+        - "February"
+        - "March"
+        - "Q1 2025"
+        - "Q2 2025"
+
+  - name: uses-plain-language
+    description: PRD should be written for broad readability, avoiding heavy jargon
+    input: |
+      Build a feature that lets restaurant owners create and manage their digital menus.
+    expected:
+      output_contains:
+        - "restaurant"
+      output_not_contains:
+        - "synergize"
+        - "leverage our core competencies"
+        - "paradigm shift"

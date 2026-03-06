@@ -1,0 +1,81 @@
+name: user-stories-tests
+description: Behavior tests for the user-stories skill — verifies it generates properly structured stories following the 3 C's and INVEST criteria.
+
+skill: ../../pm-execution/skills/user-stories/SKILL.md
+model: claude-sonnet-4-5-20251001
+min_pass_rate: 0.8
+
+tests:
+  - name: uses-as-a-i-want-so-that-format
+    description: Every story must follow the canonical user story format
+    input: |
+      Product: Fitness tracking app
+      Feature: Allow users to log their daily water intake and get hydration reminders
+      Design: N/A
+      Assumptions: Users have previously set up a profile with their weight
+    expected:
+      output_contains:
+        - "As a"
+        - "I want"
+        - "so that"
+      output_not_contains:
+        - "The user should"
+        - "The system shall"
+
+  - name: includes-acceptance-criteria
+    description: Each story must have explicit, testable acceptance criteria
+    input: |
+      Product: B2B invoicing tool
+      Feature: Let finance teams export invoices as PDF with custom branding
+      Design: N/A
+      Assumptions: Company logo and color settings are already configured
+    expected:
+      output_contains:
+        - "Acceptance Criteria"
+      output_not_contains:
+        - "TBD"
+        - "to be defined"
+
+  - name: generates-multiple-independent-stories
+    description: Complex features should be broken into multiple independent stories
+    input: |
+      Product: Online learning platform
+      Feature: Build a complete quiz system with creation, taking, and result tracking
+      Design: N/A
+      Assumptions: Instructors and students are separate user roles
+    expected:
+      output_contains:
+        - "As a"
+      output_not_contains:
+        - "single story"
+        - "one story"
+
+  - name: identifies-correct-user-role
+    description: Stories must identify a specific user role, not a generic "user"
+    input: |
+      Product: Hospital scheduling system
+      Feature: Let doctors block time slots on their calendar for administrative work
+      Design: N/A
+      Assumptions: The system has both doctor and patient roles
+    expected:
+      output_contains:
+        - "doctor"
+      output_not_contains:
+        - "As a user"
+        - "As a person"
+
+  - name: acceptance-criteria-are-testable
+    description: Acceptance criteria must be concrete and verifiable, not vague
+    input: |
+      Product: E-commerce checkout
+      Feature: Add an order summary sidebar that stays visible during the checkout flow
+      Design: N/A
+      Assumptions: Checkout is a multi-step form
+    expected:
+      output_contains:
+        - "displayed"
+      output_not_contains:
+        - "user-friendly"
+        - "intuitive"
+        - "easy to use"
+        - "seamless"

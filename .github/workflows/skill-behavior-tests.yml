@@ -1,0 +1,62 @@
+name: Skill Behavior Tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*/skills/**"
+      - "tests/**"
+      - ".github/workflows/skill-behavior-tests.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "*/skills/**"
+      - "tests/**"
+      - ".github/workflows/skill-behavior-tests.yml"
+  workflow_dispatch:
+
+jobs:
+  behavior-tests:
+    name: Run skill behavior tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install EvalView
+        run: pip install "evalview>=0.4.0"
+
+      - name: Validate skill structure (existing check)
+        run: python validate_plugins.py
+
+      - name: Run behavior tests — pm-toolkit
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          evalview skill test tests/pm-toolkit/grammar-check.yaml --no-open
+
+      - name: Run behavior tests — pm-execution
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          evalview skill test tests/pm-execution/create-prd.yaml --no-open
+          evalview skill test tests/pm-execution/user-stories.yaml --no-open
+          evalview skill test tests/pm-execution/test-scenarios.yaml --no-open
+
+      - name: Run behavior tests — pm-product-discovery
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          evalview skill test tests/pm-product-discovery/brainstorm-ideas-new.yaml --no-open
+
+      - name: Run behavior tests — pm-product-strategy
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          evalview skill test tests/pm-product-strategy/product-vision.yaml --no-open

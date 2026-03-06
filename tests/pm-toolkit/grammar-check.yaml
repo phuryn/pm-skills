@@ -1,0 +1,79 @@
+name: grammar-check-tests
+description: Behavior tests for the grammar-check skill — verifies it identifies errors and suggests fixes without rewriting the full text.
+
+skill: ../../pm-toolkit/skills/grammar-check/SKILL.md
+model: claude-sonnet-4-5-20251001
+min_pass_rate: 0.8
+
+tests:
+  - name: detects-subject-verb-disagreement
+    description: Should flag "The team are" as a subject-verb agreement error
+    input: |
+      Objective: Professional business email
+      Text: The team are working hard on the new feature. Each engineers have submitted their update.
+    expected:
+      output_contains:
+        - "agreement"
+      output_not_contains:
+        - "looks good"
+        - "no errors"
+        - "well written"
+
+  - name: flags-tense-inconsistency
+    description: Should catch mixed past and present tense in the same passage
+    input: |
+      Objective: Product launch announcement
+      Text: We launched the feature last Monday. Users can now access it and the team worked for six months to build it. Tomorrow we will have shipped three updates.
+    expected:
+      output_contains:
+        - "tense"
+      output_not_contains:
+        - "no issues"
+        - "correct"
+
+  - name: identifies-logical-contradiction
+    description: Should detect contradictory claims within the same paragraph
+    input: |
+      Objective: Investor update
+      Text: Our churn rate is our biggest strength. We retained 95% of customers last quarter while simultaneously losing the majority of our user base due to pricing changes.
+    expected:
+      output_contains:
+        - "contradict"
+      output_not_contains:
+        - "logically sound"
+        - "no issues"
+
+  - name: catches-vague-pronoun-reference
+    description: Should flag ambiguous pronoun references
+    input: |
+      Objective: Internal engineering handoff doc
+      Text: Sarah told Maria that she would own the migration. It needs to be done before it goes live, but it hasn't been scheduled yet.
+    expected:
+      output_contains:
+        - "unclear"
+      output_not_contains:
+        - "clear"
+        - "well written"
+
+  - name: suggests-fix-not-full-rewrite
+    description: Should give targeted suggestions, not rewrite the whole text
+    input: |
+      Objective: Marketing blog post
+      Text: Our product is very unique and totally revolutionary. Customers loves the interface and say its the best.
+    expected:
+      output_contains:
+        - "unique"
+      output_not_contains:
+        - "Here is the rewritten"
+        - "Here is the corrected version"
+        - "Rewritten text"
+
+  - name: clean-text-passes-gracefully
+    description: Should acknowledge when text has no significant issues
+    input: |
+      Objective: Internal team memo
+      Text: The sprint review is scheduled for Friday at 2 PM. Please bring your demo ready and review the acceptance criteria beforehand.
+    expected:
+      output_not_contains:
+        - "critical error"
+        - "major issue"
