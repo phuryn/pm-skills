@@ -1,0 +1,62 @@
+name: product-vision-tests
+description: Behavior tests for the product-vision skill — verifies it generates inspiring, achievable, emotionally resonant vision statements with multiple options and clear rationale.
+
+skill: ../../pm-product-strategy/skills/product-vision/SKILL.md
+model: claude-sonnet-4-5-20251001
+min_pass_rate: 0.8
+
+tests:
+  - name: produces-multiple-vision-options
+    description: Should generate 3-5 distinct vision statement variations, not a single answer
+    input: |
+      Company: A startup building AI-powered tools for independent therapists to reduce admin work and focus on patient care.
+    expected:
+      output_contains:
+        - "1."
+        - "2."
+        - "3."
+      output_not_contains:
+        - "here is your vision"
+        - "the vision is"
+
+  - name: vision-is-concise-and-memorable
+    description: Vision statements should be communicable in one sentence, not a paragraph
+    input: |
+      Company: A fintech startup helping first-generation immigrants send money home with zero fees and instant delivery.
+    expected:
+      output_not_contains:
+        - "In order to achieve our long-term goal of"
+        - "Through leveraging our core competencies"
+
+  - name: selects-strongest-option-with-rationale
+    description: Must recommend one vision and explain why it was chosen
+    input: |
+      Company: An edtech platform that teaches coding to children aged 8-14 through story-driven games.
+    expected:
+      output_contains:
+        - "rationale"
+      output_not_contains:
+        - "all options are equally good"
+        - "you decide"
+
+  - name: vision-addresses-customer-not-just-company
+    description: Vision must be customer-centric, not purely about the business
+    input: |
+      Company: A SaaS platform that helps e-commerce brands manage returns and reduce reverse logistics costs.
+    expected:
+      output_not_contains:
+        - "maximize shareholder value"
+        - "achieve market dominance"
+        - "become the largest"
+
+  - name: avoids-jargon-and-buzzwords
+    description: Vision language must be clear and emotionally resonant — not corporate buzzwords
+    input: |
+      Company: A mental wellness app for remote workers experiencing isolation and burnout.
+    expected:
+      output_not_contains:
+        - "synergy"
+        - "leverage"
+        - "disrupt"
+        - "paradigm"
+        - "ecosystem"

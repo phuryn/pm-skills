@@ -1,0 +1,70 @@
+name: brainstorm-ideas-new-tests
+description: Behavior tests for the brainstorm-ideas-new skill — verifies it generates ideas from PM, Designer, and Engineer perspectives with prioritization and assumption identification.
+
+skill: ../../pm-product-discovery/skills/brainstorm-ideas-new/SKILL.md
+model: claude-sonnet-4-5-20251001
+min_pass_rate: 0.8
+
+tests:
+  - name: produces-three-distinct-perspectives
+    description: Output must cover PM, Designer, and Engineer viewpoints explicitly
+    input: |
+      A mobile app that helps pet owners track their pet's health, vet appointments, and medications.
+    expected:
+      output_contains:
+        - "PM"
+        - "Designer"
+        - "Engineer"
+      output_not_contains:
+        - "I cannot"
+        - "insufficient information"
+
+  - name: generates-at-least-five-ideas-per-perspective
+    description: Each perspective should yield at least 5 distinct feature ideas
+    input: |
+      A B2B SaaS tool for freelancers to manage client contracts, invoices, and project timelines.
+    expected:
+      output_contains:
+        - "1."
+        - "2."
+        - "3."
+        - "4."
+        - "5."
+      output_not_contains:
+        - "only one idea"
+        - "just a few ideas"
+
+  - name: prioritizes-top-five-across-perspectives
+    description: Must select and rank the top 5 ideas across all perspectives
+    input: |
+      A consumer app that helps people reduce food waste by tracking what's in their fridge and suggesting recipes.
+    expected:
+      output_contains:
+        - "top"
+      output_not_contains:
+        - "cannot prioritize"
+        - "all ideas are equal"
+
+  - name: identifies-key-assumptions-for-prioritized-ideas
+    description: Each top idea must include at least one assumption to validate
+    input: |
+      An AI-powered tool for small business owners to automate their social media content calendar.
+    expected:
+      output_contains:
+        - "ssumption"
+      output_not_contains:
+        - "no assumptions"
+        - "proven"
+        - "guaranteed"
+
+  - name: focuses-on-initial-discovery-not-iterations
+    description: Ideas should address core value validation, not incremental improvements
+    input: |
+      A new app that connects local farmers directly with consumers for fresh produce delivery.
+    expected:
+      output_contains:
+        - "core"
+      output_not_contains:
+        - "version 2"
+        - "future iteration"
+        - "next phase"
