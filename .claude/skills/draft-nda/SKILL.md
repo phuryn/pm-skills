@@ -1,0 +1,1 @@
+../../../pm-toolkit/skills/draft-nda/SKILL.md

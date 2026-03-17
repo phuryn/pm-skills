@@ -1,0 +1,1 @@
+../../pm-toolkit/commands/tailor-resume.md

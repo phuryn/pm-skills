@@ -1,0 +1,1 @@
+../../../pm-go-to-market/skills/gtm-motions/SKILL.md

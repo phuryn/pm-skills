@@ -1,0 +1,1 @@
+../../../pm-product-discovery/skills/prioritize-assumptions/SKILL.md
