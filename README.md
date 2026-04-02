@@ -29,6 +29,7 @@ Each skill encodes a proven PM framework — discovery, assumption mapping, prio
 The result: better product decisions, not just faster documents.
 
 ## How It Works (Skills, Commands, Plugins)
+- [skill-taxonomy](https://github.com/SeeleAI/skill-taxonomy) - Structured taxonomy for AI agent skills: discovery, classification and routing across multi-agent workflows.
 
 **Skills** are the building blocks of the marketplace. Each skill gives Claude domain knowledge, analytical frameworks, or a guided workflow for a specific PM task. Some skills also work as reusable foundations that multiple commands share. 
 
