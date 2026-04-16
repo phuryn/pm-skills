@@ -1,0 +1,23 @@
+{
+  "name": "pm-voiceflow",
+  "version": "1.0.0",
+  "description": "VoiceFlow build skills for architecture, UI, dictation, persistence, and advanced developer features.",
+  "author": {
+    "name": "Amit Jangra",
+    "email": "amitjangra25@gmail.com",
+    "url": "https://github.com/AmitJangra25"
+  },
+  "keywords": [
+    "voiceflow",
+    "react",
+    "tailwind",
+    "supabase",
+    "whisper",
+    "claude",
+    "dictation",
+    "developer-tools",
+    "product-build"
+  ],
+  "homepage": "https://github.com/AmitJangra25/PM-skills-Amit",
+  "license": "MIT"
+}

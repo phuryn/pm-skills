@@ -4,7 +4,7 @@
 
 # PM Skills Marketplace: The AI Operating System for Better Product Decisions
 
-> 65 PM skills and 36 chained workflows across 8 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, and growth. 
+> 70 PM skills and 36 chained workflows across 9 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, and growth. 
 
 ![Plugin overview](.docs/images/plugins-overview.webp)
 
@@ -36,7 +36,7 @@ Skills are loaded automatically when relevant to the conversation — no explici
 
 **Commands** are user-triggered workflows invoked with `/command-name`. They chain one or more skills into an end-to-end process. For example, `/discover` chains four skills together: brainstorm-ideas → identify-assumptions → prioritize-assumptions → brainstorm-experiments.
 
-**Plugins** group related skills and commands into installable packages. Each plugin covers a PM domain — discovery, strategy, execution, and so on. Installing the marketplace gives you all 8 plugins at once.
+**Plugins** group related skills and commands into installable packages. Each plugin covers a PM domain — discovery, strategy, execution, and so on. Installing the marketplace gives you all 9 plugins at once.
 
 ![How skills work](.docs/images/how-skills-work.webp)
 
@@ -53,7 +53,7 @@ Commands are designed to flow into each other, matching the PM workflow. After a
 3. Select **Add marketplace from GitHub**
 4. Enter: `phuryn/pm-skills`
 
-All 8 plugins install automatically. You get both commands (`/discover`, `/strategy`, etc.) and skills.
+All 9 plugins install automatically. You get both commands (`/discover`, `/strategy`, etc.) and skills.
 
 ![Installing PM Skills in Claude Cowork](.docs/images/pm-skills-install.gif)
 
@@ -72,6 +72,7 @@ claude plugin install pm-data-analytics@pm-skills
 claude plugin install pm-marketing-growth@pm-skills
 claude plugin install pm-go-to-market@pm-skills
 claude plugin install pm-execution@pm-skills
+claude plugin install pm-voiceflow@pm-skills
 ```
 
 ### Other AI assistants (skills only)
@@ -396,6 +397,32 @@ Commands:
 - `/review-resume [attach your PM resume]`
 - `/tailor-resume [attach resume + paste job description]`
 - `/proofread Here's the draft of our Q1 investor update`
+
+</details>
+
+<details>
+<summary><strong>9. pm-voiceflow</strong> — VoiceFlow implementation, architecture, UI, data flows, and advanced dictation features (5 skills, 0 commands)</summary>
+
+VoiceFlow-specific build skills for turning the app spec into a working React + Tailwind + Supabase product.
+
+**Skills (5):**
+
+- `voiceflow-architecture` — Convert the spec into an exact implementation slice with routes, state, schema impact, and acceptance criteria.
+- `voiceflow-ui-system` — Build the design system, theme system, layout rules, responsive behavior, and accessibility with no visual drift.
+- `voiceflow-dictation-engine` — Implement the recording loop, Whisper/Claude pipeline, state machine, shortcuts, and output actions.
+- `voiceflow-data-workflows` — Implement Supabase auth, onboarding, history, snippets, dictionary, and settings persistence.
+- `voiceflow-dev-modes` — Implement Variable Recognition, File Tagging, AI Prompt context, and AI Agent Import with the required guardrails.
+
+**Commands (0):**
+
+- This plugin is intentionally skills-first. Use the skills directly for implementation work.
+
+**Examples:**
+
+Skills:
+- `Use voiceflow-architecture to break the dashboard into pages, hooks, stores, and schema changes`
+- `Use voiceflow-ui-system to build the dark/light/system theme and app shell`
+- `Use voiceflow-dictation-engine to implement the recording state machine and output actions`
 
 </details>
 
