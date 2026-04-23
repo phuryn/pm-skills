@@ -1,0 +1,1 @@
+../../../pm-product-strategy/skills/porters-five-forces/SKILL.md
