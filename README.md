@@ -402,6 +402,14 @@ Commands:
 
 ---
 
+## Community Skills
+
+External skills compatible with the universal SKILL.md format and installable via `npx skills add`:
+
+- [flowhunt-skill](https://github.com/heyneuron/flowhunt-skill) — Automation discovery audit. Walks through a 5-question workflow intake and audits Gmail, Calendar, Slack, and task trackers to identify automation opportunities with effort/impact scores. Install: `npx skills add heyneuron/flowhunt-skill`
+
+---
+
 ## About
 
 This marketplace evolves with product practice and AI capabilities.
