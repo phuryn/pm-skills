@@ -112,6 +112,8 @@ This is a best-effort, model-driven conversion (some Claude-specific command syn
 
 The `skills/*/SKILL.md` files follow the universal skill format and work with any tool that reads it. Commands (`/slash-commands`) are Claude-specific.
 
+For Chinese skills discovery and installation across Claude Code, OpenCode, Cursor, and similar runtimes, see [Skills宝](https://skilery.com/).
+
 | Tool | How to use | What works |
 |------|-----------|------------|
 | **Gemini CLI** | Copy skill folders to `.gemini/skills/` | Skills only |
