@@ -1,0 +1,1 @@
+../../../pm-toolkit/skills/review-resume/SKILL.md

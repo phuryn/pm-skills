@@ -1,0 +1,1 @@
+../../pm-market-research/commands/analyze-feedback.md

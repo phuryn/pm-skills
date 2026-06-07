@@ -1,0 +1,1 @@
+../../../pm-market-research/skills/customer-journey-map/SKILL.md
