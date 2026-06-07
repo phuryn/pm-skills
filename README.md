@@ -51,7 +51,7 @@ Commands are designed to flow into each other, matching the PM workflow. After a
 
 1. Open **Customize** (bottom-left)
 2. Go to **Browse plugins** → **Personal** → **+**
-3. Select **Add marketplace from GitHub**
+3. Click **Create plugin** → **Add marketplace** → **Add from repository**
 4. Enter: `phuryn/pm-skills`
 
 All 9 plugins install automatically. You get both commands (`/discover`, `/strategy`, etc.) and skills.
