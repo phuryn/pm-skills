@@ -90,7 +90,7 @@ The ability of customers to negotiate lower prices or demand higher quality, aff
 **High Buyer Power When:**
 - Few large customers (concentrated demand)
 - Buyers switch easily and often (low switching costs)
-- Backwards integration threat (customers become competitors)
+- Backward integration threat (customers become competitors)
 - Product is undifferentiated (commoditized)
 - Buyers have price sensitivity or tight budgets
 - Buyers have full information about alternatives
