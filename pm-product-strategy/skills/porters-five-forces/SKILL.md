@@ -133,7 +133,7 @@ The risk that customers will switch to alternative products that solve the same 
 - Switching costs are high
 - Your product is deeply integrated into customer workflows
 - Customer preference and loyalty are strong
-- Barrier to substitute entry are high
+- Barriers to substitute entry are high
 - Your product solves the problem uniquely
 
 **Strategic Implications:**
