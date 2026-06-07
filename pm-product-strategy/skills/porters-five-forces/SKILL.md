@@ -90,7 +90,7 @@ The ability of customers to negotiate lower prices or demand higher quality, aff
 **High Buyer Power When:**
 - Few large customers (concentrated demand)
 - Buyers switch easily and often (low switching costs)
-- Backwards integration threat (customers become competitors)
+- Backward integration threat (customers become competitors)
 - Product is undifferentiated (commoditized)
 - Buyers have price sensitivity or tight budgets
 - Buyers have full information about alternatives
@@ -133,7 +133,7 @@ The risk that customers will switch to alternative products that solve the same 
 - Switching costs are high
 - Your product is deeply integrated into customer workflows
 - Customer preference and loyalty are strong
-- Barrier to substitute entry are high
+- Barriers to substitute entry are high
 - Your product solves the problem uniquely
 
 **Strategic Implications:**
