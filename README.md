@@ -49,12 +49,17 @@ Commands are designed to flow into each other, matching the PM workflow. After a
 
 ### Claude Cowork (recommended for non-developers)
 
-1. Open **Customize** (bottom-left)
-2. Go to **Browse plugins** → **Personal** → **+**
-3. Select **Add marketplace from GitHub**
-4. Enter: `phuryn/pm-skills`
+1. Update Claude Desktop first: **Help** -> **Check for updates**,
+   or **Help** -> **Restart to update** if that option is shown.
+2. Open **Customize** (bottom-left), then **Browse plugins**.
+   In some Claude Desktop builds this appears under **Cowork** -> **Plugins**, and the **Personal** filter may not be shown.
+3. Click **+** and select **Add marketplace from GitHub**.
+4. Enter the full GitHub URL: `https://github.com/phuryn/pm-skills`
 
 All 9 plugins install automatically. You get both commands (`/discover`, `/strategy`, etc.) and skills.
+
+If Claude Desktop shows **Failed to add marketplace**, restart after updating and retry with the full GitHub URL above.
+The shorthand `phuryn/pm-skills` works in the CLI, but the Desktop UI has rejected it in some builds.
 
 ![Installing PM Skills in Claude Cowork](.docs/images/pm-skills-install.gif)
 
