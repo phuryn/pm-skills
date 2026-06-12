@@ -5,7 +5,7 @@
 
 # PM Skills Marketplace: The AI Operating System for Better Product Decisions
 
-> 68 PM skills and 42 chained workflows across 9 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, growth, and shipping AI-built code. 
+> 69 PM skills and 42 chained workflows across 9 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, growth, and shipping AI-built code.
 
 ![PM Skills marketplace: skills, commands, and all 9 plugins at a glance](.docs/images/plugins.png)
 
@@ -178,11 +178,11 @@ Commands:
 </details>
 
 <details>
-<summary><strong>2. pm-product-strategy</strong> — Vision, business models, pricing, competitive landscape (12 skills, 5 commands)</summary>
+<summary><strong>2. pm-product-strategy</strong> — Vision, business models, pricing, competitive landscape (13 skills, 5 commands)</summary>
 
 Product strategy, vision, business models, pricing, and macro environment analysis. Covers the full strategic toolkit from vision crafting through competitive landscape scanning.
 
-**Skills (12):**
+**Skills (13):**
 
 - `product-strategy` — Comprehensive 9-section Product Strategy Canvas (vision → defensibility)
 - `startup-canvas` — Startup Canvas combining Product Strategy (9 sections) + Business Model — an alternative to BMC and Lean Canvas for new products
@@ -195,6 +195,7 @@ Product strategy, vision, business models, pricing, and macro environment analys
 - `swot-analysis` — SWOT analysis with actionable recommendations
 - `pestle-analysis` — Macro environment: Political, Economic, Social, Technological, Legal, Environmental
 - `porters-five-forces` — Competitive forces analysis (rivalry, suppliers, buyers, substitutes, new entrants)
+- `seven-powers` — Durable competitive advantage analysis across scale economies, network effects, counter-positioning, switching costs, branding, cornered resource, and process power
 - `ansoff-matrix` — Growth strategy mapping across markets and products
 
 **Commands (5):**
@@ -211,6 +212,7 @@ Skills:
 - `Compare Lean Canvas vs Business Model Canvas vs Startup Canvas for my marketplace startup`
 - `Design a value proposition for our AI writing assistant targeting non-native English speakers`
 - `Run a Porter's Five Forces analysis for the project management SaaS market`
+- `Assess whether our vertical AI agent has a durable competitive moat`
 
 Commands:
 - `/strategy B2B project management tool for agencies`
