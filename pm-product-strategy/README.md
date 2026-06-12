@@ -1,8 +1,8 @@
 # pm-product-strategy
 
-Product strategy skills for PMs: vision, strategy canvas, startup canvas, value propositions, lean canvas, business model canvas, SWOT, PESTLE, Ansoff Matrix, Porter's Five Forces, pricing, and monetization.
+Product strategy skills for PMs: vision, strategy canvas, startup canvas, value propositions, lean canvas, business model canvas, SWOT, PESTLE, Ansoff Matrix, Porter's Five Forces, Seven Powers, pricing, and monetization.
 
-## Skills (12)
+## Skills (13)
 
 - **ansoff-matrix** — Generate an Ansoff Matrix analysis mapping growth strategies across market penetration, market development, product development, and diversification.
 - **business-model** — Generate a Business Model Canvas with all 9 building blocks.
@@ -13,6 +13,7 @@ Product strategy skills for PMs: vision, strategy canvas, startup canvas, value 
 - **pricing-strategy** — Analyze and design pricing strategies including pricing models, competitive pricing analysis, willingness-to-pay estimation, and price elasticity considerations.
 - **product-strategy** — Generate a comprehensive product strategy using the 9-section Product Strategy Canvas covering vision, segments, costs, value propositions, trade-offs, metrics, growth, capabilities, and defensibility.
 - **product-vision** — Brainstorm an inspiring, achievable, and emotional product vision that motivates teams.
+- **seven-powers** — Assess durable competitive advantage using Hamilton Helmer's 7 Powers framework: scale economies, network effects, counter-positioning, switching costs, branding, cornered resource, and process power.
 - **startup-canvas** — Generate a Startup Canvas combining Product Strategy (9 sections) and Business Model (Cost Structure + Revenue Streams) for a new product. An alternative to Business Model Canvas and Lean Canvas that separates strategy from business model.
 - **swot-analysis** — Perform a detailed SWOT analysis identifying strengths, weaknesses, opportunities, and threats with actionable recommendations.
 - **value-proposition** — Generate a detailed value proposition using a 6-part JTBD template (Who, Why, What before, How, What after, Alternatives).
