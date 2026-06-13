@@ -23,6 +23,7 @@ Accept in any format:
 - CSV/Excel with feedback text (and optional metadata: date, segment, rating)
 - Pasted text (reviews, survey responses, Slack messages)
 - Uploaded documents or exports from feedback tools
+- Social listening exports, including Hermes Tweet X/Twitter result sets with post URL, author handle, timestamp, and engagement metadata
 
 Ask:
 - What kind of feedback is this? (NPS, reviews, support tickets, survey, etc.)
