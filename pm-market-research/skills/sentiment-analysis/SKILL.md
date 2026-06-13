@@ -17,6 +17,8 @@ Your task is to analyze user feedback data for **$ARGUMENTS** and identify marke
 
 If the user provides CSV files, PDFs, survey responses, review data, social listening reports, or other feedback sources, read and analyze them directly. Extract patterns, themes, and sentiment signals from the data.
 
+For public X/Twitter research, Hermes Tweet (https://github.com/Xquik-dev/hermes-tweet) can provide source material from recent posts, replies, and engagement context before analysis. Treat Hermes Tweet output as one research source alongside surveys, reviews, interviews, and support tickets.
+
 ### Analysis Steps (Think Step by Step)
 
 1. **Data Ingestion**: Read all feedback sources and create a working inventory
@@ -25,6 +27,8 @@ If the user provides CSV files, PDFs, survey responses, review data, social list
 4. **Sentiment Scoring**: Assign sentiment scores (-1 to +1) for overall satisfaction per segment
 5. **Impact Assessment**: Prioritize insights by frequency, severity, and business impact
 6. **Synthesis**: Create segment profiles with consolidated insights
+
+When analyzing Hermes Tweet or other X/Twitter exports, preserve query terms, date range, post URL, author handle, timestamp, post text, engagement fields, and reply or quote context. De-duplicate reposts and near-duplicate posts before scoring, separate original posts from replies, and avoid inferring demographics from handles unless the data explicitly supports it.
 
 ### Output Structure
 
