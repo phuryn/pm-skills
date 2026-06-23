@@ -1,0 +1,9 @@
+{
+  "name": "pm-skills",
+  "type": "module",
+  "private": true,
+  "main": ".opencode/plugins/pm-skills.js",
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}

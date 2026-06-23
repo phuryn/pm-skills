@@ -4,7 +4,7 @@ Guidance for AI agents (Claude Code, Cowork, and others) working in this reposit
 
 ## Project Overview
 
-**PM Skills** (`phuryn/pm-skills`) — a marketplace of **9 independent plugins** (68 skills, 42 commands) that bring structured product-management workflows to AI coding assistants. Built for Claude Code and Claude Cowork; the skills are also compatible with other agents (Gemini CLI, Cursor, Codex CLI).
+**PM Skills** (`phuryn/pm-skills`) — a marketplace of **9 independent plugins** (68 skills, 42 commands) that bring structured product-management workflows to AI coding assistants. Built for Claude Code and Claude Cowork; the skills are also compatible with other agents (Gemini CLI, Cursor, Codex CLI). OpenCode is supported as a first-class target via a bundled auto-discovery plugin (see [OpenCode Support](#opencode-support)).
 
 Owner: Paweł Huryn — pawel@productcompass.pm — https://www.productcompass.pm
 
@@ -16,6 +16,9 @@ pm-skills/                           <- repo root
 ├── .docs/images/                    <- images used by README (webp, gif)
 ├── .gitattributes
 ├── .gitignore
+├── .opencode/                      <- OpenCode auto-discovery plugin + npm deps
+│   ├── package.json                <- npm manifest (declares gray-matter)
+│   └── plugins/pm-skills.js        <- plugin that registers all PM skills + commands
 ├── CLAUDE.md                        <- this file (agent guidance, single source of truth)
 ├── AGENTS.md                        <- pointer to CLAUDE.md (for non-Claude agents)
 ├── CONTRIBUTING.md                  <- contributor guidelines
@@ -67,6 +70,19 @@ pm-skills/                           <- repo root
 
 Descriptions in `plugin.json` and the repo `README.md` should stay aligned (identical text).
 
+## OpenCode Support
+
+This repo ships a bundled OpenCode plugin (`.opencode/plugins/pm-skills.js`) so the same skills and commands work in OpenCode with no manual copying.
+
+At startup it:
+- Scans the repo root for `pm-*` directories.
+- Injects each plugin's `skills/` path into `config.skills.paths` — OpenCode then lazy-loads skills from those paths.
+- Parses every `commands/*.md` file (via `gray-matter` frontmatter) and registers it under `config.command`, so the same `/slash` commands are available.
+
+It is self-bootstrapping: adding, removing, or editing skills and commands anywhere under `pm-*/skills/` or `pm-*/commands/` is picked up automatically on the next OpenCode start — no `.opencode/` edits required.
+
+Runtime dependency: `gray-matter` (declared in `.opencode/package.json`). Install once with `npm install` inside `.opencode/`; `node_modules/` is gitignored.
+
 ## Versioning
 
 - All versions are currently **2.0.0** — `marketplace.json` and all 9 `plugin.json` files.
@@ -87,6 +103,7 @@ Descriptions in `plugin.json` and the repo `README.md` should stay aligned (iden
 2. If skills/commands were added or removed, update the counts in `README.md`.
 3. If totals changed, update the count in the `marketplace.json` description.
 4. Bump versions across all manifests (see Versioning).
+5. No OpenCode sync needed — the bundled `.opencode/plugins/pm-skills.js` re-scans `pm-*/skills/` and `pm-*/commands/` on startup (just ensure `npm install` has run in `.opencode/` once).
 
 ### After a description change
 - A `plugin.json` description changed → check whether `README.md` needs the same edit (they stay aligned).
