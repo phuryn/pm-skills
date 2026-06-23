@@ -17,7 +17,7 @@
     },
     {
       "name": "pm-product-strategy",
-      "description": "Product strategy skills for PMs: vision, strategy canvas, value propositions, lean canvas, business model canvas, SWOT, PESTLE, Ansoff Matrix, Porter's Five Forces, and monetization.",
+      "description": "Product strategy skills for PMs: vision, strategy canvas, value propositions, lean canvas, business model canvas, SWOT, PESTLE, Ansoff Matrix, Porter's Five Forces, Seven Powers, and monetization.",
       "source": "./pm-product-strategy",
       "category": "product-management"
     },
