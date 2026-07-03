@@ -8,11 +8,11 @@
 
 # PM Skills Marketplace: The AI Operating System for Better Product Decisions
 
-> 68 PM skills and 42 chained workflows across 9 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, growth, and shipping AI-built code. 
+> 68 PM skills and 42 chained workflows across 9 plugins. Claude Code, Cowork, Autohand Code, and more. From discovery to strategy, execution, launch, growth, and shipping AI-built code.
 
 ![PM Skills marketplace: skills, commands, and all 9 plugins at a glance](.docs/images/plugins.png)
 
-Designed for Claude Code and Cowork. Skills compatible with other AI assistants.
+Designed for Claude Code and Cowork. Skills compatible with other AI assistants, including Autohand Code.
 
 ## Start Here
 
@@ -121,6 +121,7 @@ The `skills/*/SKILL.md` files follow the universal skill format and work with an
 | **OpenCode** | Copy skill folders to `.opencode/skills/` | Skills only |
 | **Cursor** | Copy skill folders to `.cursor/skills/` | Skills only |
 | **Kiro** | Copy skill folders to `.kiro/skills/` | Skills only |
+| **Autohand Code** | Copy skill folders to `.autohand/skills/` or `~/.autohand/skills/` | Skills only |
 
 ```bash
 # Example: copy all skills for OpenCode (project-level)
@@ -133,7 +134,15 @@ done
 for plugin in pm-*/; do
   cp -r "$plugin/skills/"* ~/.gemini/skills/ 2>/dev/null
 done
+
+# Example: copy all skills for Autohand Code (project-level)
+for plugin in pm-*/; do
+  mkdir -p .autohand/skills/
+  cp -r "$plugin/skills/"* .autohand/skills/ 2>/dev/null
+done
 ```
+
+Autohand Code can also browse its community catalog with `autohand --skill-install`; for PM Skills, copy the plugin skill folders as shown above so related skills stay together.
 
 ---
 
