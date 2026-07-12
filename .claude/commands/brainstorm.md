@@ -1,0 +1,1 @@
+../../pm-product-discovery/commands/brainstorm.md

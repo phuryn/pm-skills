@@ -1,0 +1,1 @@
+../../../pm-go-to-market/skills/ideal-customer-profile/SKILL.md

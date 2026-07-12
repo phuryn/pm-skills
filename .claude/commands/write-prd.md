@@ -1,0 +1,1 @@
+../../pm-execution/commands/write-prd.md

@@ -1,0 +1,1 @@
+../../../pm-go-to-market/skills/beachhead-segment/SKILL.md

@@ -1,0 +1,1 @@
+../../../pm-market-research/skills/sentiment-analysis/SKILL.md

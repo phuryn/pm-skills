@@ -1,0 +1,1 @@
+../../../pm-product-discovery/skills/analyze-feature-requests/SKILL.md

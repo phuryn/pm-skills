@@ -1,0 +1,1 @@
+../../../pm-product-strategy/skills/pestle-analysis/SKILL.md
