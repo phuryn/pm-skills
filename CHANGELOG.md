@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### pm-ai-shipping
+
+- Added the `prd-to-mvp` skill and `/ship-mvp` command — the step between a finished PRD and `/ship-check`: settle the decisions an agent must never guess, build the core journey as a walking skeleton, choose a backend path (including a temporary backend the agent creates when none exists), and hand back a live URL with an honest build report. (#54, thanks @AragAgg)
+
 ## v2.1.0 — 2026-07-03
 
 ### pm-ai-shipping

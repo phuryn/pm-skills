@@ -8,7 +8,7 @@
 
 # PM Skills Marketplace: The AI Operating System for Better Product Decisions
 
-> 68 PM skills and 42 chained workflows across 9 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, growth, and shipping AI-built code. 
+> 69 PM skills and 43 chained workflows across 9 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, growth, and shipping AI-built code. 
 
 ![PM Skills marketplace: skills, commands, and all 9 plugins at a glance](.docs/images/plugins.png)
 
@@ -438,17 +438,19 @@ Commands:
 </details>
 
 <details>
-<summary><strong>9. pm-ai-shipping</strong> — AI Shipping Kit: document a vibe-coded app, audit security and performance, map test coverage, compile a shipping packet (2 skills, 5 commands)</summary>
+<summary><strong>9. pm-ai-shipping</strong> — AI Shipping Kit: build an MVP from a PRD, document a vibe-coded app, audit security and performance, map test coverage, compile a shipping packet (3 skills, 6 commands)</summary>
 
-For PMs and founders accountable for AI-built code. AI agents write code fast but leave no record of *intent* — what the system should do, who may do what, where the secrets live, which rules are actually verified. This kit restores reviewability: it documents the system, then audits the gap between what the docs say and what the code actually does — the class of bug generic scanners miss.
+For PMs and founders accountable for AI-built code. AI agents write code fast but leave no record of *intent* — what the system should do, who may do what, where the secrets live, which rules are actually verified. This kit covers the build and the accountability: turn a finished PRD into a working, deployed app in one disciplined pass, then restore reviewability — document the system and audit the gap between what the docs say and what the code actually does, the class of bug generic scanners miss.
 
-**Skills (2):**
+**Skills (3):**
 
 - `shipping-artifacts` — The durable documentation set that makes an AI-built app reviewable: a core every app needs (architecture, user/permission flows, permissions, variables/secrets, test-coverage map) plus conditional docs added only when they apply (emails, cron, SEO, embedded agents/automation). Defines what each doc must capture and how a reviewer uses it
 - `intended-vs-implemented` — The method for finding the gap between what a system is documented to do and what the code actually does, with cited evidence on both sides
+- `prd-to-mvp` — The method for turning a finished PRD or spec into a working, deployed app in one disciplined pass: settle the decisions an AI agent must never guess, sequence the build as a walking skeleton, choose the backend path (including a temporary backend the agent creates when none exists), and deliver a live URL with an honest build report
 
-**Commands (5):**
+**Commands (6):**
 
+- `/ship-mvp` — Turn a finished PRD or spec into a working, deployed app in one disciplined pass: settle the pre-build decisions, build the core journey as a walking skeleton, provision the backend when one is needed, verify the acceptance walkthrough, and deliver a live URL with an honest build report
 - `/ship-check` — Turn a vibe-coded repo into a reviewer-ready shipping packet: document, wire agent context, run security and performance audits, map test coverage, and compile the results
 - `/document-app` — Reverse-engineer a codebase into the system documents reviewers and auditors need — a core set (architecture, flows, permissions, variables) plus conditional docs (emails, cron, SEO, automation) when they apply
 - `/derive-tests` — Turn documented intent into a test-coverage map: inventory the tests that exist today, separate them from proposed tests and unverified gaps, and recommend a green-before-merge CI gate
@@ -460,8 +462,10 @@ For PMs and founders accountable for AI-built code. AI agents write code fast bu
 Skills:
 - `What documentation does my Supabase app need before someone can review it?`
 - `Where does what this code does diverge from what the docs say it should do?`
+- `What do I need to decide before handing this PRD to an agent to build?`
 
 Commands:
+- `/ship-mvp docs/prd.md`
 - `/ship-check the payments service`
 - `/document-app — Reverse-engineer the system docs for this repo`
 - `/derive-tests — Which documented rules have no test yet?`
