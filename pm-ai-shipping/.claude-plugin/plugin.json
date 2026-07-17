@@ -1,7 +1,7 @@
 {
   "name": "pm-ai-shipping",
   "version": "2.1.0",
-  "description": "AI Shipping Kit — for PMs and founders accountable for AI-built code. Document a vibe-coded app, audit it for intended-vs-implemented security gaps and performance issues, and produce a reviewer-ready shipping packet.",
+  "description": "AI Shipping Kit — for PMs and founders accountable for AI-built code. Build an MVP from a finished PRD, document a vibe-coded app, audit it for intended-vs-implemented security gaps and performance issues, and produce a reviewer-ready shipping packet.",
   "author": {
     "name": "Paweł Huryn",
     "email": "pawel@productcompass.pm",

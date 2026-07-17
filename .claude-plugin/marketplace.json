@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-skills",
   "version": "2.1.0",
-  "description": "Structured AI workflows for better product decisions. 68 domain-specific skills and 42 chained workflows across 9 PM plugins — from discovery to strategy, execution, launch, growth, and shipping AI-built software.",
+  "description": "Structured AI workflows for better product decisions. 69 domain-specific skills and 43 chained workflows across 9 PM plugins — from discovery to strategy, execution, launch, growth, and shipping AI-built software.",
   "owner": {
     "name": "Paweł Huryn",
     "email": "pawel@productcompass.pm",
