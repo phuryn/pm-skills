@@ -221,5 +221,22 @@ class TestCommandReferences(unittest.TestCase):
                 )
 
 
+class TestSentimentAnalysisContract(unittest.TestCase):
+    def test_command_uses_the_skill_score_scale(self):
+        plugin = ROOT / "pm-market-research"
+        skill = (plugin / "skills" / "sentiment-analysis" / "SKILL.md").read_text(
+            encoding="utf-8"
+        )
+        command = (plugin / "commands" / "analyze-feedback.md").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn("sentiment scores (-1 to +1)", skill)
+        self.assertIn(
+            "- Average sentiment score: [X on a -1 to +1 scale]", command
+        )
+        self.assertNotIn("- Average sentiment score: [X/10]", command)
+
+
 if __name__ == "__main__":
     unittest.main()

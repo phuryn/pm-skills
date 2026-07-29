@@ -51,7 +51,7 @@ Apply the **sentiment-analysis** skill:
 
 ### Overall Sentiment
 - Positive: [X%] | Neutral: [Y%] | Negative: [Z%]
-- Average sentiment score: [X/10]
+- Average sentiment score: [X on a -1 to +1 scale]
 - Trend: [improving / stable / declining]
 
 ### Top Themes
