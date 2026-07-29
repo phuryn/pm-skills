@@ -8,6 +8,7 @@ What this locks in:
 - README counts (headline, per-plugin summaries, plugin README section headers)
   match the skills and commands actually on disk;
 - every /plugin:command reference in a plugin README resolves to a real command file.
+- the sentiment-analysis Skill and command use the same score scale.
 """
 
 import json

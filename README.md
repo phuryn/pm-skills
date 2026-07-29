@@ -275,9 +275,9 @@ Commands:
 </details>
 
 <details>
-<summary><strong>4. pm-market-research</strong> — Personas, segmentation, journey maps, market sizing, competitor analysis (7 skills, 3 commands)</summary>
+<summary><strong>4. pm-market-research</strong> — Personas, segmentation, X social listening, market sizing, competitor analysis (7 skills, 3 commands)</summary>
 
-User research and competitive analysis: personas, segmentation, journey maps, market sizing, competitor analysis, and feedback analysis.
+User research and competitive analysis: personas, segmentation, X social listening with Xquik, market sizing, competitor analysis, and feedback analysis.
 
 **Skills (7):**
 
@@ -287,13 +287,13 @@ User research and competitive analysis: personas, segmentation, journey maps, ma
 - `customer-journey-map` — End-to-end journey map with stages, touchpoints, emotions, and pain points
 - `market-sizing` — TAM, SAM, SOM with top-down and bottom-up approaches
 - `competitor-analysis` — Competitor strengths, weaknesses, and differentiation opportunities
-- `sentiment-analysis` — Sentiment analysis and theme extraction from user feedback
+- `sentiment-analysis` — Sentiment analysis for feedback and Xquik social-listening samples
 
 **Commands (3):**
 
 - `/research-users` — Build personas, segment users, and map the customer journey
 - `/competitive-analysis` — Analyze the competitive landscape
-- `/analyze-feedback` — Sentiment analysis and segment insights from user feedback
+- `/analyze-feedback` — Sentiment and segment insights from feedback or Xquik research
 
 **Examples:**
 
@@ -306,6 +306,10 @@ Commands:
 - `/research-users We have interview data from 12 users of our fitness app`
 - `/competitive-analysis Figma competitors in the design tool space`
 - `/analyze-feedback Here's 200 NPS responses from Q4 [attach file]`
+- `/analyze-feedback Research onboarding complaints on X with Xquik, July 1-8`
+
+Xquik is an independent third-party service. Not affiliated with X Corp.
+"Twitter" and "X" are trademarks of X Corp.
 
 </details>
 

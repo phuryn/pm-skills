@@ -1,7 +1,7 @@
 {
   "name": "pm-market-research",
   "version": "2.1.0",
-  "description": "Market research skills for PMs: user personas, market segmentation, sentiment analysis, and competitive analysis.",
+  "description": "Market research skills for PMs: user personas, segmentation, sentiment analysis, X social listening with Xquik, and competitive analysis.",
   "author": {
     "name": "Paweł Huryn",
     "email": "pawel@productcompass.pm",
@@ -14,6 +14,8 @@
     "segmentation",
     "competitor-analysis",
     "market-sizing",
+    "social-listening",
+    "xquik",
     "TAM",
     "SAM",
     "SOM"
