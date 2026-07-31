@@ -1,11 +1,5 @@
 # Changelog
 
-## Unreleased
-
-### Repo
-
-- Documented project-level Qoder skill installation. (#57, thanks @phodal)
-
 ## v2.1.0 — 2026-07-03
 
 ### pm-ai-shipping
