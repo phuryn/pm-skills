@@ -1,0 +1,30 @@
+{
+  "name": "pm-skills-pi",
+  "version": "2.1.0",
+  "description": "Pi slash commands porting the pm-skills Claude Code commands — 42 product-management workflows (/write-prd, /discover, /sprint, /ship-check, ...) plus the pm skills.",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "product-management",
+    "pm",
+    "workflows"
+  ],
+  "license": "MIT",
+  "pi": {
+    "prompts": ["./prompts"],
+    "skills": ["../pm-*/skills"]
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test \"test/*.test.ts\""
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "0.84.1",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.5.0"
+  }
+}
