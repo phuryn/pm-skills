@@ -113,7 +113,7 @@ This is a best-effort, model-driven conversion (some Claude-specific command syn
 
 ### Other AI assistants (skills only)
 
-The `skills/*/SKILL.md` files follow the universal skill format and work with any tool that reads it. Commands (`/slash-commands`) are Claude-specific.
+The `skills/*/SKILL.md` files follow the universal skill format and work with any tool that reads it. Commands (`/slash-commands`) are Claude-specific — except **pi**, which has full command support via the `pm-skills-pi` package.
 
 | Tool | How to use | What works |
 |------|-----------|------------|
@@ -121,6 +121,7 @@ The `skills/*/SKILL.md` files follow the universal skill format and work with an
 | **OpenCode** | Copy skill folders to `.opencode/skills/` | Skills only |
 | **Cursor** | Copy skill folders to `.cursor/skills/` | Skills only |
 | **Kiro** | Copy skill folders to `.kiro/skills/` | Skills only |
+| **pi** | `pi install git:phuryn/pm-skills` (or `pi install ./pi-extensions` from this repo) | All 42 commands + skills |
 
 ```bash
 # Example: copy all skills for OpenCode (project-level)

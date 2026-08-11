@@ -1,0 +1,18 @@
+{
+  "name": "pm-skills-pi",
+  "version": "2.1.0",
+  "description": "Pi package porting the pm-skills Claude Code commands to pi — 42 product-management slash commands (/write-prd, /discover, /sprint, /ship-check, ...) as prompt templates, plus all 68 pm skills.",
+  "license": "MIT",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "product-management",
+    "pm",
+    "skills",
+    "workflows"
+  ],
+  "pi": {
+    "prompts": ["./pi-extensions/prompts"],
+    "skills": ["./pm-*/skills"]
+  }
+}

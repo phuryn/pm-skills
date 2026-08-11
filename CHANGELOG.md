@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### pi-extensions (new)
+
+- Added `pi-extensions/` — a pi package that ports all 42 Claude Code commands to [pi](https://pi.dev) as slash commands, with identical names, descriptions, and workflows. Fully declarative: the workflow content lives in plain Markdown prompt templates (`prompts/`) with `$ARGUMENTS` interpolation, and the package manifest declares both the prompts and the repo's 68 skills (`./pm-*/skills` glob) — no TypeScript code at all. Install with `pi install git:phuryn/pm-skills` (repo root manifest) or `pi install ./pi-extensions` (local path). Install verified end-to-end in both layouts — all 42 commands register, skills load from the manifest, and globally-installed skills win collisions silently (pi keeps the first registration per name). Includes a parity test suite (89 tests) that pins every template to its `pm-*` plugin command file, guards against template-substitution hazards, verifies both manifests resolve to 42 commands and 68 skills, and a regeneration script (`scripts/port-commands.mjs`).
+
 ## v2.1.0 — 2026-07-03
 
 ### pm-ai-shipping
