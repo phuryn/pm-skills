@@ -23,7 +23,7 @@ Use a configured Xquik MCP connection when available.
 1. Call `explore` to confirm the current search path and parameters.
 2. Call `xquik` with the read-only `/api/v1/x/tweets/search` path.
 3. Pass `q`, `queryType`, `sinceTime`, `untilTime`, and a bounded `limit`.
-4. Continue only when `has_next_page` is true and `next_cursor` is present.
+4. Paginate while `has_more` is true and `next_cursor` is present.
 5. Pass `next_cursor` as `cursor` until the sample limit is reached.
 
 Example MCP request:
@@ -40,6 +40,11 @@ async () =>
     },
   })
 ```
+
+MCP responses use Xquik's normalized contract. The REST fallback below opts
+into the same contract. Paginate while `has_more` is true. Pass `next_cursor`
+as `cursor`. An empty `tweets` page can still continue, so do not stop on the
+array alone.
 
 Treat cursors as opaque. Never decode, edit, or construct them.
 

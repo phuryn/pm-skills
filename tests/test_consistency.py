@@ -238,6 +238,20 @@ class TestSentimentAnalysisContract(unittest.TestCase):
         )
         self.assertNotIn("- Average sentiment score: [X/10]", command)
 
+    def test_xquik_guide_uses_normalized_pagination(self):
+        guide = (
+            ROOT
+            / "pm-market-research"
+            / "skills"
+            / "sentiment-analysis"
+            / "references"
+            / "xquik.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("Paginate while `has_more` is true", guide)
+        self.assertIn("Pass `next_cursor` as `cursor`", guide)
+        self.assertNotIn("`has_next_page`", guide)
+
 
 if __name__ == "__main__":
     unittest.main()
