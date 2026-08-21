@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+### pm-market-research
+
+- Added bounded X social-listening collection through Xquik MCP or REST. Results retain provenance and sampling limits. (#43, thanks @kriptoburak)
+- Fixed `/analyze-feedback` to use the Skill's `-1` to `+1` sentiment scale. (#43, thanks @kriptoburak)
+
 ## v2.1.0 — 2026-07-03
 
 ### pm-ai-shipping

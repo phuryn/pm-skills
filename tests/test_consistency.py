@@ -8,6 +8,7 @@ What this locks in:
 - README counts (headline, per-plugin summaries, plugin README section headers)
   match the skills and commands actually on disk;
 - every /plugin:command reference in a plugin README resolves to a real command file.
+- the sentiment-analysis Skill and command use the same score scale.
 """
 
 import json
@@ -219,6 +220,37 @@ class TestCommandReferences(unittest.TestCase):
                     f"{p.name}/README.md references /{p.name}:{m.group(1)} "
                     f"but commands/{m.group(1)}.md is missing",
                 )
+
+
+class TestSentimentAnalysisContract(unittest.TestCase):
+    def test_command_uses_the_skill_score_scale(self):
+        plugin = ROOT / "pm-market-research"
+        skill = (plugin / "skills" / "sentiment-analysis" / "SKILL.md").read_text(
+            encoding="utf-8"
+        )
+        command = (plugin / "commands" / "analyze-feedback.md").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn("sentiment scores (-1 to +1)", skill)
+        self.assertIn(
+            "- Average sentiment score: [X on a -1 to +1 scale]", command
+        )
+        self.assertNotIn("- Average sentiment score: [X/10]", command)
+
+    def test_xquik_guide_uses_normalized_pagination(self):
+        guide = (
+            ROOT
+            / "pm-market-research"
+            / "skills"
+            / "sentiment-analysis"
+            / "references"
+            / "xquik.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("Paginate while `has_more` is true", guide)
+        self.assertIn("Pass `next_cursor` as `cursor`", guide)
+        self.assertNotIn("`has_next_page`", guide)
 
 
 if __name__ == "__main__":

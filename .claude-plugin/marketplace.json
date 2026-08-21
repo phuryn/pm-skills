@@ -29,7 +29,7 @@
     },
     {
       "name": "pm-market-research",
-      "description": "Market research skills for PMs: user personas, market segmentation, sentiment analysis, and competitive analysis.",
+      "description": "Market research skills for PMs: user personas, segmentation, sentiment analysis, X social listening with Xquik, and competitive analysis.",
       "source": "./pm-market-research",
       "category": "product-management"
     },
