@@ -8,13 +8,15 @@
 
 # PM Skills Marketplace: The AI Operating System for Better Product Decisions
 
-> 69 PM skills and 42 chained workflows across 9 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, growth, and shipping AI-built code. 
+> 70 PM skills and 43 chained workflows across 9 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, growth, and shipping AI-built code.
 
 ![PM Skills marketplace: skills, commands, and all 9 plugins at a glance](.docs/images/plugins.png)
 
 Designed for Claude Code and Cowork. Skills compatible with other AI assistants.
 
 ## Start Here
+
+Not sure which skill or workflow to use? With **pm-toolkit** installed, start with `/pm-toolkit:ask-pm` and describe your situation. It recommends a next step from the capabilities available in your session, explains why it fits, and helps you proceed when requested. On skills-only hosts, ask to use **skill-navigation** instead.
 
 New idea? → `/discover`  
 Need strategic clarity? → `/strategy`  
@@ -405,19 +407,21 @@ Commands:
 </details>
 
 <details>
-<summary><strong>8. pm-toolkit</strong> — Resume review, legal documents, proofreading (4 skills, 5 commands)</summary>
+<summary><strong>8. pm-toolkit</strong> — Skill navigation, resume review, legal documents, proofreading (5 skills, 6 commands)</summary>
 
-PM utilities beyond core product work: resume review, legal documents, and proofreading.
+PM utility skills: skill navigation, resume review, NDA drafting, privacy policy generation, and grammar/flow checking. Essential tools for product managers beyond core product work.
 
-**Skills (4):**
+**Skills (5):**
 
+- `skill-navigation` — Find the right available PM skill or workflow from your situation
 - `review-resume` — PM resume review and tailoring against 10 best practices (XYZ+S formula, keywords, structure)
 - `draft-nda` — Non-Disclosure Agreement with jurisdiction-appropriate clauses
 - `privacy-policy` — Privacy policy covering GDPR/CCPA compliance
 - `grammar-check` — Grammar, logic, and flow checking with targeted fixes
 
-**Commands (5):**
+**Commands (6):**
 
+- `/ask-pm` — Describe your situation and find the right next PM step
 - `/review-resume` — Comprehensive PM resume review
 - `/tailor-resume` — Tailor a resume to a specific job description
 - `/draft-nda` — Draft an NDA
@@ -432,6 +436,7 @@ Skills:
 
 Commands:
 - `/review-resume [attach your PM resume]`
+- `/ask-pm I have a product direction but don't know what to build first`
 - `/tailor-resume [attach resume + paste job description]`
 - `/proofread Here's the draft of our Q1 investor update`
 
