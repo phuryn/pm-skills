@@ -1,0 +1,1 @@
+../../../pm-market-research/skills/competitor-analysis/SKILL.md

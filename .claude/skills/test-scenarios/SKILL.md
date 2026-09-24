@@ -1,0 +1,1 @@
+../../../pm-execution/skills/test-scenarios/SKILL.md

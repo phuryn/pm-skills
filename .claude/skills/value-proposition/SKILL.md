@@ -1,0 +1,1 @@
+../../../pm-product-strategy/skills/value-proposition/SKILL.md

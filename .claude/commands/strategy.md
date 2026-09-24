@@ -1,0 +1,1 @@
+../../pm-product-strategy/commands/strategy.md

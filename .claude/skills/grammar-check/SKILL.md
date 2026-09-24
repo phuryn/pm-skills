@@ -1,0 +1,1 @@
+../../../pm-toolkit/skills/grammar-check/SKILL.md

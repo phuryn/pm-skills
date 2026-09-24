@@ -1,0 +1,1 @@
+../../../pm-marketing-growth/skills/product-name/SKILL.md

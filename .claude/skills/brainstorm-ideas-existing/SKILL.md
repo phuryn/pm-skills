@@ -1,0 +1,1 @@
+../../../pm-product-discovery/skills/brainstorm-ideas-existing/SKILL.md

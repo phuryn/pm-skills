@@ -1,0 +1,1 @@
+../../../pm-product-strategy/skills/pricing-strategy/SKILL.md
