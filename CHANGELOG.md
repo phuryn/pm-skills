@@ -4,7 +4,7 @@
 
 ### pm-data-analytics
 
-- Fixed `ab-test-analysis` sample-size planning to include target power, define per-arm sample size and absolute MDE, and state the normal-approximation assumptions with a worked example (thanks @qingmingyiyang).
+- Fixed `ab-test-analysis` sample-size planning to include target power, define per-arm sample size and absolute MDE, and state the normal-approximation assumptions with a worked example (#64, thanks @qingmingyiyang).
 
 ### pm-ai-shipping
 
