@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### pm-data-analytics
+
+- Fixed `ab-test-analysis` sample-size planning to include target power, define per-arm sample size and absolute MDE, and state the normal-approximation assumptions with a worked example (thanks @qingmingyiyang).
+
 ### pm-ai-shipping
 
 - Added the **code-review** skill: correctness is the core engine, with performance and security as optional sub-cases of it rather than separate methods. It anchors on agreements between participants across a boundary — the defects that stay invisible file-by-file because each side reads as reasonable alone — forces a violating execution, and refutes every candidate before reporting.
