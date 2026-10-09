@@ -1,6 +1,6 @@
 ---
 name: create-prd
-description: "Create a lean, decision-ready Product Requirements Document with an 8-section template: summary, contacts, background, objective, market segments, value propositions, solution, and release. Lean by default (about one to two pages), with a fuller spec on request. Use when writing a PRD, documenting product requirements, preparing a feature spec, or reviewing an existing PRD."
+description: "Create a lean, decision-ready Product Requirements Document with an 8-section template: summary, contacts, background, objective, market segments, value propositions (6-part JTBD template), solution, and release. Lean by default (about one to two pages), with a fuller spec on request. Use when writing a PRD, documenting product requirements, preparing a feature spec, or reviewing an existing PRD."
 ---
 
 # Create a Product Requirements Document
@@ -15,7 +15,7 @@ A first PRD is the shortest document that lets the team decide and start: about 
 
 - **Complete means no gap that blocks a decision about the first version**, not every question answered. The questions under each section below are a checklist to pick from: answer the ones that matter for this initiative and skip the rest.
 - **A section with little to say gets a line or two.** If you don't know the contacts, leave the Contacts section out entirely; don't list roles to fill in later. Never pad a section or fill it with "TBD".
-- **Market Segments and Value Propositions are always included.** They are the core of this template: who has the problem, and why they would care.
+- **Market Segments and Value Propositions are always included.** They are the core of this template: who has the problem, and why they would care. The value proposition follows the 6-part template in section 6.
 - **Don't invent.** What you don't know goes to 7.4 Assumptions and open questions, clearly marked, not into the body as fact.
 
 ## Instructions
@@ -47,10 +47,19 @@ A first PRD is the shortest document that lets the team decide and start: about 
    - For whom are we building this? Define segments by people's problems or jobs, not demographics.
    - What constraints exist?
 
-   **6. Value Proposition(s)** (always included)
-   - What customer jobs or needs are we addressing?
-   - What will customers gain, and which pains will they avoid?
-   - Which problems do we solve better than the alternatives? (the Value Curve framework belongs in the detailed version)
+   **6. Value Proposition(s)** (always included; one per segment from section 5)
+
+   Use the 6-part JTBD value proposition template by Paweł Huryn and Aatir Abdul Rauf. It starts from the customer, not the product, and makes you name the alternatives:
+   - **Who:** the segment from section 5
+   - **Why:** the job they're trying to get done, and the problem in the way
+   - **What before:** how they do it today, and what hurts about it
+   - **How:** how our solution gets the job done (the key capability; section 7 has the features)
+   - **What after:** the improved outcome, and what becomes possible that wasn't before
+   - **Alternatives:** what they'd use without us, and why they'd choose us instead
+
+   Finish with a value proposition statement of one or two sentences. In the lean version, each part is a line or two; the detailed version goes deeper and can add a Value Curve against the alternatives. The full method, with examples, is in the value-proposition skill of the PM Skills product-strategy plugin, if it's installed.
+
+   This section is the spine of the PRD: section 7 (Solution) delivers the How, and the Key Results in section 4 measure the What after. If they don't line up, fix that before anything else.
 
    **7. Solution**
    - 7.1 UX/Prototypes: the key flow, or a link to wireframes (skip if there are none yet)
@@ -70,7 +79,7 @@ A first PRD is the shortest document that lets the team decide and start: about 
 
 ## Reviewing an existing PRD
 
-Check it against the same standard: Is anything missing that blocks a decision about the first version? Are Market Segments and Value Propositions there, and specific? Are assumptions marked as assumptions? What could be cut without losing anything the team needs? Return the gaps first, then the cuts.
+Check it against the same standard: Is anything missing that blocks a decision about the first version? Are Market Segments there, and is there a 6-part value proposition (Who, Why, What before, How, What after, Alternatives) for each segment? Does the Solution deliver its How, and do the Key Results measure its What after? Are assumptions marked as assumptions? What could be cut without losing anything the team needs? Return the gaps first, then the cuts.
 
 ## Notes
 

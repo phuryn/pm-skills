@@ -48,7 +48,7 @@ Apply the **create-prd** skill: its 8-section template, lean by default (about o
 **Status**: Draft
 ```
 
-Then the eight sections: Summary, Contacts (if known), Background, Objective, Market Segment(s), Value Proposition(s), Solution, Release. Market Segments and Value Propositions are always included. Put what the first version will not do in Release, and what's still unknown in Solution → Assumptions and open questions.
+Then the eight sections: Summary, Contacts (if known), Background, Objective, Market Segment(s), Value Proposition(s), Solution, Release. Market Segments and Value Propositions are always included; each value proposition uses the 6-part template (Who, Why, What before, How, What after, Alternatives). Put what the first version will not do in Release, and what's still unknown in Solution → Assumptions and open questions.
 
 ### Step 4: Review and Iterate
 
