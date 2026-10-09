@@ -1,11 +1,11 @@
 ---
-description: Create a comprehensive Product Requirements Document from a feature idea or problem statement
+description: Create a lean Product Requirements Document from a feature idea or problem statement, with a fuller spec on request
 argument-hint: "<feature or problem statement>"
 ---
 
 # /write-prd -- Product Requirements Document
 
-Create a structured PRD that aligns stakeholders and guides development. Accepts anything from a vague idea to a detailed brief.
+Create a lean PRD that aligns stakeholders and guides development. Accepts anything from a vague idea to a detailed brief.
 
 ## Invocation
 
@@ -26,22 +26,19 @@ Accept the input in any form:
 - A vague idea ("We should do something about onboarding drop-off")
 - An uploaded document (brief, research, Slack thread, email)
 
-### Step 2: Gather Context
+### Step 2: Fill Only the Gaps That Matter
 
-Ask conversationally — most important questions first, fill gaps as you go:
+Extract what the input already gives you. If any of these three is missing, ask about it before writing, in one message, three questions at most:
 
-1. **User problem**: What problem does this solve? Who experiences it? How painful is it?
-2. **Target users**: Which user segment(s)? How many? What's their current workaround?
+1. **User problem**: What problem does this solve? Who experiences it, and how painful is it?
+2. **Target users**: Which user segment(s)? What's their current workaround?
 3. **Success metrics**: How will we know this worked? What moves if we nail it?
-4. **Constraints**: Technical constraints, timeline, regulatory, dependencies on other teams?
-5. **Prior art**: Has this been attempted before? Existing solutions in the market?
-6. **Scope preference**: Full solution or phased approach?
 
-If the user provides a document with context, extract what's available and only ask about gaps.
+Constraints, prior art, and scope preference are worth asking about only if the user wants the detailed version. If the user says "just write it", go ahead and mark the gaps as assumptions.
 
 ### Step 3: Generate the PRD
 
-Apply the **create-prd** skill to produce an 8-section document:
+Apply the **create-prd** skill: its 8-section template, lean by default (about one to two pages). Write the detailed version only if the user asks for it. Start the document with:
 
 ```
 ## Product Requirements Document: [Feature Name]
@@ -49,59 +46,15 @@ Apply the **create-prd** skill to produce an 8-section document:
 **Author**: [user]
 **Date**: [today]
 **Status**: Draft
-**Stakeholders**: [if known]
-
-### 1. Executive Summary
-[2-3 sentences: what, for whom, why now]
-
-### 2. Background & Context
-[Problem space, prior research, market context, what prompted this]
-
-### 3. Objectives & Success Metrics
-**Goals** (what success looks like):
-1. [Specific, measurable goal]
-2. [...]
-
-**Non-Goals** (explicitly out of scope):
-1. [What we're not doing, and why]
-2. [...]
-
-**Success Metrics**:
-| Metric | Current | Target | Measurement |
-|--------|---------|--------|-------------|
-
-### 4. Target Users & Segments
-[Who this serves, user profiles, segment sizing]
-
-### 5. User Stories & Requirements
-
-**P0 — Must Have**:
-| # | User Story | Acceptance Criteria |
-|---|-----------|-------------------|
-
-**P1 — Should Have**:
-| # | User Story | Acceptance Criteria |
-|---|-----------|-------------------|
-
-**P2 — Nice to Have / Future**:
-| # | User Story | Acceptance Criteria |
-|---|-----------|-------------------|
-
-### 6. Solution Overview
-[High-level approach, key design decisions, technical approach if known]
-
-### 7. Open Questions
-| Question | Owner | Deadline |
-|----------|-------|----------|
-
-### 8. Timeline & Phasing
-[Milestones, dependencies, phasing if applicable]
 ```
+
+Then the eight sections: Summary, Contacts (if known), Background, Objective, Market Segment(s), Value Proposition(s), Solution, Release. Market Segments and Value Propositions are always included. Put what the first version will not do in Release, and what's still unknown in Solution → Assumptions and open questions.
 
 ### Step 4: Review and Iterate
 
-After generating, offer:
-- "Want me to **tighten the scope**? I can challenge which P1s should really be P2s."
+After generating, say in one line what you left out on purpose, then offer:
+- "Want the **detailed version**, or should I expand a specific section?"
+- "Want me to **tighten the scope** further? I can challenge what really needs to be in the first version."
 - "Should I **run a pre-mortem** on this PRD?"
 - "Want me to **break this into user stories** for engineering?"
 - "Should I **create a stakeholder update** to socialize this?"

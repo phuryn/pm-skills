@@ -229,7 +229,7 @@ Day-to-day product management: PRDs, OKRs, roadmaps, sprints, retrospectives, re
 
 **Skills (16):**
 
-- `create-prd` — Comprehensive 8-section PRD template
+- `create-prd` — Lean 8-section PRD template (a fuller spec on request)
 - `brainstorm-okrs` — Team-level OKRs aligned with company objectives
 - `outcome-roadmap` — Transform a feature list into an outcome-focused roadmap
 - `sprint-plan` — Sprint planning with capacity estimation, story selection, and risk identification

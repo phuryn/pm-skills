@@ -1,82 +1,81 @@
 ---
 name: create-prd
-description: "Create a Product Requirements Document using a comprehensive 8-section template covering problem, objectives, segments, value propositions, solution, and release planning. Use when writing a PRD, documenting product requirements, preparing a feature spec, or reviewing an existing PRD."
+description: "Create a lean, decision-ready Product Requirements Document with an 8-section template: summary, contacts, background, objective, market segments, value propositions, solution, and release. Lean by default (about one to two pages), with a fuller spec on request. Use when writing a PRD, documenting product requirements, preparing a feature spec, or reviewing an existing PRD."
 ---
 
 # Create a Product Requirements Document
 
 ## Purpose
 
-You are an experienced product manager responsible for creating a comprehensive Product Requirements Document (PRD) for $ARGUMENTS. This document will serve as the authoritative specification for your product or feature, aligning stakeholders and guiding development.
+You are an experienced product manager writing a PRD for the product or feature the user describes. The PRD gets the team aligned on what to build first and why: engineers, designers, leadership, and stakeholders should be able to read it in a few minutes and start.
 
-## Context
+## Lean by default
 
-A well-structured PRD clearly communicates the what, why, and how of your product initiative. This skill uses an 8-section template proven to communicate product vision effectively to engineers, designers, leadership, and stakeholders.
+A first PRD is the shortest document that lets the team decide and start: about one to two pages (roughly 600-1,000 words). Write a longer, more detailed version only when the user asks for one.
+
+- **Complete means no gap that blocks a decision about the first version**, not every question answered. The questions under each section below are a checklist to pick from: answer the ones that matter for this initiative and skip the rest.
+- **A section with little to say gets a line or two.** If you don't know the contacts, leave the Contacts section out entirely; don't list roles to fill in later. Never pad a section or fill it with "TBD".
+- **Market Segments and Value Propositions are always included.** They are the core of this template: who has the problem, and why they would care.
+- **Don't invent.** What you don't know goes to 7.4 Assumptions and open questions, clearly marked, not into the body as fact.
 
 ## Instructions
 
-1. **Gather Information**: If the user provides files, read them carefully. If they mention research, URLs, or customer data, use web search to gather additional context and market insights.
+1. **Start from what the user gave you.** Read any files they provide. If the problem, the target users, or how success will be measured is missing, stop and ask about them first: up to three short questions in one message, and no PRD in that reply. Write the PRD after the answers. Write it without them only if the user tells you to go ahead, and then mark those gaps as assumptions. Use web search only when the user points to sources or asks for market context, not to pad the document.
 
-2. **Think Step by Step**: Before writing, analyze:
-   - What problem are we solving?
-   - Who are we solving it for?
-   - How will we measure success?
-   - What are our constraints and assumptions?
+2. **Think before writing** (this stays out of the document): what problem are we solving, for whom, how will we know it worked, and what is the smallest first version that tests it?
 
-3. **Apply the PRD Template**: Create a document with these 8 sections:
+3. **Write the 8 sections.** The lean version answers only what matters; the detailed version goes through more of the questions.
 
    **1. Summary** (2-3 sentences)
-   - What is this document about?
+   - What is this, for whom, and why now?
 
-   **2. Contacts**
+   **2. Contacts** (optional in the lean version)
    - Name, role, and comment for key stakeholders
 
    **3. Background**
-   - Context: What is this initiative about?
-   - Why now? Has something changed?
-   - Is this something that just recently became possible?
+   - Context: what is this initiative about?
+   - Why now? Has something changed, or just become possible?
 
    **4. Objective**
-   - What's the objective? Why does it matter?
-   - How will it benefit the company and customers?
-   - How does it align with vision and strategy?
-   - Key Results: How will you measure success? (Use SMART OKR format)
+   - What's the objective, and why does it matter to customers and the company?
+   - How does it align with the vision and strategy? (one line, if relevant)
+   - Key Results: 1-3 measurable results (SMART OKR format)
 
-   **5. Market Segment(s)**
-   - For whom are we building this?
+   **5. Market Segment(s)** (always included)
+   - For whom are we building this? Define segments by people's problems or jobs, not demographics.
    - What constraints exist?
-   - Note: Markets are defined by people's problems/jobs, not demographics
 
-   **6. Value Proposition(s)**
-   - What customer jobs/needs are we addressing?
-   - What will customers gain?
-   - Which pains will they avoid?
-   - Which problems do we solve better than competitors?
-   - Consider the Value Curve framework
+   **6. Value Proposition(s)** (always included)
+   - What customer jobs or needs are we addressing?
+   - What will customers gain, and which pains will they avoid?
+   - Which problems do we solve better than the alternatives? (the Value Curve framework belongs in the detailed version)
 
    **7. Solution**
-   - 7.1 UX/Prototypes (wireframes, user flows)
-   - 7.2 Key Features (detailed feature descriptions)
+   - 7.1 UX/Prototypes: the key flow, or a link to wireframes (skip if there are none yet)
+   - 7.2 Key Features: the must-haves for the first version, a line or two each
    - 7.3 Technology (optional, only if relevant)
-   - 7.4 Assumptions (what we believe but haven't proven)
+   - 7.4 Assumptions and open questions: what we believe but haven't proven, and what we still need to find out
 
    **8. Release**
-   - How long could it take?
-   - What goes in the first version vs. future versions?
-   - Avoid exact dates; use relative timeframes
+   - What goes in the first version, what comes later, and what we are explicitly not doing
+   - How long could it take? Use relative timeframes, not exact dates.
 
-4. **Use Accessible Language**: Write for a primary school graduate. Avoid jargon. Use clear, short sentences.
+4. **Use accessible language.** Write for a primary school graduate. Avoid jargon. Use clear, short sentences.
 
-5. **Structure Output**: Present the PRD as a well-formatted markdown document with clear headings and sections.
+5. **Save the output** as a markdown document: `PRD-[product-name].md`.
 
-6. **Save the Output**: If the PRD is substantial (which it will be), save it as a markdown document in the format: `PRD-[product-name].md`
+6. **Say what you left out.** In your reply, not in the document, add one short line listing what you skipped on purpose (for example: competitive analysis, detailed UX flows, rollout plan), so the user can ask you to expand any section.
+
+## Reviewing an existing PRD
+
+Check it against the same standard: Is anything missing that blocks a decision about the first version? Are Market Segments and Value Propositions there, and specific? Are assumptions marked as assumptions? What could be cut without losing anything the team needs? Return the gaps first, then the cuts.
 
 ## Notes
 
-- Be specific and data-driven where possible
-- Link each section back to the overall strategy
-- Flag assumptions clearly so the team can validate them
-- Keep the document concise but complete
+- Lean is the default; detail is on request.
+- Be specific and data-driven where possible: a number or a named user group beats an adjective.
+- Flag assumptions clearly so the team can validate them.
+- Non-goals matter as much as goals: say what the first version will not do.
 
 ---
 

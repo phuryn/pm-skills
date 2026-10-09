@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+### pm-execution
+
+- **create-prd** is now lean by default: a first PRD is about one to two pages, with the detailed version on request. Feedback was that the skill fought itself, asking for a "comprehensive" document and for brevity at the same time. "Complete" now means no gap that blocks a decision about the first version; the section questions are a checklist to pick from rather than a form to fill; Market Segments and Value Propositions are always included; unknowns go to Assumptions and open questions instead of being invented; it asks up to three questions when the problem, the users, or the success metric is missing; and it ends by naming what it left out so you can expand any section. It also gained a short checklist for reviewing an existing PRD.
+- **`/write-prd`** now uses the create-prd template. It had carried its own, different 8-section template while also invoking the skill. It asks at most three questions up front.
+
 ### pm-ai-shipping
 
 - Added the **code-review** skill: correctness is the core engine, with performance and security as optional sub-cases of it rather than separate methods. It anchors on agreements between participants across a boundary — the defects that stay invisible file-by-file because each side reads as reasonable alone — forces a violating execution, and refutes every candidate before reporting.

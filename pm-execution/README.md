@@ -5,7 +5,7 @@ Execution and product management skills: PRDs, OKRs, roadmaps, sprints, pre-mort
 ## Skills (16)
 
 - **brainstorm-okrs** — Brainstorm team-level OKRs aligned with company objectives.
-- **create-prd** — Create a Product Requirements Document using a comprehensive 8-section template covering summary, background, objectives, market segments, value propositions, solution details, and release planning.
+- **create-prd** — Create a lean, decision-ready Product Requirements Document with an 8-section template covering summary, background, objectives, market segments, value propositions, solution details, and release planning. Lean by default (about one to two pages), with a fuller spec on request.
 - **dummy-dataset** — Generate realistic dummy datasets for testing with customizable columns, constraints, and output formats (CSV, JSON, SQL, Python script).
 - **job-stories** — Create job stories using the 'When [situation], I want to [motivation], so I can [outcome]' format with detailed acceptance criteria.
 - **outcome-roadmap** — Transform an output-focused roadmap into an outcome-focused one.
@@ -32,7 +32,7 @@ Execution and product management skills: PRDs, OKRs, roadmaps, sprints, pre-mort
 - `/pm-execution:stakeholder-map` — Map stakeholders on a Power × Interest grid and create a tailored communication plan.
 - `/pm-execution:test-scenarios` — Generate comprehensive test scenarios from user stories or feature specs — happy paths, edge cases, and error handling.
 - `/pm-execution:transform-roadmap` — Convert a feature-based roadmap into an outcome-focused roadmap that communicates strategic intent.
-- `/pm-execution:write-prd` — Create a comprehensive Product Requirements Document from a feature idea or problem statement.
+- `/pm-execution:write-prd` — Create a lean Product Requirements Document from a feature idea or problem statement, with a fuller spec on request.
 - `/pm-execution:write-stories` — Break a feature into backlog items — user stories, job stories, or WWA format with acceptance criteria.
 
 ## Author
