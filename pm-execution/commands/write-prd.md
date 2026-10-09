@@ -28,7 +28,7 @@ Accept the input in any form:
 
 ### Step 2: Fill Only the Gaps That Matter
 
-Extract what the input already gives you. If any of these three is missing, ask about it before writing, in one message, three questions at most:
+Extract what the input already gives you, and research what the web can answer (prior art, competitors, market context) instead of asking. If any of these three is missing, ask about it before writing, in one message, three questions at most:
 
 1. **User problem**: What problem does this solve? Who experiences it, and how painful is it?
 2. **Target users**: Which user segment(s)? What's their current workaround?

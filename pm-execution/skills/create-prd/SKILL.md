@@ -20,11 +20,13 @@ A first PRD is the shortest document that lets the team decide and start: about 
 
 ## Instructions
 
-1. **Start from what the user gave you.** Read any files they provide. If the problem, the target users, or how success will be measured is missing, stop and ask about them first: up to three short questions in one message, and no PRD in that reply. Write the PRD after the answers. Write it without them only if the user tells you to go ahead, and then mark those gaps as assumptions. Use web search only when the user points to sources or asks for market context, not to pad the document.
+1. **Start from what the user gave you.** Read any files they provide. If the problem, the target users, or how success will be measured is missing, stop and ask about them first: up to three short questions in one message, and no PRD in that reply. Ask only what only the user knows (their evidence of the problem, their users, their success metric); research what the web can answer. Write the PRD after the answers. Write it without them only if the user tells you to go ahead, and then mark those gaps as assumptions.
 
-2. **Think before writing** (this stays out of the document): what problem are we solving, for whom, how will we know it worked, and what is the smallest first version that tests it?
+2. **Research freely when it helps.** Search the web for the market, competitors and alternatives, regulations, or what changed recently, and read any sources the user points to. Use what you find to sharpen the PRD's decisions: why now, who the segment is, what we do better than the alternatives. Cite the source next to the claim. A finding goes into the document only if it changes a decision; anything else that's useful goes in your reply as notes, so the PRD stays lean.
 
-3. **Write the 8 sections.** The lean version answers only what matters; the detailed version goes through more of the questions.
+3. **Think before writing** (this stays out of the document): what problem are we solving, for whom, how will we know it worked, and what is the smallest first version that tests it?
+
+4. **Write the 8 sections.** The lean version answers only what matters; the detailed version goes through more of the questions.
 
    **1. Summary** (2-3 sentences)
    - What is this, for whom, and why now?
@@ -60,11 +62,11 @@ A first PRD is the shortest document that lets the team decide and start: about 
    - What goes in the first version, what comes later, and what we are explicitly not doing
    - How long could it take? Use relative timeframes, not exact dates.
 
-4. **Use accessible language.** Write for a primary school graduate. Avoid jargon. Use clear, short sentences.
+5. **Use accessible language.** Write for a primary school graduate. Avoid jargon. Use clear, short sentences.
 
-5. **Save the output** as a markdown document: `PRD-[product-name].md`.
+6. **Save the output** as a markdown document: `PRD-[product-name].md`.
 
-6. **Say what you left out.** In your reply, not in the document, add one short line listing what you skipped on purpose (for example: competitive analysis, detailed UX flows, rollout plan), so the user can ask you to expand any section.
+7. **Say what you left out.** In your reply, not in the document, add one short line listing what you skipped on purpose (for example: competitive analysis, detailed UX flows, rollout plan), so the user can ask you to expand any section.
 
 ## Reviewing an existing PRD
 
