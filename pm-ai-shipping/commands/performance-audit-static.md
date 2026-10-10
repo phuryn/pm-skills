@@ -69,12 +69,12 @@ Performance Audit: [scope]
   - Expected effect: <directional — e.g. payload size, query count, load time>
 ```
 
-End with what's already efficient (say it explicitly) and what needs runtime profiling to confirm. Write the full report to `reports/performance_audit_{timestamp}.md` and give the user the path.
+End with what's already efficient (say it explicitly) and what needs runtime profiling to confirm. Write the full report to the repo's reports location, or `reports/performance_audit_{timestamp}.md` if it has none (the **shipping-artifacts** skill's *Locations and names* rule), and give the user the path.
 
 ## Notes
 
 - Rank by impact-per-effort — one missing index on a hot table usually beats ten micro-optimizations.
-- The audit is read-only by design: the pre-approved toolset covers reading, searching, subagent fan-out, and writing under `reports/` — it never edits the code it audits.
+- The audit is read-only by design: the pre-approved toolset covers reading, searching, subagent fan-out, and writing under `reports/` — it never edits the code it audits. A report written to the repo's own location instead falls outside that pre-approval, so the user is asked before the write.
 - Don't flag theoretical inefficiency with no growth path; flag what breaks as rows or traffic scale.
 - This command covers performance only. For authorization, injection, and data-exposure risks, use `/security-audit-static`.
 - This is the data-backed-application specialisation of the **code-review** skill's performance sub-case. For logic and state defects, or for a review across several dimensions at once, use `/pm-ai-shipping:code-review`.

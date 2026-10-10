@@ -8,6 +8,8 @@ AI agents write code fast but leave no record of *intent* — what the system sh
 
 Start with `/ship-check` for the full sequence, or run a single stage with the specialist commands.
 
+Folders and file names are defaults. The kit follows the repo's own setup — its agent instructions, its docs folder, and the documents and test-coverage file it already has — and falls back to `documentation/`, `documentation/tests.md` and `reports/` only where the repo has none, saying so in its output.
+
 ## Install
 
 Install from the [pm-skills marketplace](https://github.com/phuryn/pm-skills) and enable the `pm-ai-shipping` plugin. Each command can be triggered with `/pm-ai-shipping:<command>` or its short `/<command>` form; skills auto-load when the topic matches.
@@ -22,7 +24,7 @@ Install from the [pm-skills marketplace](https://github.com/phuryn/pm-skills) an
 
 - `/pm-ai-shipping:ship-check` — Turn a vibe-coded repo into a reviewer-ready shipping packet: document, wire agent context, run correctness, security and performance reviews, add an independent unsteered pass by a second model, map test coverage, and compile the results.
 - `/pm-ai-shipping:document-app` — Reverse-engineer a codebase into the system documents reviewers and auditors need — a core set (architecture, flows, permissions, variables) plus conditional docs (emails, cron, SEO, automation) when they apply.
-- `/pm-ai-shipping:derive-tests` — Turn documented intent into a test-coverage map: inventory the tests that exist today, separate them from proposed tests and unverified gaps, mark each unit / guarded-live / manual, and recommend a green-before-merge CI gate.
+- `/pm-ai-shipping:derive-tests` — Turn documented intent into a test-coverage map: inventory the tests that exist today, separate them from proposed tests and unverified gaps, mark each unit / guarded-live / manual, and recommend a gate that follows the repo's stated gate policy (a green-before-merge CI gate where it states none).
 - `/pm-ai-shipping:security-audit-static` — Static security audit: map trust boundaries, cross-reference documented intent, self-refute every finding, and report only evidence-backed risks.
 - `/pm-ai-shipping:performance-audit-static` — Static performance audit: find N+1 queries and request waterfalls, over-fetching, missing indexes, and caching opportunities, ranked by effort and impact.
 
