@@ -1,13 +1,13 @@
 ---
-description: Turn documented intent into a test-coverage map — inventory the tests that exist today, derive use-case cases from the system docs, separate existing coverage from proposed tests and unverified gaps, mark each unit / guarded-live / manual, and recommend a green-before-merge CI gate
+description: Turn documented intent into a test-coverage map — inventory the tests that exist today, derive use-case cases from the system docs, separate existing coverage from proposed tests and unverified gaps, mark each unit / guarded-live / manual, and recommend a gate that follows the repo's stated gate policy (a green-before-merge CI gate where it states none)
 argument-hint: "<repo path or area; defaults to the whole repository>"
 ---
 
 # /derive-tests -- Turn Intent Into Tests
 
-The docs say what the system *should* do. An audit finds where the code *doesn't*. Tests are what stop that gap from reopening after the next AI edit. This command reads the documented intent, turns each load-bearing rule into a concrete test case, sorts them into what to automate, what needs a guarded live run, and what stays manual — then recommends the CI gate that keeps `main` honest.
+The docs say what the system *should* do. An audit finds where the code *doesn't*. Tests are what stop that gap from reopening after the next AI edit. This command reads the documented intent, turns each load-bearing rule into a concrete test case, sorts them into what to automate, what needs a guarded live run, and what stays manual — then recommends the gate that keeps `main` honest: the one the repo's own instructions define, or a green-before-merge CI gate where they define none.
 
-This produces a coverage map (`tests.md`) and concrete test cases, not a finished suite — you or the next agent implement the deterministic ones.
+This produces a coverage map (`tests.md`) and concrete test cases, not a finished suite — you or the next agent implement the deterministic ones. If the repo already keeps a test-coverage file, under any name, that file is the map: update it rather than starting a second one (the **shipping-artifacts** skill's *Locations and names* rule).
 
 ## Invocation
 
@@ -19,7 +19,7 @@ This produces a coverage map (`tests.md`) and concrete test cases, not a finishe
 
 ## Prerequisite: documented intent
 
-Tests are derived from the docs, so the docs come first. If `documentation/*.md` is missing or thin, run `/document-app` (and `/derive-tests` reads `flows.md`, `permissions.md`, and `automation.md` most heavily). You cannot map coverage to rules you never wrote down — where intent is absent, say so rather than inventing rules to test.
+Tests are derived from the docs, so the docs come first. If the system docs (in the repo's docs location, or `documentation/` by default) are missing or thin, run `/document-app` (and `/derive-tests` reads `flows.md`, `permissions.md`, and `automation.md` most heavily). You cannot map coverage to rules you never wrote down — where intent is absent, say so rather than inventing rules to test.
 
 ## The workflow
 
@@ -51,10 +51,10 @@ Test types:
 
 - **unit** — pure and deterministic, no external services.
 - **integration (deterministic)** — exercises real wiring against a local or in-memory dependency (test DB, mocked provider) and runs the same way every time.
-- **guarded live** — needs a real external DB, email provider, LLM, or third party. Runs only behind an explicit flag, never in the default CI run.
+- **guarded live** — needs a real external DB, email provider, LLM, or third party. Runs only behind an explicit flag, never in the default gate run.
 - **manual** — UI/visual or judgment calls. A reviewer checklist item, not an automated test.
 
-**What CI must require:** the deterministic local set — unit plus deterministic integration tests, the ones that pass or fail the same way on every run with no live dependencies. Prefer **unit** where the decision logic can be isolated; reach for **integration** when the rule lives in the wiring (middleware, RLS, auth guards) and only a real-but-local dependency can exercise it. Guarded-live and manual rows never gate the default run.
+**What the gate must require** (hosted CI, or whatever gate the repo runs): the deterministic local set — unit plus deterministic integration tests, the ones that pass or fail the same way on every run with no live dependencies. Prefer **unit** where the decision logic can be isolated; reach for **integration** when the rule lives in the wiring (middleware, RLS, auth guards) and only a real-but-local dependency can exercise it. Guarded-live and manual rows never gate the default run.
 
 When a rule can only be exercised live, you can extract its *decision* into a pure helper so the logic is unit-testable — but only as a **complement, not a replacement** for testing the real enforcement. The unit test proves the helper's logic; it does **not** prove the framework actually calls it. Wiring and policy enforcement (route middleware, DB row-level security, auth guards, provider config) still needs an integration or guarded-live check, or the helper becomes a policy shadow that passes while the real path is unprotected.
 
@@ -62,9 +62,11 @@ When a rule can only be exercised live, you can extract its *decision* into a pu
 
 For each rule you can pin with a deterministic automated test (unit or integration), write the case: name, arrange/act/assert intent, and the negative case it must reject. Group cases by the doc or flow they defend. Prefer the smallest test that pins the rule — one clear assertion per boundary beats a sprawling integration test that fails for ten reasons.
 
-### 5. Recommend the CI gate
+### 5. Recommend the gate
 
-Recommend — don't silently install — a CI setup matched to the repo's stack and existing tooling:
+Start from the repo's stated gate policy. Its agent instructions, contributing guide or release docs may already say what gates a merge or a release — a local command plus a human go, a hosted CI workflow, something else. Where they do, that policy is the gate: record it in the coverage map with its source, check that the deterministic set runs inside it, and don't recommend hosted CI or branch protection over it. If the deterministic set does not run inside that gate, say so as a finding for the owner rather than proposing a different gate.
+
+Where the repo states no policy, recommend — don't silently install — a CI setup matched to the repo's stack and existing tooling:
 
 - run the **deterministic local set on every pull request** (unit + any integration test that runs without live services),
 - keep **guarded-live tests opt-in** (manual or scheduled, never blocking),
@@ -97,18 +99,18 @@ Test Coverage: [scope]
 ### Proposed tests
 [grouped by flow/doc — name · assert · negative case · type]
 
-### Recommended CI gate
-[workflow snippet for the detected stack + "green-before-merge" branch-protection note]
+### Gate
+[the repo's stated gate policy, with its source, and whether the deterministic set runs inside it — or, where it states none, a workflow snippet for the detected stack + "green-before-merge" branch-protection note]
 
 ### Gaps — documented but unverified
 [rules with no test yet, ranked by what crossing them exposes]
 ```
 
-Write the coverage map to `documentation/tests.md` and the full report to `reports/test_plan_{timestamp}.md`, and give the user both paths.
+Write the coverage map to the repo's existing coverage file, or `documentation/tests.md` if it has none, and the full report to the repo's reports location, or `reports/test_plan_{timestamp}.md` if it has none. Give the user both paths, and say which are plugin defaults.
 
 ## Notes
 
 - This is the verification half of "documented == implemented": the audits find today's gap, these tests stop it from reopening tomorrow.
 - Don't fabricate rules to manufacture coverage. If the docs are silent, the gap is in the docs — fix `/document-app` first.
-- Don't wire external services into the default CI run; flaky live tests erode the green-before-merge gate until people start ignoring it.
+- Don't wire external services into the default gate run, whatever the gate is; flaky live tests erode it until people start ignoring it.
 - Covers test derivation only. For the gap audit itself use `/security-audit-static`; for the full document → audit → test → packet sequence use `/ship-check`.

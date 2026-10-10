@@ -48,7 +48,7 @@ Authorization, data access, session/identity, and input→output encoding. Compa
 
 ### 3. Cross-reference intended vs. implemented
 
-Apply the **intended-vs-implemented** skill against `documentation/*.md`. A rule documented but not enforced in code is a finding on its own. If the docs are absent, note it and recommend `/document-app` first — an intent audit needs intent on record.
+Apply the **intended-vs-implemented** skill against the system docs, wherever the repo keeps them (`documentation/*.md` by default). A rule documented but not enforced in code is a finding on its own. If the docs are absent, note it and recommend `/document-app` first — an intent audit needs intent on record.
 
 ### 4. Self-refute every candidate
 
@@ -102,12 +102,12 @@ Severity anchors: **Critical** — unauthenticated or cross-tenant access to dat
 
 If more than ~12 findings survive, lead with the highest-severity items and consolidate the tail by root-cause theme — a report a human actually reads beats an exhaustive one nobody signs off.
 
-End with: the root-cause theme across findings; **what is well-built — say it explicitly**; and what you could not verify and the user should double-check. Write the full report to `reports/security_audit_{timestamp}.md` and give the user the path.
+End with: the root-cause theme across findings; **what is well-built — say it explicitly**; and what you could not verify and the user should double-check. Write the full report to the repo's reports location, or `reports/security_audit_{timestamp}.md` if it has none (the **shipping-artifacts** skill's *Locations and names* rule), and give the user the path.
 
 ## Notes
 
 - Don't report generic hardening with no concrete impact, outdated deps without a reachable path, or test/mock code unless it ships. Logic and authorization bugs with no classic sink still count.
-- The audit is read-only by design: the pre-approved toolset covers reading, searching, subagent fan-out, and writing under `reports/` — it never edits the code it audits.
+- The audit is read-only by design: the pre-approved toolset covers reading, searching, subagent fan-out, and writing under `reports/` — it never edits the code it audits. A report written to the repo's own location instead falls outside that pre-approval, so the user is asked before the write.
 - This command covers security only. For over-fetching, indexes, and caching, use `/performance-audit-static`.
 - This is the specialised procedure behind the **code-review** skill's security sub-case. For logic and state defects, or for a review across several dimensions at once, use `/pm-ai-shipping:code-review`.
 - For an end-to-end pass that documents first and produces a shipping packet, use `/ship-check`.

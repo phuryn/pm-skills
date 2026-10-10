@@ -9,7 +9,26 @@ description: "The durable documentation set that makes an AI-built (vibe-coded) 
 
 AI agents write code fast, but they leave no durable record of *intent* — what the system is supposed to do, who is allowed to do what, where the secrets live, which rules are actually verified. Without that record, no human (and no auditing agent) can tell whether the code is safe to ship. This skill defines the small set of documents that restore reviewability.
 
-These docs live in `documentation/` at the repo root and are written for two readers: a human reviewer and the next AI coding agent. They are the **intended-state** half of every later audit — a security or performance review is only as good as the intent it can compare the code against.
+These docs are written for two readers: a human reviewer and the next AI coding agent. They are the **intended-state** half of every later audit — a security or performance review is only as good as the intent it can compare the code against.
+
+## Locations and names: the repo's setup wins
+
+Every location, file name and doc-format convention in this plugin is a **default**. The host repo's own setup comes first. Before writing anything (a system doc, the coverage map, an audit report), look for that setup:
+
+1. **Agent instructions** — `AGENTS.md`, `CLAUDE.md`, and whatever they import or point to. They often name the docs folder, the files in it, who maintains each one, and how dates are recorded.
+2. **A docs location** — an existing `docs/`, `documentation/` or similar folder.
+3. **Existing equivalents** — a document that already covers what one of the files below covers, under any name (`ARCHITECTURE.md`, `docs/security.md`, `docs/env.md`). Match on what it covers, not on its file name.
+4. **An existing test-coverage file** — `TESTS.md`, `docs/test-coverage.md`, `testing.md` and the like.
+5. **A reports location** — wherever the repo already keeps audit or review output.
+
+Then:
+
+- **Follow what you find.** Write into the repo's docs location, update its existing equivalent instead of creating a parallel file, and keep its naming and date conventions. What each document must contain does not change; only where it lives and what it is called. If its agent instructions say how or by whom a doc is maintained, follow that too.
+- **Use the plugin's defaults only where the repo has none:** docs in `documentation/` at the repo root, the file names below, the coverage map at `documentation/tests.md`, reports at `reports/<name>_{timestamp}.md`, and no "updated date" line (the file's history is the source of truth).
+- **Say which you did.** The output names every location and file written, and whether each follows the repo's setup or a plugin default.
+- **Never create a file whose name differs from an existing one only in letter case** — `tests.md` beside `TESTS.md`, `Architecture.md` beside `architecture.md`. On Windows and macOS they are the same file, so the write overwrites it; elsewhere they become two files that collide on the next checkout. Check case-insensitively before creating a file, and use the existing one.
+
+Throughout this plugin, a name such as `architecture.md` or `tests.md` means *that document, wherever and under whatever name the repo keeps it*.
 
 ## How the set is organized
 
@@ -23,7 +42,7 @@ Be brutally honest about the current state without being paranoid. The job is an
 
 ## Core documents
 
-Each entry: file · one-line purpose · what it must capture · how a reviewer uses it.
+Each entry: default file name · one-line purpose · what it must capture · how a reviewer uses it.
 
 1. **`architecture.md`** — what the system is and how it hangs together.
    - Must capture: product overview + key assumptions; tech stack; how auth/sessions/claims flow end to end; the trust boundaries (e.g. service-role vs. client); a short **Known risks / assumptions** list (each entry backed by where it shows up in the code, not a generic checklist); a "Related Documents" index of every other doc produced.
@@ -47,7 +66,7 @@ Each entry: file · one-line purpose · what it must capture · how a reviewer u
      - **Existing coverage** — tests that are in the repo *today*, each tied to the rule it pins (so the map reflects reality, not a wish-list).
      - **Proposed tests** — recommended cases not yet written, marked by **test type** (automated unit/integration · guarded live · manual review).
      - **Gaps** — documented rules with no verification at all, ranked by what crossing them exposes.
-   - Each row carries: use-case → rule → expected behavior (including the deny/negative case) → evidence source (doc + code) → status (existing / proposed / none). It also notes which checks are CI-required and gate merges to `main`.
+   - Each row carries: use-case → rule → expected behavior (including the deny/negative case) → evidence source (doc + code) → status (existing / proposed / none). It also notes which checks the repo's gate requires: under the gate policy the repo states (e.g. a local command plus a human go), or, where it states none, the CI checks that gate merges to `main`.
    - Reviewer use: the operational form of "documented == implemented" — it shows whether each rule the other docs claim is actually pinned by a test today, only proposed, or unverified.
    - Produced by `/derive-tests` (not `/document-app`), because it is derived from the other docs and the existing test suite rather than read off a subsystem.
 
@@ -71,9 +90,9 @@ Each entry: file · one-line purpose · what it must capture · how a reviewer u
 
 ## Notes
 
-- Each produced doc adds a reference to itself in `architecture.md` under a "Related Documents" section, so the set stays discoverable.
+- Each produced doc adds a reference to itself in `architecture.md` under a "Related Documents" section (or in the index the repo already keeps for its docs), so the set stays discoverable.
 - Skip any conditional document that doesn't apply, and say so in one line rather than inventing content.
 - Keep examples and finished templates out of these docs — they describe *this* system, not the general method.
-- The agent operating-context file (`CLAUDE.md` / `AGENTS.md`) is a *different* artifact — instructions derived from these docs, not system documentation. It is produced at the handoff step by `/ship-check`, not here.
+- The agent operating-context file (`AGENTS.md` or `CLAUDE.md`, whichever the repo's structure makes canonical) is a *different* artifact — instructions derived from these docs, not system documentation. It is produced at the handoff step by `/ship-check`, which follows that structure, not here.
 - `tests.md` is produced by `/derive-tests`; the rest are produced by `/document-app`.
-- Do not include an "updated date" line; the file's history is the source of truth.
+- Keep the repo's date convention. Where it has none, do not include an "updated date" line; the file's history is the source of truth.
