@@ -24,8 +24,12 @@ If the user provides data files (CSV, Excel, or analytics exports), read and ana
 
 2. **Validate the test setup**:
    - **Sample size**: Is the sample large enough for the expected effect size?
-     - Use the formula: n = (Z²α/2 × 2 × p × (1-p)) / MDE²
-     - Flag if the test is underpowered (<80% power)
+     - For an independent binary conversion metric, equal allocation, and a fixed-horizon, two-sided test, use the normal-approximation sample size **per arm**:
+       `n = ceil((z_(1-alpha/2) * sqrt(2*p_bar*(1-p_bar)) + z_(1-beta) * sqrt(p0*(1-p0) + p1*(1-p1)))^2 / (p1-p0)^2)`
+     - Define the planned baseline `p0`, alternative `p1`, `p_bar = (p0+p1)/2`, significance level `alpha`, and target power `1-beta` (usually at least 80%). Here `z_q` is the standard normal quantile at probability `q`; `ceil` rounds up. Use the **absolute** MDE `abs(p1-p0)`, not relative lift, and report total sample size as `2*n`.
+     - Example: `p0=0.20`, `p1=0.22` (2 percentage points, or 10% relative lift), `alpha=0.05`, and 80% power require approximately **6,510 observations per arm** (13,020 total). The significance-only formula omits the power term and understates the required sample.
+     - Compare achieved sample sizes with the prespecified design; flag power below the target (normally 80%) at the planned MDE. Do not substitute the observed lift into a post-hoc power calculation. If baseline, MDE, or target power is missing, ask for it or label any assumption explicitly.
+     - This approximation assumes independent observations and sufficiently large expected success/failure counts. Use a design-appropriate power calculation for unequal allocation, non-binary metrics, clustered observations, rare events, sequential testing, or multiplicity adjustments.
    - **Duration**: Did the test run for at least 1-2 full business cycles?
    - **Randomization**: Any evidence of sample ratio mismatch (SRM)?
    - **Novelty/primacy effects**: Was there enough time to wash out initial behavior changes?
