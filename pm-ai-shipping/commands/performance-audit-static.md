@@ -1,7 +1,7 @@
 ---
-description: Static performance audit of AI-built code — find N+1 queries and request waterfalls, over-fetching, missing indexes, and caching opportunities, ranked by effort and impact
-argument-hint: "<repo path or area; defaults to the whole repository>"
-allowed-tools: Read, Grep, Glob, Task, Bash(git log:*), Bash(git diff:*), Bash(git show:*), Write(reports/**)
+description: Static performance audit of AI-built code — find N+1 queries and request waterfalls, over-fetching, missing indexes, and caching opportunities, ranked by effort and impact. Scope it to a release's changes with a git range (`<base>..<head>`) or `changes` for the uncommitted working tree; audit the whole repository for the first release or after a large refactor
+argument-hint: "<path or area> | <base>..<head> | changes; defaults to the whole repository"
+allowed-tools: Read, Grep, Glob, Task, Bash(git log:*), Bash(git diff:*), Bash(git show:*), Bash(git status:*), Write(reports/**)
 ---
 
 # /performance-audit-static -- Find What Won't Scale
@@ -15,11 +15,17 @@ This is a static review of code and queries, not a load test. The repository und
 ```
 /performance-audit-static
 /performance-audit-static src/views
+/performance-audit-static v2.1.0..HEAD
+/performance-audit-static changes
 ```
 
 ## Scope
 
 Audit **$ARGUMENTS**. If empty, review the whole repository, prioritizing list and dashboard views, frequently hit endpoints, and large tables. When the scope exceeds roughly 30 files or 5,000 lines, fan out with parallel subagents — one per module or view cluster, each returning finding records with cited evidence — then merge and run the refute pass (step 5) yourself.
+
+**Changes only.** When **$ARGUMENTS** is a git range (`<base>..<head>`, such as a release's unreleased commits), the word `changes` (the uncommitted working tree: staged, unstaged and untracked files), or both, audit the change, not the codebase. List the changed files with `git diff --name-only <base>..<head>`, `git diff --name-only HEAD` and `git status --porcelain`, and read each in full. Then follow the change outward to what it makes newly reachable or newly wrong elsewhere: callers of a changed function now running in a loop or on a hot path, unchanged queries hitting a changed schema or index, and views that now render a changed payload. Code the change neither touches nor newly reaches is out of scope; a pre-existing defect met on that path is still reported, marked pre-existing. The report header names the range or `changes` and the number of changed files.
+
+A release normally audits only its changes. Audit the whole repository (no argument, or a path) for the first release, or after a large refactor, when the diff no longer bounds what could be wrong.
 
 ## Model and orchestration
 
@@ -58,7 +64,7 @@ Try to disprove each finding; keep it only with cited evidence (file:line):
 Report findings per view, route, or table:
 
 ```
-Performance Audit: [scope]
+Performance Audit: [scope — path, or range / changes and N changed files]
 
 <view / route / table>:
   - Finding: <what is slow or wasteful>
