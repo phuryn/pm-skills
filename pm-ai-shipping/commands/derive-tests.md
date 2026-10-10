@@ -1,6 +1,6 @@
 ---
-description: Turn documented intent into a test-coverage map — inventory the tests that exist today, derive use-case cases from the system docs, separate existing coverage from proposed tests and unverified gaps, mark each unit / guarded-live / manual, and recommend a gate that follows the repo's stated gate policy (a green-before-merge CI gate where it states none)
-argument-hint: "<repo path or area; defaults to the whole repository>"
+description: Turn documented intent into a test-coverage map — inventory the tests that exist today, derive use-case cases from the system docs, separate existing coverage from proposed tests and unverified gaps, mark each unit / guarded-live / manual, and recommend a gate that follows the repo's stated gate policy (a green-before-merge CI gate where it states none). `check` mode writes nothing and reports where the coverage map is stale against the docs and the test suite
+argument-hint: "[check] <repo path or area; defaults to the whole repository>"
 ---
 
 # /derive-tests -- Turn Intent Into Tests
@@ -15,7 +15,11 @@ This produces a coverage map (`tests.md`) and concrete test cases, not a finishe
 /derive-tests
 /derive-tests the checkout flow
 /derive-tests supabase/functions
+/derive-tests check
+/derive-tests check the checkout flow
 ```
+
+A first argument of `check` runs **check-only mode** (below) on the scope that follows it, instead of the workflow.
 
 ## Prerequisite: documented intent
 
@@ -83,6 +87,38 @@ Write `tests.md` in three clearly separated sections:
 - **Gaps** — documented rules with **no verification at all**, ranked by what crossing them exposes.
 
 The gaps are the backlog, and they are exactly where the next AI edit can silently break a boundary. Be honest that proposed ≠ existing: a rule isn't covered until a test actually asserts it.
+
+## Check-only mode
+
+For a repo whose coverage map is kept by hand, or by whoever runs the gate, so a release can confirm the map is current without this command rewriting it. **Write no file**: not the map, not a report. Read the tests; don't run them. Don't run `/document-app` when the docs are thin; list them under *Not checked*.
+
+1. Find the coverage map the way the workflow does (the **shipping-artifacts** skill's *Locations and names* rule). If there is none, say so and stop.
+2. Compare it, row by row, against the system docs and the test suite. It is stale where:
+   - a documented rule has no row, or a row cites a rule the docs no longer state or now state differently;
+   - a row marked existing names a test that is gone or doesn't assert the rule;
+   - a test pins a rule the map marks proposed or none;
+   - a cited path, test name or gate command no longer matches the tree.
+3. Don't decide which side is wrong. The map may be behind, or a doc or test may have drifted from what the map records; that is the owner's call.
+
+Output, printed in the conversation:
+
+```
+Coverage check: [scope] — check-only, no files written
+
+### Stale entries
+1. [rule or row]
+   - Map says: [entry] — `[map path]:[line]`
+   - Docs or tests say: [what they state or assert] — `[path]:[line]`
+   - Owner decides: fix the map, the doc, or the test.
+
+### Not checked
+- [thin or absent docs, tests whose assertion couldn't be read, areas out of scope]
+
+### Summary
+Coverage check, [date], commit [short SHA], scope [scope]: [N] map rows read, [N] stale entries, [N] not checked. Tests read, not run. No files written. Which side to fix is the owner's call.
+```
+
+An empty *Stale entries* section says what was read to reach it. Then stop: don't offer to rewrite the map.
 
 ## Output
 
