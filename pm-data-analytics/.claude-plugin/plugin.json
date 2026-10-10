@@ -1,6 +1,6 @@
 {
   "name": "pm-data-analytics",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Data analytics skills for PMs: SQL query generation and cohort analysis. Analyze user data, generate queries, and identify retention patterns.",
   "author": {
     "name": "Paweł Huryn",
