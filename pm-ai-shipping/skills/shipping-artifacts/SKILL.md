@@ -18,7 +18,7 @@ Every location, file name and doc-format convention in this plugin is a **defaul
 1. **Agent instructions** — `AGENTS.md`, `CLAUDE.md`, and whatever they import or point to. They often name the docs folder, the files in it, who maintains each one, and how dates are recorded.
 2. **A docs location** — an existing `docs/`, `documentation/` or similar folder.
 3. **Existing equivalents** — a document that already covers what one of the files below covers, under any name (`ARCHITECTURE.md`, `docs/security.md`, `docs/env.md`). Match on what it covers, not on its file name.
-4. **An existing test-coverage file** — `TESTS.md`, `docs/test-coverage.md`, `testing.md` and the like.
+4. **An existing test-coverage map** — a file that maps behaviour to the tests covering it, such as `docs/test-coverage.md`. Match on what it covers: a `TESTS.md` or `testing.md` that describes how the repo tests is the testing method, not the coverage map.
 5. **A reports location** — wherever the repo already keeps audit or review output.
 
 Then:
@@ -26,7 +26,7 @@ Then:
 - **Follow what you find.** Write into the repo's docs location, update its existing equivalent instead of creating a parallel file, and keep its naming and date conventions. What each document must contain does not change; only where it lives and what it is called. If its agent instructions say how or by whom a doc is maintained, follow that too.
 - **Use the plugin's defaults only where the repo has none:** docs in `documentation/` at the repo root, the file names below, the coverage map at `documentation/tests.md`, reports at `reports/<name>_{timestamp}.md`, and no "updated date" line (the file's history is the source of truth).
 - **Say which you did.** The output names every location and file written, and whether each follows the repo's setup or a plugin default.
-- **Never create a file whose name differs from an existing one only in letter case** — `tests.md` beside `TESTS.md`, `Architecture.md` beside `architecture.md`. On Windows and macOS they are the same file, so the write overwrites it; elsewhere they become two files that collide on the next checkout. Check case-insensitively before creating a file, and use the existing one.
+- **Never create a file whose name differs from an existing one only in letter case** — `tests.md` beside `TESTS.md`, `Architecture.md` beside `architecture.md`. On Windows and macOS they are the same file, so the write overwrites it; elsewhere they become two files that collide on the next checkout. Check case-insensitively before creating a file. If the existing one covers the same thing, use it. If it covers something else (a `TESTS.md` that is the testing method, not a coverage map), do not write into it: use the repo's real equivalent, and where there is none, pick a name that collides with nothing.
 
 Throughout this plugin, a name such as `architecture.md` or `tests.md` means *that document, wherever and under whatever name the repo keeps it*.
 
