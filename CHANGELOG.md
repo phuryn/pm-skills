@@ -17,6 +17,7 @@
 - `/ship-check` edits the agent instruction file the repo already uses. Where one of `CLAUDE.md` and `AGENTS.md` only imports or points to the other (a `CLAUDE.md` that is just `@AGENTS.md`), it edits the file pointed to and leaves the pointer alone; where only one exists, it edits that one. `CLAUDE.md` plus a thin `AGENTS.md` is created only in a repo with neither.
 - The independent review in `/ship-check` Step 6 is a fresh session of a model family different from the one that built the code, using the reviewer the repo's own instructions name. It no longer names a specific model as the usual choice.
 - `/derive-tests` defers to the repo's stated gate policy. A repo whose instructions make the gate a local command plus a human go keeps that: the coverage map records the policy and whether the deterministic tests run inside it, instead of recommending hosted CI and branch protection over it. The green-before-merge CI gate remains the recommendation where the repo states no policy.
+- `/derive-tests` writes into an existing file only when that file is a test-coverage map. A `TESTS.md` that describes the repo's testing method is no longer taken for the map just because of its name: the kit matches on what a file covers, uses the repo's real coverage map, and where there is none picks a name that collides with nothing, rather than writing into a same-named file about something else.
 
 ## v2.1.0 — 2026-07-03
 
