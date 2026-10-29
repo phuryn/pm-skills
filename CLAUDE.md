@@ -4,7 +4,7 @@ Guidance for AI agents (Claude Code, Cowork, and others) working in this reposit
 
 ## Project Overview
 
-**PM Skills** (`phuryn/pm-skills`) — a marketplace of **9 independent plugins** (68 skills, 42 commands) that bring structured product-management workflows to AI coding assistants. Built for Claude Code and Claude Cowork; the skills are also compatible with other agents (Gemini CLI, Cursor, Codex CLI).
+**PM Skills** (`phuryn/pm-skills`) — a marketplace of **9 independent plugins** (70 skills, 43 commands) that bring structured product-management workflows to AI coding assistants. Built for Claude Code and Claude Cowork; the skills are also compatible with other agents (Gemini CLI, Cursor, Codex CLI).
 
 Owner: Paweł Huryn — pawel@productcompass.pm — https://www.productcompass.pm
 

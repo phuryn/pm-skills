@@ -8,7 +8,7 @@
 
 # PM Skills Marketplace: The AI Operating System for Better Product Decisions
 
-> 69 PM skills and 42 chained workflows across 9 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, growth, and shipping AI-built code. 
+> 70 PM skills and 43 chained workflows across 9 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, growth, and shipping AI-built code.
 
 ![PM Skills marketplace: skills, commands, and all 9 plugins at a glance](.docs/images/plugins.png)
 
@@ -227,11 +227,11 @@ Commands:
 </details>
 
 <details>
-<summary><strong>3. pm-execution</strong> — PRDs, OKRs, roadmaps, sprints, retros, release notes, stakeholder management (16 skills, 11 commands)</summary>
+<summary><strong>3. pm-execution</strong> — PRDs, OKRs, roadmaps, sprints, retros, release notes, stakeholder management (17 skills, 12 commands)</summary>
 
 Day-to-day product management: PRDs, OKRs, roadmaps, sprints, retrospectives, release notes, pre-mortems, stakeholder management, user stories, and prioritization frameworks.
 
-**Skills (16):**
+**Skills (17):**
 
 - `create-prd` — Lean 8-section PRD template (a fuller spec on request)
 - `brainstorm-okrs` — Team-level OKRs aligned with company objectives
@@ -249,8 +249,9 @@ Day-to-day product management: PRDs, OKRs, roadmaps, sprints, retrospectives, re
 - `dummy-dataset` — Realistic dummy datasets as CSV, JSON, SQL, or Python
 - `prioritization-frameworks` — Reference guide to 9 prioritization frameworks (Opportunity Score, ICE, RICE, MoSCoW, Kano, etc.)
 - `strategy-red-team` — Adversarial stress-test of a plan: surface load-bearing assumptions, name what would make each one fail, and rank by cheapest test
+- `implementation-simulation` — Dry-run the build before handoff: developer personas log only decision-blocking friction, a skeptic pass drops noise, and the output is a punch list with owners and recommended defaults
 
-**Commands (11):**
+**Commands (12):**
 
 - `/write-prd` — Create a PRD from a feature idea or problem statement
 - `/plan-okrs` — Brainstorm team-level OKRs
@@ -258,6 +259,7 @@ Day-to-day product management: PRDs, OKRs, roadmaps, sprints, retrospectives, re
 - `/sprint` — Sprint lifecycle (`plan|retro|release`)
 - `/pre-mortem` — Pre-mortem risk analysis on a PRD or launch plan
 - `/red-team-prd` — Adversarially stress-test a PRD, roadmap, or strategy and rank the riskiest assumptions by cheapest test
+- `/simulate-implementation` — Simulate building a PRD, epic, or stories and get a pre-handoff punch list of blockers with owners and recommended defaults
 - `/meeting-notes` — Summarize a meeting transcript into structured notes
 - `/stakeholder-map` — Map stakeholders and create a communication plan
 - `/write-stories` — Break features into backlog items (`user|job|wwa`)

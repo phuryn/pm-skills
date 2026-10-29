@@ -5,6 +5,10 @@
 - **pm-ai-shipping moved to [phuryn/product-engineering](https://github.com/phuryn/product-engineering)**, which maintains the AI Shipping Kit in its `ai-shipping` plugin. Its three skills and five commands keep their names here and only say where each one went and how to install it, so an agent that loads one can tell you. Once product-engineering's plugin is installed, turn this one off.
 - Added Cursor plugin manifests: a root `.cursor-plugin/marketplace.json` and a `.cursor-plugin/plugin.json` in every plugin, mirroring the Claude manifests. Claude manifests are unchanged.
 
+### pm-execution
+
+- Added the **implementation-simulation** skill and `/simulate-implementation` command: a panel of developer personas mentally builds a PRD, epic, or stories before handoff and logs only decision-blocking friction; a skeptic pass sorts each finding into a dev blocker, a PM scope question, or noise, and the output is a Pre-Handoff Simulation Report with a punch list (#73, thanks @ardaasaroglu).
+
 ## v2.2.0 — 2026-10-10
 
 ### pm-execution
