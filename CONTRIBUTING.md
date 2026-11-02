@@ -26,7 +26,7 @@ Every user-facing change gets a bullet in [CHANGELOG.md](CHANGELOG.md). In a PR,
 `CHANGELOG.md` is the source of truth; tags and GitHub Releases are deterministic projections of it (`.github/workflows/tag-on-merge.yml`):
 
 1. Rename `## Unreleased` to `## vX.Y.Z — YYYY-MM-DD`. Semver: breaking changes = major, new skills/commands or changed behavior = minor, fixes and docs = patch.
-2. Set the same version in `.claude-plugin/marketplace.json` and every plugin's `plugin.json` — versions stay in sync across the repo (the test suite enforces this).
+2. Set the same version in `.claude-plugin/marketplace.json`, `.cursor-plugin/marketplace.json` (`metadata.version`), and every plugin's `.claude-plugin/plugin.json` and `.cursor-plugin/plugin.json` - versions stay in sync across the repo (the test suite enforces this).
 3. Push to `main`. CI verifies the version sync, runs the validator and test suite, then tags `vX.Y.Z` and publishes a GitHub Release with the changelog section as notes. No new heading → no release; ordinary pushes are unaffected.
 
 ## License
