@@ -17,8 +17,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 MARKETPLACE = ROOT / ".claude-plugin" / "marketplace.json"
+CURSOR_MARKETPLACE = ROOT / ".cursor-plugin" / "marketplace.json"
 CHANGELOG = ROOT / "CHANGELOG.md"
 README = ROOT / "README.md"
+CLAUDE_MD = ROOT / "CLAUDE.md"
 
 
 def plugin_dirs():
@@ -45,6 +47,10 @@ def command_count(plugin: Path) -> int:
 
 def marketplace() -> dict:
     return json.loads(MARKETPLACE.read_text(encoding="utf-8"))
+
+
+def cursor_marketplace() -> dict:
+    return json.loads(CURSOR_MARKETPLACE.read_text(encoding="utf-8"))
 
 
 def latest_changelog_version() -> str:
@@ -74,6 +80,34 @@ class TestMarketplaceList(unittest.TestCase):
                 f"plugin {p['name']} has source {p['source']}",
             )
 
+    def test_cursor_marketplace_mirrors_claude_marketplace(self):
+        claude_mp = marketplace()
+        cursor_mp = cursor_marketplace()
+        claude_plugins = [p["name"] for p in claude_mp["plugins"]]
+        cursor_plugins = [p["name"] for p in cursor_mp["plugins"]]
+        self.assertEqual(
+            cursor_plugins,
+            claude_plugins,
+            "Cursor marketplace plugin list does not match Claude marketplace",
+        )
+        claude_by_name = {p["name"]: p for p in claude_mp["plugins"]}
+        for p in cursor_mp["plugins"]:
+            self.assertEqual(
+                p["source"],
+                p["name"],
+                f"Cursor plugin {p['name']} has source {p['source']}",
+            )
+            self.assertEqual(
+                p["description"],
+                claude_by_name[p["name"]]["description"],
+                f"Cursor marketplace description mismatch for {p['name']}",
+            )
+            self.assertEqual(
+                p["category"],
+                claude_by_name[p["name"]]["category"],
+                f"Cursor marketplace category mismatch for {p['name']}",
+            )
+
 
 class TestVersionSync(unittest.TestCase):
     """One version everywhere; the newest CHANGELOG heading is the released version."""
@@ -84,16 +118,41 @@ class TestVersionSync(unittest.TestCase):
         mp_version = marketplace()["version"]
         if mp_version != want:
             mismatches.append(f"marketplace.json={mp_version}")
+        cursor_mp_version = cursor_marketplace().get("metadata", {}).get("version")
+        if cursor_mp_version != want:
+            mismatches.append(f".cursor-plugin/marketplace.json={cursor_mp_version}")
         for p in plugin_dirs():
             manifest = p / ".claude-plugin" / "plugin.json"
             v = json.loads(manifest.read_text(encoding="utf-8"))["version"]
             if v != want:
                 mismatches.append(f"{p.name}={v}")
+            cursor_manifest = p / ".cursor-plugin" / "plugin.json"
+            if not cursor_manifest.is_file():
+                mismatches.append(f"{p.name}/.cursor-plugin/plugin.json=missing")
+            else:
+                cv = json.loads(cursor_manifest.read_text(encoding="utf-8")).get("version")
+                if cv != want:
+                    mismatches.append(f"{p.name}/.cursor-plugin={cv}")
         self.assertEqual(
             mismatches,
             [],
             f"CHANGELOG says v{want}; out of sync: {mismatches}",
         )
+
+    def test_cursor_plugin_manifests_mirror_claude_manifests(self):
+        for p in plugin_dirs():
+            claude_data = json.loads(
+                (p / ".claude-plugin" / "plugin.json").read_text(encoding="utf-8")
+            )
+            cursor_data = json.loads(
+                (p / ".cursor-plugin" / "plugin.json").read_text(encoding="utf-8")
+            )
+            for field in ("name", "version", "description", "keywords", "homepage", "license"):
+                self.assertEqual(
+                    cursor_data.get(field),
+                    claude_data.get(field),
+                    f"{p.name} Cursor vs Claude manifest mismatch on {field}",
+                )
 
 
 class TestChangelogFormat(unittest.TestCase):
@@ -159,6 +218,26 @@ class TestReadmeCounts(unittest.TestCase):
             (int(m.group(1)), int(m.group(2)), int(m.group(3))),
             (skills, commands, plugins),
             "marketplace.json description counts don't match disk",
+        )
+        cursor_desc = cursor_marketplace().get("metadata", {}).get("description", "")
+        self.assertEqual(
+            cursor_desc,
+            desc,
+            ".cursor-plugin/marketplace.json metadata.description does not match .claude-plugin/marketplace.json",
+        )
+
+    def test_claude_md_headline_counts(self):
+        skills, commands, plugins = self._totals()
+        text = CLAUDE_MD.read_text(encoding="utf-8")
+        m = re.search(
+            r"\*\*(\d+) independent plugins\*\* \((\d+) skills, (\d+) commands\)",
+            text,
+        )
+        self.assertIsNotNone(m, "headline count sentence not found in CLAUDE.md")
+        self.assertEqual(
+            (int(m.group(2)), int(m.group(3)), int(m.group(1))),
+            (skills, commands, plugins),
+            "CLAUDE.md headline counts don't match disk",
         )
 
     def test_root_readme_per_plugin_counts(self):

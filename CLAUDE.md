@@ -4,7 +4,7 @@ Guidance for AI agents (Claude Code, Cowork, and others) working in this reposit
 
 ## Project Overview
 
-**PM Skills** (`phuryn/pm-skills`) — a marketplace of **9 independent plugins** (68 skills, 42 commands) that bring structured product-management workflows to AI coding assistants. Built for Claude Code and Claude Cowork; the skills are also compatible with other agents (Gemini CLI, Cursor, Codex CLI).
+**PM Skills** (`phuryn/pm-skills`) - a marketplace of **9 independent plugins** (69 skills, 42 commands) that bring structured product-management workflows to AI coding assistants. Built for Claude Code and Claude Cowork; the skills are also compatible with other agents (Gemini CLI, Cursor, Codex CLI).
 
 Owner: Paweł Huryn — pawel@productcompass.pm — https://www.productcompass.pm
 
@@ -12,7 +12,8 @@ Owner: Paweł Huryn — pawel@productcompass.pm — https://www.productcompass.p
 
 ```
 pm-skills/                           <- repo root
-├── .claude-plugin/marketplace.json  <- root marketplace manifest (lists all 9 plugins)
+├── .claude-plugin/marketplace.json  <- root Claude marketplace manifest (lists all 9 plugins)
+├── .cursor-plugin/marketplace.json  <- root Cursor marketplace manifest (mirrors Claude manifest)
 ├── .docs/images/                    <- images used by README (webp, gif)
 ├── .gitattributes
 ├── .gitignore
@@ -26,7 +27,8 @@ pm-skills/                           <- repo root
 ├── validate_plugins.py              <- plugin validator
 ├── tests/                           <- unit + docs-consistency tests (unittest)
 └── pm-{name}/                       <- 9 plugin directories
-    ├── .claude-plugin/plugin.json   <- per-plugin manifest
+    ├── .claude-plugin/plugin.json   <- per-plugin Claude manifest
+    ├── .cursor-plugin/plugin.json   <- per-plugin Cursor manifest (mirrors Claude manifest)
     ├── skills/{skill}/SKILL.md      <- one folder per skill
     ├── commands/{command}.md        <- one file per command
     └── README.md                    <- per-plugin documentation
@@ -73,7 +75,7 @@ Descriptions in `plugin.json` and the repo `README.md` should stay aligned (iden
 ## Versioning & Releases
 
 - **`CHANGELOG.md` is the source of truth.** The newest `## vX.Y.Z — YYYY-MM-DD` heading is the released version. Pushing a commit to `main` that adds a new heading makes CI (`.github/workflows/tag-on-merge.yml`) verify the version sync and test suite, tag `vX.Y.Z`, and publish a GitHub Release with that section as notes.
-- **Keep every version in sync.** `marketplace.json`, all 9 `plugin.json` files, and the newest CHANGELOG heading always carry the same version (enforced by `tests/test_consistency.py`). There is no independent per-plugin versioning.
+- **Keep every version in sync.** `.claude-plugin/marketplace.json`, `.cursor-plugin/marketplace.json` (`metadata.version`), all 9 `.claude-plugin/plugin.json` and `.cursor-plugin/plugin.json` files, and the newest CHANGELOG heading always carry the same version (enforced by `tests/test_consistency.py`). There is no independent per-plugin versioning.
 - Every user-facing change gets a CHANGELOG bullet under `## Unreleased`; contributors are credited inline (`#PR, thanks @handle`). Full procedure: CONTRIBUTING.md § Releases.
 - Semver: breaking = major; new skills/commands or changed behavior = minor; fixes/docs = patch.
 
