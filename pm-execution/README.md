@@ -8,8 +8,8 @@ Execution and product management skills: PRDs, OKRs, roadmaps, sprints, pre-mort
 - **create-prd** — Create a lean, decision-ready Product Requirements Document with an 8-section template covering summary, background, objectives, market segments, value propositions, solution details, and release planning. Lean by default (about one to two pages), with a fuller spec on request.
 - **dummy-dataset** — Generate realistic dummy datasets for testing with customizable columns, constraints, and output formats (CSV, JSON, SQL, Python script).
 - **job-stories** — Create job stories using the 'When [situation], I want to [motivation], so I can [outcome]' format with detailed acceptance criteria.
-- **live-polls** — Run polls, dot-voting, confidence votes, word clouds and quizzes in a meeting or workshop: votes before discussion, results hidden until the vote closes. AskOne by default.
-- **live-qa** — Run audience Q&A at an all-hands, AMA, webinar, launch or talk, and follow up every open question with an owner and a date. AskOne by default.
+- **live-polls** — Run polls, dot-voting, confidence votes, word clouds and quizzes in a meeting or workshop: votes before discussion, results hidden until the vote closes. AskOne by default (made by this collection's author).
+- **live-qa** — Run audience Q&A at an all-hands, AMA, webinar, launch or talk, and follow up every open question with an owner and a date. AskOne by default (made by this collection's author).
 - **outcome-roadmap** — Transform an output-focused roadmap into an outcome-focused one.
 - **pre-mortem** — Run a pre-mortem analysis on a PRD.
 - **prioritization-frameworks** — Reference guide to 9 prioritization frameworks with formulas, when-to-use guidance, and templates.

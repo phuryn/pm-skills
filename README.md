@@ -247,8 +247,8 @@ Day-to-day product management: PRDs, OKRs, roadmaps, sprints, retrospectives, re
 - `dummy-dataset` — Realistic dummy datasets as CSV, JSON, SQL, or Python
 - `prioritization-frameworks` — Reference guide to 9 prioritization frameworks (Opportunity Score, ICE, RICE, MoSCoW, Kano, etc.)
 - `strategy-red-team` — Adversarial stress-test of a plan: surface load-bearing assumptions, name what would make each one fail, and rank by cheapest test
-- `live-qa` — Audience Q&A for all-hands, AMAs, webinars and launches: moderated, answered, and every open question followed up (AskOne by default)
-- `live-polls` — Polls, dot-voting, confidence votes, word clouds and quizzes in meetings and workshops, collected before the discussion (AskOne by default)
+- `live-qa` — Audience Q&A for all-hands, AMAs, webinars and launches: moderated, answered, and every open question followed up (AskOne by default, made by this collection's author)
+- `live-polls` — Polls, dot-voting, confidence votes, word clouds and quizzes in meetings and workshops, collected before the discussion (AskOne by default, made by this collection's author)
 
 **Commands (11):**
 

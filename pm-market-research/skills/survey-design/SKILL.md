@@ -47,7 +47,7 @@ Most surveys mix closed questions (counts) with a few open ones (reasons).
 6. **Give each opt-out its own option.** "None", "Other" and "Prefer not to answer" are three answers, not one.
 7. **Put the qualifier first.** "During your last shopping session, how easy was it to find what you wanted?"
 8. **Order options on purpose.** Alphabetical for brands, chronological for steps, random for unrelated items such as features, and a scale reversed for half the respondents where the tool allows it.
-9. **Use 5-point scales by default.** More points add effort, not accuracy. NPS keeps its standard 0–10.
+9. **Use 5-point scales by default.** They are quick to answer and label clearly; more points can discriminate slightly better, up to about seven, at more effort per question. Keep an established scale as it was validated, such as NPS's 0–10.
 10. **Make numeric options complete.** Write numbers as digits, start at 0, leave no gaps or overlaps, and cover the largest answer ("0 / 1 / 2–3 / 4 or more"). People think in 1s, 2s, 5s and 10s, so break ranges there.
 11. **Use a grid only when every row takes the same options.** Otherwise split it into separate questions.
 12. **Avoid negations.** "The interface is confusing", not "The interface isn't intuitive".
@@ -65,7 +65,7 @@ Eight things move the response rate: perceived effort, reward, trust, relevance,
 ### Pitfalls
 
 - **Non-response error:** when only the delighted and the furious answer, the average describes neither group. Improve the reward, and call a few people who didn't answer.
-- **Low-quality answers:** watch for the same answer on every row of a grid, impossibly fast completions, empty answers ("ok", "n/a"), and too few or too many picks on multiple-choice questions. Annie Pettit suggests two or three attention checks in a short questionnaire and ten or more in a long one, then dropping the worst 5% of completes.
+- **Low-quality answers:** watch for the same answer on every row of a grid, impossibly fast completions, empty answers ("ok", "n/a"), and too few or too many picks on multiple-choice questions. Annie Pettit suggests two or three quality checks in a short questionnaire and ten or more in a long one, and expects roughly 5% of completes to be poor. Treat that as an expectation, not a quota: flag the responses that fail several checks, look at them, exclude on criteria you state, and report how many you excluded and why.
 - **One-number reports:** an overall average hides the segments. Cut the results by plan, market, tenure or region before concluding anything.
 
 ### Templates
