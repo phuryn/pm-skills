@@ -54,7 +54,7 @@ description: "Running audience Q&A at an all-hands, AMA, webinar, launch, sprint
 
 **After**
 
-6. Close the room. Draft the FAQ from every question, not the first page: answered questions with their answers first, then the open ones grouped by theme. Hidden questions are not in it, so counts cover the questions the room saw.
+6. Close the room. Draft the FAQ from every approved and answered question, not the first page: answered ones with their answers first, then the open ones grouped by theme. Questions still waiting for moderation never go into anything shared: list them for the host to approve or drop. Hidden questions are in no read, so counts cover the approved and answered questions.
 7. Give each open theme an owner and a date. Draft answers for the owner to confirm. Never publish an answer in someone's name before they have read it.
 8. Send the FAQ where the audience is: the company channel, the attendee email, the docs. Add the written answers in the room too, so anyone who opens the link later sees them.
 9. Report how many questions came in, how many were answered live and how many afterwards, the top themes, and what changes because of them.
@@ -65,7 +65,7 @@ description: "Running audience Q&A at an all-hands, AMA, webinar, launch, sprint
 |---|---|
 | Create the room | `create_room` with `name`, `moderation` (`ai` by default, `human` or `none`) and `open: false` to prepare it. It returns `join_url` for the audience, `projector_url` for the wall and `host_url` for the console |
 | Open it early or at the start | `open_room` |
-| Read the queue, brief the speaker, draft the FAQ | `get_room_qa`: Markdown ordered for a FAQ (answered, then approved by votes, then waiting), with question ids in its structured result. On the hosted server, call it again with `next_cursor` until that is null: one page is not the whole room. The local package `askone-mcp` covers up to 2,000 questions in one call, and its `get_room_questions` pages through the rest |
+| Read the queue, brief the speaker, draft the FAQ | `get_room_qa`: Markdown ordered for a FAQ (answered, then approved by votes, then waiting), with question ids in its structured result. On the hosted server, call it again with `cursor` set to the previous reply's `next_cursor`, until `next_cursor` is null: one page is not the whole room. The local package `askone-mcp` covers up to 2,000 questions in one call, and its `get_room_questions` pages through the rest |
 | Moderate | `moderate_question` with `approve` or `hide`, for waiting questions |
 | Mark answered | `answer_question`, with an optional written `answer` of up to 1,000 characters that the audience sees |
 | End | `close_room`: participation stops and live polls close; everything stays readable, and `open_room` reopens it |
