@@ -1,0 +1,1 @@
+../../../pm-product-strategy/skills/swot-analysis/SKILL.md

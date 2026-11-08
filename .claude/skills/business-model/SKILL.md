@@ -1,0 +1,1 @@
+../../../pm-product-strategy/skills/business-model/SKILL.md

@@ -1,0 +1,1 @@
+../../pm-product-strategy/commands/market-scan.md

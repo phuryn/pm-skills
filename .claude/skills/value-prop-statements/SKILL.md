@@ -1,0 +1,1 @@
+../../../pm-marketing-growth/skills/value-prop-statements/SKILL.md

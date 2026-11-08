@@ -1,0 +1,1 @@
+../../../pm-data-analytics/skills/sql-queries/SKILL.md

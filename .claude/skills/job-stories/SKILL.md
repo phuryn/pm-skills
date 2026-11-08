@@ -1,0 +1,1 @@
+../../../pm-execution/skills/job-stories/SKILL.md

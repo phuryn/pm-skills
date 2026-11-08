@@ -1,0 +1,1 @@
+../../pm-data-analytics/commands/write-query.md

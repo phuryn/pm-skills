@@ -1,0 +1,1 @@
+../../pm-data-analytics/commands/analyze-cohorts.md
