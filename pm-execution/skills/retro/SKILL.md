@@ -39,6 +39,8 @@ If the user provides files (sprint data, velocity charts, team feedback, or prev
    - Identify the most frequently mentioned topics
    - Note sentiment patterns (frustration, energy, confusion)
 
+   If there is no input yet, collect it anonymously before the discussion, so the first or most senior voice doesn't set the agenda: a word cloud or a 1–5 rating for the mood, and written items others can upvote for what went well and what didn't. The live-polls and live-qa skills cover both.
+
 3. **Analyze the sprint performance**:
    - Sprint goal: achieved or not?
    - Velocity vs. commitment (over-committed? under-committed?)

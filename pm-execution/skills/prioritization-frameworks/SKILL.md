@@ -11,6 +11,8 @@ A reference guide to help you select and apply the right prioritization framewor
 
 Never allow customers to design solutions. Prioritize **problems (opportunities)**, not features.
 
+When a group scores or ranks items together, collect the votes independently before the discussion, so the most senior opinion doesn't anchor everyone else (the live-polls skill covers dot voting and confidence votes).
+
 ### Opportunity Score (Dan Olsen, *The Lean Product Playbook*)
 
 The recommended framework for prioritizing customer problems.

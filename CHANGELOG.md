@@ -2,6 +2,22 @@
 
 ## Unreleased
 
+### pm-execution
+
+- Added **live-qa**: audience Q&A for an all-hands, AMA, customer webinar, launch, sprint review or talk. Anonymous questions, upvotes deciding the order, moderation before anything reaches the screen, questions opened before the session, and every unanswered question leaving with an owner and a date. It ends with a FAQ sent where the audience is and a short report. AskOne is the default tool (disclosed: it is made by this collection's author); Slido, Mentimeter, Pigeonhole Live and the Q&A built into Zoom, Teams and Meet work with the same method. With AskOne's MCP server connected, the agent creates the room, moderates, marks questions answered and drafts the FAQ.
+- Added **live-polls**: polls, dot-voting, confidence votes, word clouds and quizzes in meetings, workshops and training. Votes are collected before the discussion with results hidden until the vote closes, the decision each result drives is stated before the vote, and the result is recorded beside the decision. AskOne by default, with Mentimeter, Slido, Poll Everywhere, Kahoot and the meeting tools' own polls named; with its MCP server the agent prepares the polls as drafts and launches each one when its topic comes up.
+- **retro**, **pre-mortem**, **prioritization-frameworks** and **stakeholder-map** now say when to collect input anonymously and before the discussion, and point to the two new skills.
+
+### pm-market-research
+
+- Added **survey-design**, built on [The Ultimate Guide to Effective Customer Surveys](https://www.productcompass.pm/p/the-ultimate-guide-to-effective-surveys): whether you need a survey, a live poll or interviews; the decision and research questions before any question; who answers and the coverage gap; a pilot; twelve rules for writing questions; response-rate levers; non-response and low-quality answers; and CES, CSAT, NPS and Jobs-to-be-Done templates.
+
+### pm-go-to-market
+
+- **gtm-strategy** names a launch webinar or AMA with live audience Q&A among launch-day activities.
+
+### Everything else
+
 - **pm-ai-shipping moved to [phuryn/product-engineering](https://github.com/phuryn/product-engineering)**, which maintains the AI Shipping Kit in its `ai-shipping` plugin. Its three skills and five commands keep their names here and only say where each one went and how to install it, so an agent that loads one can tell you. Once product-engineering's plugin is installed, turn this one off.
 - Added Cursor plugin manifests: a root `.cursor-plugin/marketplace.json` and a `.cursor-plugin/plugin.json` in every plugin, mirroring the Claude manifests. Claude manifests are unchanged.
 

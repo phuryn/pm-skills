@@ -30,7 +30,7 @@ If the user provides files (org charts, project briefs, team rosters), read them
 
 4. **For each quadrant**, recommend:
    - Communication frequency (daily, weekly, bi-weekly, monthly)
-   - Communication format (1:1, email, Slack, meeting, dashboard)
+   - Communication format (1:1, email, Slack, meeting, dashboard, all-hands or AMA; for a large Keep Informed group, an anonymous live Q&A lets people raise the concerns they wouldn't in a meeting, see the live-qa skill)
    - Key messages and framing
    - Potential risks if this stakeholder is neglected
 

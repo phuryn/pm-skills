@@ -83,6 +83,7 @@ A pre-mortem is a structured risk-identification exercise that forces teams to t
 - Be honest and constructive—the goal is to improve launch readiness, not assign blame
 - Default to "Tiger" if unsure; it's better to address risks early
 - Involve cross-functional perspectives (engineering, design, go-to-market) in your analysis
+- Elephants come out only when people can raise them without their name attached. With the team, collect risks anonymously before discussing them: a live Q&A room where people write risks and upvote each other's ranks the most widely shared worry first (the live-qa skill)
 - Revisit the pre-mortem 2-3 weeks before launch to verify mitigations are on track
 
 ---

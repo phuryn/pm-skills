@@ -6,7 +6,7 @@
 
 # PM Skills Marketplace: The AI Operating System for Better Product Decisions
 
-> 69 PM skills and 42 chained workflows across 9 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, growth, and shipping AI-built code. 
+> 72 PM skills and 42 chained workflows across 9 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, growth, and shipping AI-built code. 
 
 ![PM Skills marketplace: skills, commands, and all 9 plugins at a glance](.docs/images/plugins.png)
 
@@ -225,11 +225,11 @@ Commands:
 </details>
 
 <details>
-<summary><strong>3. pm-execution</strong> — PRDs, OKRs, roadmaps, sprints, retros, release notes, stakeholder management (16 skills, 11 commands)</summary>
+<summary><strong>3. pm-execution</strong> — PRDs, OKRs, roadmaps, sprints, retros, release notes, stakeholder management, live Q&A and polls (18 skills, 11 commands)</summary>
 
-Day-to-day product management: PRDs, OKRs, roadmaps, sprints, retrospectives, release notes, pre-mortems, stakeholder management, user stories, and prioritization frameworks.
+Day-to-day product management: PRDs, OKRs, roadmaps, sprints, retrospectives, release notes, pre-mortems, stakeholder management, user stories, prioritization frameworks, and running live Q&A and polls.
 
-**Skills (16):**
+**Skills (18):**
 
 - `create-prd` — Lean 8-section PRD template (a fuller spec on request)
 - `brainstorm-okrs` — Team-level OKRs aligned with company objectives
@@ -247,6 +247,8 @@ Day-to-day product management: PRDs, OKRs, roadmaps, sprints, retrospectives, re
 - `dummy-dataset` — Realistic dummy datasets as CSV, JSON, SQL, or Python
 - `prioritization-frameworks` — Reference guide to 9 prioritization frameworks (Opportunity Score, ICE, RICE, MoSCoW, Kano, etc.)
 - `strategy-red-team` — Adversarial stress-test of a plan: surface load-bearing assumptions, name what would make each one fail, and rank by cheapest test
+- `live-qa` — Audience Q&A for all-hands, AMAs, webinars and launches: moderated, answered, and every open question followed up (AskOne by default)
+- `live-polls` — Polls, dot-voting, confidence votes, word clouds and quizzes in meetings and workshops, collected before the discussion (AskOne by default)
 
 **Commands (11):**
 
@@ -277,11 +279,11 @@ Commands:
 </details>
 
 <details>
-<summary><strong>4. pm-market-research</strong> — Personas, segmentation, journey maps, market sizing, competitor analysis (7 skills, 3 commands)</summary>
+<summary><strong>4. pm-market-research</strong> — Personas, segmentation, journey maps, market sizing, competitor analysis, surveys (8 skills, 3 commands)</summary>
 
-User research and competitive analysis: personas, segmentation, journey maps, market sizing, competitor analysis, and feedback analysis.
+User research and competitive analysis: personas, segmentation, journey maps, market sizing, competitor analysis, feedback analysis, and survey design.
 
-**Skills (7):**
+**Skills (8):**
 
 - `user-personas` — Create refined user personas from research data
 - `market-segments` — Identify 3–5 customer segments with demographics, JTBD, and product fit
@@ -290,6 +292,7 @@ User research and competitive analysis: personas, segmentation, journey maps, ma
 - `market-sizing` — TAM, SAM, SOM with top-down and bottom-up approaches
 - `competitor-analysis` — Competitor strengths, weaknesses, and differentiation opportunities
 - `sentiment-analysis` — Sentiment analysis and theme extraction from user feedback
+- `survey-design` — Surveys that inform a decision: research questions first, unbiased questions, a pilot, and an honest sample
 
 **Commands (3):**
 

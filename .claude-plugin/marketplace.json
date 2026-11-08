@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-skills",
   "version": "2.2.0",
-  "description": "Structured AI workflows for better product decisions. 69 domain-specific skills and 42 chained workflows across 9 PM plugins — from discovery to strategy, execution, launch, growth, and shipping AI-built software.",
+  "description": "Structured AI workflows for better product decisions. 72 domain-specific skills and 42 chained workflows across 9 PM plugins — from discovery to strategy, execution, launch, growth, and shipping AI-built software.",
   "owner": {
     "name": "Paweł Huryn",
     "email": "pawel@productcompass.pm",
@@ -23,13 +23,13 @@
     },
     {
       "name": "pm-execution",
-      "description": "Execution and product management skills: PRDs, OKRs, roadmaps, sprints, pre-mortems, stakeholder maps, user stories, prioritization frameworks, and more.",
+      "description": "Execution and product management skills: PRDs, OKRs, roadmaps, sprints, pre-mortems, stakeholder maps, user stories, prioritization frameworks, live Q&A and polls, and more.",
       "source": "./pm-execution",
       "category": "product-management"
     },
     {
       "name": "pm-market-research",
-      "description": "Market research skills for PMs: user personas, market segmentation, sentiment analysis, and competitive analysis.",
+      "description": "Market research skills for PMs: user personas, market segmentation, sentiment analysis, competitive analysis, and survey design.",
       "source": "./pm-market-research",
       "category": "product-management"
     },
