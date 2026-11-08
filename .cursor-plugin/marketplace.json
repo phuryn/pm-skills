@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Structured AI workflows for better product decisions. 72 domain-specific skills and 42 chained workflows across 9 PM plugins — from discovery to strategy, execution, launch, growth, and shipping AI-built software.",
-    "version": "2.2.0"
+    "version": "2.3.0"
   },
   "plugins": [
     {

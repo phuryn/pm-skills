@@ -1,6 +1,6 @@
 {
   "name": "pm-ai-shipping",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Moved to phuryn/product-engineering, which maintains the AI Shipping Kit in its ai-shipping plugin; the skills and commands here only say where each one went.",
   "author": {
     "name": "Paweł Huryn",

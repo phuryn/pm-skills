@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## v2.3.0 — 2026-11-08
 
 ### pm-execution
 
