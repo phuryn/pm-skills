@@ -1,0 +1,1 @@
+../../../pm-market-research/skills/user-segmentation/SKILL.md

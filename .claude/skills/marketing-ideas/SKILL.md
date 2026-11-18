@@ -1,0 +1,1 @@
+../../../pm-marketing-growth/skills/marketing-ideas/SKILL.md

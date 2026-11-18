@@ -1,0 +1,1 @@
+../../../pm-execution/skills/stakeholder-map/SKILL.md

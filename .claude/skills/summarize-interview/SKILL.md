@@ -1,0 +1,1 @@
+../../../pm-product-discovery/skills/summarize-interview/SKILL.md

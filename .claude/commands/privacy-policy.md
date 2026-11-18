@@ -1,0 +1,1 @@
+../../pm-toolkit/commands/privacy-policy.md
