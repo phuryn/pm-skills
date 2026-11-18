@@ -4,8 +4,7 @@ description: "Identify growth loops (flywheels) for sustainable traction. Evalua
 ---
 # Growth Loops
 
-## Overview
-Identify and design growth loops (flywheels) that create sustainable traction. This skill evaluates five proven growth loop mechanisms to reduce reliance on paid acquisition and build product-led growth.
+Identify and design growth loops (flywheels) that create sustainable, product-led traction. Analyze the user's product against five proven loop types and deliver a ranked recommendation with implementation details.
 
 ## When to Use
 - Designing growth mechanisms for a product
@@ -51,75 +50,94 @@ Users invite other potential users in exchange for rewards, incentives, or socia
 - **Strength**: Directly incentivizes acquisition; easy to measure ROI
 - **Challenge**: Requires valuable incentive without eroding unit economics
 
+## Loop Selection Matrix
+
+Score each factor 1-3 for the user's product to determine fit:
+
+| Factor | Viral | Usage | Collab | UGC | Referral |
+|--------|-------|-------|--------|-----|----------|
+| Output is shareable outside product | 3 | 2 | 1 | 2 | 1 |
+| Users create content as core action | 2 | 3 | 2 | 3 | 1 |
+| Product improves with more team members | 1 | 1 | 3 | 1 | 1 |
+| Users browse/discover others' work | 1 | 2 | 1 | 3 | 1 |
+| Clear value moment in first session | 2 | 1 | 2 | 1 | 3 |
+
+Highest-scoring loop = primary recommendation. Second-highest = secondary loop to layer later.
+
 ## How It Works
 
-### Step 1: Define Product Value
-Clarify the core value users experience:
-- Primary action users take in your product
-- Value created per user action
-- Network effects present (if any)
-- Friction points in the experience
+### Step 1: Gather Product Context
+Extract from $ARGUMENTS:
+- Core user action and value delivered
+- Whether output is shareable or collaborative
+- Existing network effects or sharing features
+- Current acquisition channels and growth rate
 
-### Step 2: Evaluate Loop Fit
-Assess which growth loops align with your product:
-- Product type (collaborative, content-based, utility, etc.)
-- Target user behavior and sharing habits
-- Network effects already present
-- Existing user base and engagement
+### Step 2: Score Loop Fit
+Apply the selection matrix above. Present results as a ranked table with scores out of 15 and fit assessment (Strong / Moderate / Weak).
 
-### Step 3: Design Loop Mechanics
-Create specific loop implementation:
-- Trigger that initiates sharing or invitations
-- Incentive for participation (intrinsic or extrinsic)
-- Ease of sharing mechanism
-- Conversion rate from invite to activation
-- Frequency of loop repetition per user
+### Step 3: Design the Primary Loop
+For the top-scoring loop, specify:
+1. **Trigger**: Exact user action that initiates the loop
+2. **Share mechanism**: How value reaches new potential users
+3. **Conversion hook**: What compels the new user to sign up
+4. **Activation step**: First action that delivers value to the new user
+5. **Re-engagement**: What brings the new user back to repeat the loop
 
-### Step 4: Calculate Loop Coefficient
-Estimate growth velocity:
-- Invites/shares per user per cycle
-- Conversion rate of invites to new users
-- Net new users per cycle
-- Time per cycle iteration
+### Step 4: Estimate Loop Coefficient
+```
+Loop Coefficient = (Actions per user per cycle)
+                 x (Shares per action)
+                 x (Conversion rate per share)
 
-### Step 5: Build the Loop
-Implement the highest-leverage loop first:
-- Start with the most natural loop for your product
-- Optimize messaging and friction
-- Measure loop metrics and conversion rates
-- Compound results over time
+Example: 5 actions/week x 0.3 shares/action x 0.10 conversion = 0.15
+```
 
-## Input Format
-Use $ARGUMENTS to pass:
-- Product description and primary user action
-- Target user demographics and behavior
-- Existing sharing/collaboration features
-- Current growth channels and metrics
-- Constraints or opportunities
+- Coefficient > 1.0: Self-sustaining viral growth
+- Coefficient 0.3-1.0: Meaningful growth amplifier
+- Coefficient < 0.3: Supplement with other channels
 
-## Output
-A growth loops analysis including:
-- Ranked evaluation of all 5 loop types for your product
-- Recommended primary growth loop with implementation plan
-- Secondary loops to layer over time
-- Key metrics and measurement framework
-- 30-60-90 day implementation roadmap
-- Potential loop coefficient and growth projections
+### Step 5: Deliver Implementation Plan
+Provide a 30-60-90 day roadmap:
+- **Days 1-30**: Instrument baseline metrics, ship minimum loop mechanic
+- **Days 31-60**: Optimize conversion at weakest step, A/B test share prompts
+- **Days 61-90**: Layer secondary loop, set coefficient targets
+
+## Output Format
+
+Structure every response as:
+
+1. **Product Summary**: One-sentence restatement of the product and core user action
+2. **Loop Fit Scores**: Ranked table from Step 2
+3. **Primary Loop Design**: Full loop specification from Step 3
+4. **Loop Coefficient Estimate**: Calculation from Step 4 with assumptions stated
+5. **Secondary Loop**: Brief design for the second-best loop to layer later
+6. **Implementation Roadmap**: 30-60-90 plan from Step 5
+7. **Key Metrics to Track**: 3-5 specific metrics with target ranges
+
+## Example
+
+**Input**: "B2B project management tool where teams create and assign tasks. Free tier available. 5,000 MAU."
+
+**Output summary**:
+- Loop Fit: Collaboration (13/15), Viral (8/15), Referral (8/15)
+- Primary Loop: User creates project > Invites teammates > Teammates see value in shared board > Create their own projects > Invite their teams
+- Coefficient: 3 projects/user/month x 2.5 invites/project x 0.25 conversion = 1.88
+- Roadmap: Ship "invite to board" flow (Day 1-30), optimize invite email conversion (Day 31-60), add cross-org sharing for Viral loop (Day 61-90)
 
 ## Framework
 Based on growth loops research by Ognjen Bošković. Focuses on compounding user acquisition through built-in, product-native sharing and collaboration mechanisms.
 
 ## Tips
-- Start with one loop and master it before adding complexity
-- Viral loops compound fastest but take time to build
-- Collaboration loops create strongest retention and LTV
-- Measure loop health weekly during optimization phase
-- Combine loops for multiplicative effect once operating at scale
+- Master one loop before layering a second
+- Collaboration loops drive the strongest retention and lifetime value
+- Measure loop health weekly; a declining coefficient signals friction buildup
+- Combine loops for multiplicative effect only after the primary loop exceeds 0.5 coefficient
 
 ---
 
 ### Further Reading
 
 - [Product-Led Growth 101, Part 1/2](https://www.productcompass.pm/p/product-led-growth-101-12)
-- [OpenAI’s Product Leader Shares 3-Layer Distribution Framework To Win Mind & Market Share in the AI World](https://www.productcompass.pm/p/distribution-framework-ai-products)
+- [OpenAI's Product Leader Shares 3-Layer Distribution Framework To Win Mind & Market Share in the AI World](https://www.productcompass.pm/p/distribution-framework-ai-products)
 - [How to Design a Value Proposition Customers Can't Resist?](https://www.productcompass.pm/p/how-to-design-value-proposition-template)
