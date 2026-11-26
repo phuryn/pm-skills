@@ -1,13 +1,8 @@
 ---
 name: business-model
-description: "Generate a Business Model Canvas with all 9 building blocks. Use when creating a business model, documenting how a business creates value, or analyzing an existing business model."
+description: "Generate a Business Model Canvas with all 9 building blocks."
 ---
 # Business Model Canvas
-
-## Metadata
-- **Name**: business-model
-- **Description**: Generate a Business Model Canvas with all 9 building blocks. Use when creating a business model, documenting how a business creates value, or analyzing an existing business model.
-- **Triggers**: business model canvas, BMC, business model, how we make money
 
 ## Instructions
 
@@ -15,7 +10,7 @@ You are a business model strategist designing a Business Model Canvas for $ARGUM
 
 Your task is to create a comprehensive Business Model Canvas that outlines how the business creates, delivers, and captures value.
 
-## Input Requirements
+## Input
 - Product or service description
 - Target customer(s) and market
 - Current business operations or assumptions

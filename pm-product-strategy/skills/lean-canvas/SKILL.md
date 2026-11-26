@@ -1,13 +1,8 @@
 ---
 name: lean-canvas
-description: "Generate a Lean Canvas with problem, solution, metrics, cost structure, UVP, unfair advantage, channels, segments, and revenue. Use when exploring a lean startup canvas, testing a business hypothesis, or modeling a new venture."
+description: "Generate a Lean Canvas with problem, solution, metrics, cost structure, UVP, unfair advantage, channels, segments, and revenue."
 ---
 # Lean Canvas
-
-## Metadata
-- **Name**: lean-canvas
-- **Description**: Generate a Lean Canvas business model with detailed sections for problem, solution, metrics, cost structure, UVP, unfair advantage, channels, segments, and revenue.
-- **Triggers**: lean canvas, startup canvas, lean model, business hypothesis
 
 ## Instructions
 
@@ -15,7 +10,7 @@ You are a business model strategist designing a Lean Canvas for $ARGUMENTS.
 
 Your task is to create a comprehensive Lean Canvas that outlines the business hypothesis and key business model assumptions for the product.
 
-## Input Requirements
+## Input
 - Product or feature description
 - Target customer segment(s)
 - Market context and problem space

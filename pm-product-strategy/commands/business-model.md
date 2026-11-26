@@ -1,6 +1,6 @@
 ---
 description: Explore business models using Lean Canvas, Business Model Canvas, Startup Canvas, or Value Proposition frameworks
-argument-hint: "[lean|full|startup|value-prop] <product or business>"
+argument-hint: "<lean|full|startup|value-prop> <product or business>"
 ---
 
 # /business-model -- Business Model Exploration

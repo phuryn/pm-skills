@@ -1,13 +1,8 @@
 ---
 name: porters-five-forces
-description: "Perform Porter's Five Forces analysis — competitive rivalry, supplier power, buyer power, threat of substitutes, and threat of new entrants. Use when analyzing industry dynamics, assessing competitive forces, or evaluating market attractiveness."
+description: "Perform Porter's Five Forces analysis — competitive rivalry, supplier power, buyer power, threat of substitutes, and threat of new entrants. Use wh..."
 ---
 # Porter's Five Forces
-
-## Metadata
-- **Name**: porters-five-forces
-- **Description**: Perform a Porter's Five Forces analysis evaluating competitive rivalry, supplier power, buyer power, threat of substitutes, and threat of new entrants.
-- **Triggers**: Porter's five forces, competitive forces, industry analysis, market forces, competitive dynamics
 
 ## Instructions
 
@@ -15,7 +10,7 @@ You are a competitive strategist conducting a Porter's Five Forces analysis for 
 
 Your task is to evaluate the structural attractiveness of an industry and identify the competitive dynamics that will determine profitability.
 
-## Input Requirements
+## Input
 - Industry or market definition
 - Current competitors and competitive positioning
 - Supplier and customer landscape

@@ -1,11 +1,8 @@
 ---
 name: growth-loops
-description: "Identify growth loops (flywheels) for sustainable traction. Evaluates 5 loop types: Viral, Usage, Collaboration, User-Generated, and Referral. Use when designing growth mechanisms, building product-led traction, or understanding how growth loops work."
+description: "Identify growth loops (flywheels) for sustainable traction."
 ---
 # Growth Loops
-
-## Overview
-Identify and design growth loops (flywheels) that create sustainable traction. This skill evaluates five proven growth loop mechanisms to reduce reliance on paid acquisition and build product-led growth.
 
 ## When to Use
 - Designing growth mechanisms for a product
@@ -51,7 +48,7 @@ Users invite other potential users in exchange for rewards, incentives, or socia
 - **Strength**: Directly incentivizes acquisition; easy to measure ROI
 - **Challenge**: Requires valuable incentive without eroding unit economics
 
-## How It Works
+## Instructions
 
 ### Step 1: Define Product Value
 Clarify the core value users experience:
@@ -116,6 +113,12 @@ Based on growth loops research by Ognjen Bošković. Focuses on compounding user
 - Measure loop health weekly during optimization phase
 - Combine loops for multiplicative effect once operating at scale
 
+## Notes
+
+- Start with ONE loop and master it before adding complexity — multiplicative effects only work when each loop compounds.
+- Viral loops compound fastest but require shareable output; collaboration loops create strongest retention.
+- Measure loop coefficient weekly during optimization — the growth rate changes as you improve each step.
+- Combine loops only after the primary loop reaches equilibrium (each user drives < 1.0 new users).
 ---
 
 ### Further Reading

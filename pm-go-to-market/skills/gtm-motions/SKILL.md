@@ -1,11 +1,8 @@
 ---
 name: gtm-motions
-description: "Identify the best GTM motions and tools across 7 motion types: Inbound, Outbound, Paid Digital, Community, Partners, ABM, and PLG. Use when selecting marketing channels, choosing between inbound and outbound strategy, or planning cross-channel campaigns."
+description: "Identify the best GTM motions and tools across 7 motion types: Inbound, Outbound, Paid Digital, Community, Partners, ABM, and PLG."
 ---
 # GTM Motions
-
-## Overview
-Identify and evaluate the best go-to-market motions for your product. This skill analyzes seven proven GTM approaches with specific tools and tactics to help you build a balanced acquisition strategy.
 
 ## When to Use
 - Selecting marketing channels for your product
@@ -72,7 +69,7 @@ Drive adoption through the product experience itself with minimal sales friction
 - **Strength**: Low CAC; aligns product and growth; strong PMF signals; scalable
 - **Challenge**: Requires excellent product experience; lower price points; longer ROI
 
-## How It Works
+## Instructions
 
 ### Step 1: Understand Your Product
 Define product characteristics:

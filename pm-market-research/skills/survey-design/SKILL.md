@@ -1,6 +1,6 @@
 ---
 name: survey-design
-description: "Writing or reviewing a survey or questionnaire: customer feedback, NPS, CSAT, CES, pricing, market research, an in-app survey. Starts from the decision, asks about facts, pilots it, and reports the sample honestly."
+description: "Writing or reviewing a survey or questionnaire: customer feedback, NPS, CSAT, CES, pricing, market research, an in-app survey."
 ---
 
 ## Survey Design
@@ -75,6 +75,16 @@ Eight things move the response rate: perceived effort, reward, trust, relevance,
 - **NPS:** "On a scale of 0 to 10, how likely are you to recommend [product] to a friend or colleague?" It measures attitude, not behavior.
 - **Jobs to be done:** "When [job step], how important is it to you that you can [desired outcome]?" and "When [job step], how satisfied are you with your ability to [desired outcome]?", each on a 5-point scale with "Not applicable".
 - End any of them with one optional open question: "Anything else you'd like to share?"
+
+## Instructions
+
+1. **Decide if a survey is needed.** If you need "why" from a few people, use interviews. If you need "how common" from a population, send a survey. If you need what a room thinks right now, run a live poll.
+2. **Write the decision and research questions first.** Map every survey question to a research question.
+3. **Choose the audience from the goal, not from who is easy to reach.** Avoid coverage errors.
+4. **Pilot with a small group before sending.**
+5. **Write questions that go from broad to specific, are short and plain, ask what people did, not what they think.**
+6. **Give each opt-out its own option, order options purposefully, use 5-point scales by default.**
+7. **Write the survey, pilot it, send it, and analyze it with segments in mind.**
 
 ### Output
 

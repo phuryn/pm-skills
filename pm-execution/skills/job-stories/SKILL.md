@@ -1,6 +1,6 @@
 ---
 name: job-stories
-description: "Create job stories using the 'When [situation], I want to [motivation], so I can [outcome]' format with detailed acceptance criteria. Use when writing job stories, creating JTBD-style backlog items, or expressing user situations and motivations."
+description: "Create job stories using the 'When [situation], I want to [motivation], so I can [outcome]' format with detailed acceptance criteria."
 ---
 # Job Stories
 
@@ -9,12 +9,9 @@ Create job stories using the 'When [situation], I want to [motivation], so I can
 **Use when:** Writing job stories, expressing user situations and motivations, creating JTBD-style backlog items, or focusing on user context rather than roles.
 
 **Arguments:**
-- `$PRODUCT`: The product or system name
-- `$FEATURE`: The new feature to break into job stories
-- `$DESIGN`: Link to design files (Figma, Miro, etc.)
-- `$CONTEXT`: User situations or job scenarios
+- `$ARGUMENTS`: Product or feature to break into job stories; include design links, user situations, and any other context
 
-## Step-by-Step Process
+## Instructions
 
 1. **Identify user situations** that trigger the need
 2. **Define motivations** underlying the user's behavior
@@ -67,6 +64,12 @@ Create job stories using the 'When [situation], I want to [motivation], so I can
 - Stories emphasize user situations and motivations
 - Clear links to design and prototypes
 
+## Notes
+
+- Job stories are situation-driven, not persona-driven — focus on the context, not the person.
+- The format "When [situation], I want to [motivation], so I can [outcome]" surfaces real needs.
+- If the outcome isn't a genuine motivation (it's a feature), reframe the story.
+- Use job stories when you need to understand context-specific behavior; use user stories when you need testable acceptance criteria.
 ---
 
 ### Further Reading

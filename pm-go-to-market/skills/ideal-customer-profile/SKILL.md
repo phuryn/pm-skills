@@ -1,11 +1,8 @@
 ---
 name: ideal-customer-profile
-description: "Identify the Ideal Customer Profile (ICP) from research data with demographics, behaviors, JTBD, and needs. Use when defining your ICP, analyzing PMF survey data, or understanding who your best customers are."
+description: "Identify the Ideal Customer Profile (ICP) from research data with demographics, behaviors, JTBD, and needs."
 ---
 # Ideal Customer Profile
-
-## Overview
-Identify your Ideal Customer Profile (ICP) from research and survey data. This skill synthesizes customer research to define the customer most likely to find value, retain, and expand with your product.
 
 ## When to Use
 - Defining ICP from product-market fit survey data
@@ -58,7 +55,7 @@ What problems does your product solve?
 - Available budget to solve
 - Competing priorities
 
-## How It Works
+## Instructions
 
 ### Step 1: Gather Customer Data
 Collect research about actual and potential customers:
@@ -156,6 +153,11 @@ Based on Jobs to Be Done theory by Clayton Christensen and customer profiling me
 - Share ICP across entire organization (marketing, sales, product)
 - Remember: ICP should drive focus, not exclude all others
 
+## Notes
+
+- An ICP is a profile of companies, not individuals — focus on firmographics and behavior, not demographics.
+- The best ICP is backed by data from your existing customers, not intuition.
+- Use the `market-segments` skill to explore segments, then narrow to one ICP.
 ---
 
 ### Further Reading

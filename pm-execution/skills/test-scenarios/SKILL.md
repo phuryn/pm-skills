@@ -1,7 +1,24 @@
 ---
 name: test-scenarios
-description: "Create comprehensive test scenarios from user stories with test objectives, starting conditions, user roles, step-by-step actions, and expected outcomes. Use when writing QA test cases, creating test plans, defining acceptance tests, or preparing for feature validation."
+description: "Create comprehensive test scenarios from user stories with test objectives, starting conditions, user roles, step-by-step actions, and expected outcomes."
 ---
+
+## Notes
+
+- Test scenarios should cover happy paths, edge cases, and error conditions.
+- Each scenario must be independently executable — no hidden dependencies on other tests.
+- Use the `user-stories` skill to create stories first, then derive scenarios from their acceptance criteria.
+- Always include data setup steps — a test is unreliable if it depends on undefined state.
+- Keep test descriptions action-oriented: "Verify that X happens when Y" not "Check X"".
+
+### Further Reading
+
+- [How to Write Test Scenarios from User Stories](https://www.productcompass.pm/p/test-scenarios-user-stories)
+---
+
+### Further Reading
+
+- [How to Write Test Scenarios from User Stories](https://www.productcompass.pm/p/test-scenarios-user-stories)
 # Test Scenarios
 
 Create comprehensive test scenarios from user stories with test objectives, starting conditions, user roles, step-by-step test actions, and expected outcomes.
@@ -9,11 +26,9 @@ Create comprehensive test scenarios from user stories with test objectives, star
 **Use when:** Writing QA test cases, creating test plans, defining acceptance test scenarios, or validating user story implementations.
 
 **Arguments:**
-- `$PRODUCT`: The product or system name
-- `$USER_STORY`: The user story to test (title and acceptance criteria)
-- `$CONTEXT`: Additional testing context or constraints
+- `$ARGUMENTS`: The user story to test, plus any context (product name, constraints)
 
-## Step-by-Step Process
+## Instructions
 
 1. **Review the user story** and acceptance criteria
 2. **Define test objectives** - What specific behavior to validate

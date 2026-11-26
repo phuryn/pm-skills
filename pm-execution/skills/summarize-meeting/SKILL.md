@@ -1,6 +1,6 @@
 ---
 name: summarize-meeting
-description: "Summarize a meeting transcript into structured notes with date, participants, topic, key decisions, summary points, and action items. Use when processing meeting recordings, creating meeting notes, writing meeting minutes, or recapping discussions."
+description: "Summarize a meeting transcript into structured notes with date, participants, topic, key decisions, summary points, and action items."
 ---
 
 # Summarize Meeting
@@ -52,6 +52,12 @@ Meeting summaries are how knowledge spreads and accountability stays clear in pr
 
    | Due Date | Owner | Action |
    |----------|-------|--------|
+
+---
+
+### Further Reading
+
+- [How to Write Effective Meeting Notes as a PM](https://www.productcompass.pm/p/meeting-notes-pm)
    | [Date] | [Name] | [What needs to happen] |
    | [Date] | [Name] | [What needs to happen] |
 

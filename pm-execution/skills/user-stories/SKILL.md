@@ -1,6 +1,6 @@
 ---
 name: user-stories
-description: "Create user stories following the 3 C's (Card, Conversation, Confirmation) and INVEST criteria with descriptions, design links, and acceptance criteria. Use when writing user stories, breaking down features into backlog items, or defining acceptance criteria."
+description: "Create user stories following the 3 C's (Card, Conversation, Confirmation) and INVEST criteria with descriptions, design links, and acceptance criteria."
 ---
 # User Stories
 
@@ -9,12 +9,9 @@ Create user stories following the 3 C's (Card, Conversation, Confirmation) and I
 **Use when:** Writing user stories, breaking down features into stories, creating backlog items, or defining acceptance criteria.
 
 **Arguments:**
-- `$PRODUCT`: The product or system name
-- `$FEATURE`: The new feature to break into stories
-- `$DESIGN`: Link to design files (Figma, Miro, etc.)
-- `$ASSUMPTIONS`: Key assumptions or context
+- `$ARGUMENTS`: Feature to break into stories; include design links, assumptions, and any other context
 
-## Step-by-Step Process
+## Instructions
 
 1. **Analyze the feature** based on provided design and context
 2. **Identify user roles** and distinct user journeys
@@ -67,6 +64,13 @@ Create user stories following the 3 C's (Card, Conversation, Confirmation) and I
 - Stories are sized for one sprint cycle
 - Stories reference related design documentation
 
+## Notes
+
+- INVEST criteria: Independent, Negotiable, Valuable, Estimable, Small, Testable.
+- A story is "done" only when acceptance criteria are met and the team agrees — not when code is written.
+- If a story is too big, split it before it enters a sprint; don't compromise on INVEST.
+- Use the `test-scenarios` skill to turn each story into testable scenarios.
+- User stories are conversation starters, not contracts — the conversation matters more than the card.
 ---
 
 ### Further Reading

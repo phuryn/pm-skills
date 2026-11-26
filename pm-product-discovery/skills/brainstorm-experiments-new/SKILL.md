@@ -1,6 +1,6 @@
 ---
 name: brainstorm-experiments-new
-description: "Design lean startup experiments (pretotypes) for a new product. Creates XYZ hypotheses and suggests low-effort validation methods like landing pages, explainer videos, and pre-orders. Use when validating a new product idea, creating pretotypes, or testing market demand."
+description: "Design lean startup experiments (pretotypes) for a new product."
 ---
 
 ## Design Lean Startup Experiments (New Product)
@@ -36,6 +36,12 @@ If the user provides files (market research, landing page mockups), read them fi
 
 Think step by step. Save as markdown if substantial.
 
+## Notes
+
+- Pretotypes test desirability, not feasibility — you can build the real thing later if the pretotype validates.
+- Alberto Savoia's YODA principle: collect Your Own Data, don't rely on Others' Data (market reports, analogies).
+- A landing page with a sign-up button is better than a survey asking "would you use this?"
+- If no skin-in-the-game is possible (e.g., enterprise B2B), use concierge or manual MVP as the next best option.
 ---
 
 ### Further Reading

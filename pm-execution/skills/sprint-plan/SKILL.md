@@ -1,6 +1,6 @@
 ---
 name: sprint-plan
-description: "Plan a sprint with capacity estimation, story selection, dependency mapping, and risk identification. Use when preparing for sprint planning, estimating team capacity, selecting stories, or balancing sprint scope against velocity."
+description: "Plan a sprint with capacity estimation, story selection, dependency mapping, and risk identification."
 ---
 
 ## Sprint Planning
@@ -60,6 +60,13 @@ If the user provides files (backlogs, velocity data, team rosters, or previous s
 
 Think step by step. Save as markdown.
 
+## Notes
+
+- Plan at 70–80% capacity, not 100% — teams that plan full always miss.
+- Every story needs acceptance criteria before it enters the sprint.
+- Flag external dependencies early; they are the #1 cause of sprint blockers.
+- If a story is too big to estimate, break it down before the sprint starts.
+- Keep scope stable after sprint start — new items go to the backlog, not the current sprint.
 ---
 
 ### Further Reading

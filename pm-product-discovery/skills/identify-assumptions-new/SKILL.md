@@ -1,6 +1,6 @@
 ---
 name: identify-assumptions-new
-description: "Identify risky assumptions for a new product idea across 8 risk categories including Go-to-Market, Strategy, and Team. Use when evaluating startup risks, assessing a new product concept, or mapping assumptions for a new venture."
+description: "Identify risky assumptions for a new product idea across 8 risk categories including Go-to-Market, Strategy, and Team."
 ---
 
 ## Identify Assumptions (New Product)
@@ -43,6 +43,18 @@ The user will describe the product concept, target segment, and feature idea. Wo
 
 Think step by step. Save as markdown.
 
+## Notes
+
+- New products have 8 risk categories (Value, Usability, Viability, Feasibility, Go-to-Market, Strategy, Team, Funding).
+- Go-to-Market risks (can we reach and convert users?) are often the most overlooked for new products.
+- Use the `prioritize-assumptions` skill to rank your assumption list into a test plan.
+- If you can't identify any risky assumptions, the idea may not have been examined thoroughly enough.
+### Output
+
+Present as:
+1. **Assumption list** — one per row: assumption, category (Value/Usability/Viability/Feasibility/GTM/Strategy/Team/Funding), risk level (High/Medium/Low), confidence level (High/Medium/Low)
+2. **Top 3 riskiest** — with specific test suggestions
+3. **Knowns** — assumptions already validated by data
 ---
 
 ### Further Reading

@@ -1,20 +1,12 @@
 ---
 name: value-prop-statements
-description: "Generate value proposition statements for marketing, sales, and onboarding from existing value propositions. Use when writing marketing copy, creating sales messaging, or crafting onboarding messages."
+description: "Generate value proposition statements for marketing, sales, and onboarding from existing value propositions."
 ---
 # Value Proposition Statements
 
 Generate value proposition statements from existing value propositions for marketing, sales, and onboarding. Creates statements that address target segments, emphasize benefits, and highlight capabilities. Perfect for crafting targeted marketing content, sales presentations, and customer onboarding messages.
 
-## When to Use
-
-- Writing marketing copy and promotional content
-- Creating sales decks and pitch materials
-- Crafting customer onboarding messages
-- Developing segment-specific messaging
-- Triggers: value proposition statements, marketing copy, sales messaging, value statements, positioning copy
-
-## Prompt
+## Instructions
 
 You are an experienced product growth expert with expertise in value proposition development and targeted messaging.
 
@@ -36,7 +28,7 @@ To illustrate the approach, here are value proposition statements for Canva:
 
 3. **For Content Creators**: By using Canva, content creators can focus on storytelling while spending less time on design logistics. Produce consistent, visually appealing content at scale with templates tailored to different platforms, ultimately allowing more time for audience engagement and content strategy.
 
-## Tips for Best Results
+## Notes
 
 - Provide existing value propositions or key benefits
 - Specify target segments and their pain points
@@ -44,6 +36,13 @@ To illustrate the approach, here are value proposition statements for Canva:
 - Share distribution channels (marketing, sales, onboarding)
 - Mention any brand tone or voice guidelines
 
+### Output
+
+For each statement, provide:
+1. **Segment** — which customer group this targets
+2. **Statement** — 1–2 sentences in the format: "For [who] who [need], [product] is a [category] that [benefit]. Unlike [alternative], we [differentiator]."
+3. **Channel variant** — how to adapt the statement for marketing, sales, and onboarding
+4. **Why it works** — one sentence on why this resonates with the segment
 ---
 
 ### Further Reading

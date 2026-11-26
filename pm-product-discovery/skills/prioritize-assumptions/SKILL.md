@@ -1,6 +1,6 @@
 ---
 name: prioritize-assumptions
-description: "Prioritize assumptions using an Impact × Risk matrix and suggest experiments for each. Use when triaging a list of assumptions, deciding what to test first, or applying the assumption prioritization canvas."
+description: "Prioritize assumptions using an Impact × Risk matrix and suggest experiments for each."
 ---
 
 ## Prioritize Assumptions
@@ -40,6 +40,12 @@ The user will provide a list of assumptions to prioritize. Apply the following f
 
 Think step by step. Save as markdown if the output is substantial.
 
+## Notes
+
+- Prioritize by Impact × Risk (likelihood of being wrong) — not by urgency or visibility.
+- The "leap of faith" assumption is the one that, if wrong, kills the whole idea.
+- Group related assumptions that can be tested together to reduce experiment overhead.
+- If an assumption is already known (validated by data), don't waste experiments on it.
 ---
 
 ### Further Reading

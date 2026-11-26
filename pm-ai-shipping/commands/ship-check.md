@@ -1,8 +1,3 @@
----
-description: Moved to phuryn/product-engineering, where it is maintained in the ai-shipping plugin; this copy says where it went and how to install it. Use when asked to check whether an AI-built repository is safe to ship.
-argument-hint: "<repo path or area; defaults to the whole repository>"
----
-
 # /ship-check has moved
 
 `ship-check` is maintained in [phuryn/product-engineering](https://github.com/phuryn/product-engineering/tree/main/ai-shipping/skills/ship-check), in its `ai-shipping` plugin, with the rest of the AI Shipping Kit. This command, now a skill there, stays in pm-skills only so an agent that loads it knows where it went.

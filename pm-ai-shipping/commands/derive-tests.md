@@ -1,8 +1,3 @@
----
-description: Moved to phuryn/product-engineering, where it is maintained in the ai-shipping plugin; this copy says where it went and how to install it. Use when asked to map test coverage from what the docs say the app does.
-argument-hint: "[check] <repo path or area; defaults to the whole repository>"
----
-
 # /derive-tests has moved
 
 `derive-tests` is maintained in [phuryn/product-engineering](https://github.com/phuryn/product-engineering/tree/main/ai-shipping/skills/derive-tests), in its `ai-shipping` plugin, with the rest of the AI Shipping Kit. This command, now a skill there, stays in pm-skills only so an agent that loads it knows where it went.

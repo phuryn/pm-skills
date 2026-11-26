@@ -1,6 +1,6 @@
 ---
 name: identify-assumptions-existing
-description: "Identify risky assumptions for a feature idea in an existing product across Value, Usability, Viability, and Feasibility. Uses multi-perspective devil's advocate thinking. Use when stress-testing a feature idea, doing risk assessment, or preparing for assumption mapping."
+description: "Identify risky assumptions for a feature idea in an existing product across Value, Usability, Viability, and Feasibility."
 ---
 
 ## Identify Assumptions (Existing Product)
@@ -35,6 +35,12 @@ The user will describe their product, objective, market segment, and feature ide
 
 Think step by step. Be thorough but constructive — the goal is to strengthen the idea, not kill it.
 
+## Notes
+
+- The four risk areas (Value, Usability, Viability, Feasibility) cover the full spectrum of why features fail.
+- If an assumption scores High Risk + High Impact, it should be tested before any design or code begins.
+- Use the `prioritize-assumptions` skill to rank your assumption list into a test plan.
+- Devil's advocate is useful, but don't let it turn into devil's advocate theater — be constructive, not cynical.
 ---
 
 ### Further Reading

@@ -1,13 +1,8 @@
 ---
 name: pestle-analysis
-description: "Perform a PESTLE analysis covering Political, Economic, Social, Technological, Legal, and Environmental factors. Use when assessing the macro environment, doing strategic planning, or evaluating external factors affecting your business."
+description: "Perform a PESTLE analysis covering Political, Economic, Social, Technological, Legal, and Environmental factors."
 ---
 # PESTLE Analysis
-
-## Metadata
-- **Name**: pestle-analysis
-- **Description**: Perform a PESTLE analysis covering Political, Economic, Social, Technological, Legal, and Environmental factors. Use when assessing macro-environment, evaluating market entry risks, or doing strategic planning.
-- **Triggers**: PESTLE analysis, macro environment, market environment, external factors analysis
 
 ## Instructions
 
@@ -15,7 +10,7 @@ You are a strategic analyst conducting a PESTLE analysis for $ARGUMENTS.
 
 Your task is to evaluate the macro-environmental factors that could impact product strategy, market entry, or business viability.
 
-## Input Requirements
+## Input
 - Industry and market context
 - Geographic market or region(s)
 - Product or business type

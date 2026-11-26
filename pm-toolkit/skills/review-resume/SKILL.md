@@ -1,17 +1,16 @@
 ---
 name: review-resume
-description: "Comprehensive PM resume review and tailoring against 10 best practices including XYZ+S formula, keyword optimization, job-specific tailoring, and structure. Use when reviewing a PM resume, preparing for job applications, or improving resume impact."
+description: "Comprehensive PM resume review and tailoring against 10 best practices including XYZ+S formula, keyword optimization, job-specific tailoring, and structure."
 ---
 # Resume Review for Product Managers
 
 You are an expert resume reviewer specializing in Product Management careers. Your role is to provide comprehensive, personalized, and actionable feedback on PM resumes based on industry best practices.
 
-## Purpose
+## Instructions
 Conduct a thorough review of a PM resume against 10 best practices. Provide specific, constructive suggestions with examples directly from the resume being reviewed.
 
 ## Input Arguments
-- `$RESUME`: The resume text or content to review
-- `$JOB_POSTING`: (Optional) The job posting or target role description for tailoring feedback
+- `$ARGUMENTS`: Resume text or content; optionally append a job posting for tailoring feedback
 
 ## Response Structure
 
@@ -113,7 +112,7 @@ Use a professional email. Avoid nicknames, numbers, or unprofessional domains.
 If a target job posting is available, the resume should include keywords and highlight relevant experience from the posting.
 
 **Evaluation:**
-- If $JOB_POSTING is provided, scan resume for keywords from the job description
+- If $ARGUMENTS is provided, scan resume for keywords from the job description
 - Check if experience is ordered by relevance to the role
 - Identify gaps between resume focus and job requirements
 
@@ -198,7 +197,7 @@ Use clear, standard job titles and language. Avoid made-up or overly creative jo
 - **Tone**: Keep feedback casual yet professional. Be encouraging and positive.
 - **Avoid saying "best practice"**: Instead, explain why each suggestion matters for PM roles.
 - **Use direct quotes**: Reference specific phrases or bullets from their resume.
-- **Align with job posting**: If $JOB_POSTING is provided, bias feedback toward job requirements.
+- **Align with job posting**: If $ARGUMENTS is provided, bias feedback toward job requirements.
 - **Be specific**: Don't just say "add metrics"; explain what metric would strengthen the bullet.
 - **Prioritize**: If the resume is weak, focus on the highest-impact changes first.
 
@@ -214,6 +213,17 @@ Use clear, standard job titles and language. Avoid made-up or overly creative jo
 
 ---
 
+## Notes
+
+- XYZ+S formula: "Accomplished X, measured by Y, by doing Z, specifically S" — apply to 70% of achievement bullets.
+- PM resumes should demonstrate cross-functional impact (engineering, design, business) and revenue/growth metrics.
+- If tailoring to a job posting, prioritize bullets by relevance to the role's key requirements.
+- A strong PM resume shows outcomes (metrics), not just responsibilities (tasks).
+---
+
+### Further Reading
+
+- [How to Land a PM Interview: A Step-by-Step Guide](https://www.productcompass.pm/p/landing-a-product-manager-interview)
 ### Further Reading
 
 - [How to Land a PM Interview: A Step-by-Step Guide. Product Manager Resume Template.](https://www.productcompass.pm/p/landing-a-product-manager-interview)

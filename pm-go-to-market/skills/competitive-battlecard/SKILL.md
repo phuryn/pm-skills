@@ -1,6 +1,6 @@
 ---
 name: competitive-battlecard
-description: "Create sales-ready competitive battlecards comparing your product against a specific competitor — positioning, feature comparison, objection handling, and win/loss patterns. Use when preparing sales teams, creating competitive materials, or responding to 'why not competitor X?'"
+description: "Create sales-ready competitive battlecards comparing your product against a specific competitor"
 ---
 
 ## Competitive Battlecard
@@ -70,6 +70,12 @@ Use web search to research the competitor's current product, pricing, positionin
 
 Save as markdown. Format for easy printing or sharing in Notion/Confluence.
 
+## Notes
+
+- Battlecards are for the sales team — write them for people who need to close deals, not for product managers.
+- Focus on what's actionable: specific talking points, not generic "we're better" claims.
+- Include real quotes from customers who switched from the competitor — social proof beats arguments.
+- Update battlecards quarterly — competitive landscapes change faster than most teams realize.
 ---
 
 ### Further Reading

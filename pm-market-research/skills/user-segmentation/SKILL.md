@@ -1,11 +1,11 @@
 ---
 name: user-segmentation
-description: "Segment users from feedback data based on behavior, JTBD, and needs. Identifies at least 3 distinct user segments. Use when segmenting a user base, analyzing diverse user feedback, or building a segmentation model."
+description: "Segment users from feedback data based on behavior, JTBD, and needs."
 ---
 
 # User Segmentation
 
-## Purpose
+## Instructions
 Analyze diverse user feedback to identify at least 3 distinct behavioral and needs-based user segments. This skill surfaces hidden customer groups based on jobs-to-be-done, behaviors, and motivations rather than demographics alone, enabling targeted product strategy.
 
 ## Instructions

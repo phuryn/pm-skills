@@ -1,7 +1,13 @@
 ---
 name: release-notes
-description: "Generate user-facing release notes from tickets, PRDs, or changelogs. Creates clear, engaging summaries organized by category (new features, improvements, fixes). Use when writing release notes, creating changelogs, announcing product updates, or summarizing what shipped."
+description: "Generate user-facing release notes from tickets, PRDs, or changelogs."
 ---
+
+---
+
+### Further Reading
+
+- [How to Write Release Notes That Users Actually Read](https://www.productcompass.pm/p/how-to-write-release-notes)
 
 ## Release Notes Generator
 

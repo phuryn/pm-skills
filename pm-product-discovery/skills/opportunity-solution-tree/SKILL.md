@@ -1,6 +1,6 @@
 ---
 name: opportunity-solution-tree
-description: "Build an Opportunity Solution Tree (OST) to structure product discovery — map a desired outcome to opportunities, solutions, and experiments. Based on Teresa Torres' Continuous Discovery Habits. Use when structuring discovery work, mapping opportunities to solutions, or deciding what to build next."
+description: "Build an Opportunity Solution Tree (OST) to structure product discovery"
 ---
 
 ## Opportunity Solution Tree (OST)
@@ -33,7 +33,7 @@ The **Opportunity Solution Tree** (Teresa Torres, *Continuous Discovery Habits*)
 
 You are helping a product team build an Opportunity Solution Tree for **$ARGUMENTS**.
 
-### Input Requirements
+### Input
 - A desired outcome or business metric to improve
 - Customer research data (interviews, surveys, analytics, feedback)
 - Optionally: existing opportunities or solution ideas to organize
@@ -54,6 +54,12 @@ You are helping a product team build an Opportunity Solution Tree for **$ARGUMEN
 
 Think step by step. Save as markdown if substantial.
 
+## Notes
+
+- The OST is a living artifact — update it weekly as you learn from interviews and experiments.
+- If the tree has more than 3 opportunities at any level, you've lost focus. Cut to the top 2–3.
+- A tree with solutions but no experiments is just a feature list. Always go one level deeper.
+- The tree should connect clearly to your OKRs — the desired outcome at the top should be a measurable OKR.
 ---
 
 ### Further Reading

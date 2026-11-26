@@ -1,13 +1,8 @@
 ---
 name: startup-canvas
-description: "Generate a Startup Canvas combining Product Strategy (9 sections) and Business Model (costs + revenue) for a new product. An alternative to BMC and Lean Canvas that separates strategy from business model. Use when launching a new product or evaluating a startup concept."
+description: "Generate a Startup Canvas combining Product Strategy (9 sections) and Business Model (costs + revenue) for a new product."
 ---
 # Startup Canvas
-
-## Metadata
-- **Name**: startup-canvas
-- **Description**: Generate a Startup Canvas for a new product. Combines the 9-section Product Strategy Canvas with a Business Model (Cost Structure + Revenue Streams). Designed specifically for startups and new products.
-- **Triggers**: startup canvas, new product canvas, startup strategy, startup business model
 
 ## Domain Context
 
@@ -39,7 +34,7 @@ You are a product strategist and startup advisor designing a Startup Canvas for 
 
 Your task is to create a comprehensive Startup Canvas that covers both the strategic choices and the business model for a new product.
 
-## Input Requirements
+## Input
 - Product or startup idea
 - Target market and customer insights
 - Competitive landscape

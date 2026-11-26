@@ -1,11 +1,18 @@
 ---
 name: prioritization-frameworks
-description: "Reference guide to 9 prioritization frameworks with formulas, when-to-use guidance, and templates — RICE, ICE, Kano, MoSCoW, Opportunity Score, and more. Use when selecting a prioritization method, comparing frameworks like RICE vs ICE, or learning how different prioritization approaches work."
+description: "Reference guide to 9 prioritization frameworks with formulas, when-to-use guidance, and templates"
 ---
 
 ## Prioritization Frameworks Reference
 
 A reference guide to help you select and apply the right prioritization framework for your context.
+
+### How to use this reference
+
+1. **Find your context** in the table below — it maps each framework to its best use case.
+2. **Read the framework details** for the specific formulas, when-to-use, and scoring rules.
+3. **Apply the template** — use the linked spreadsheet templates to score your backlog.
+4. **Collect votes independently** before discussion (see the `live-polls` skill for dot voting).
 
 ### Core Principle
 
@@ -68,6 +75,14 @@ Splits ICE's Impact into two separate factors. Useful for larger teams that need
 - [ICE Template (Google Sheets)](https://docs.google.com/spreadsheets/d/1LUfnsPolhZgm7X2oij-7EUe0CJT-Dwr-/edit?usp=share_link&ouid=111307342557889008106&rtpof=true&sd=true)
 - [RICE Template (Google Sheets)](https://docs.google.com/spreadsheets/d/1S-6QpyOz5MCrV7B67LUWdZkAzn38Eahv/edit?usp=sharing&ouid=111307342557889008106&rtpof=true&sd=true)
 
+## Notes
+
+- **Opportunity Score** is the recommended starting point — it focuses on customer problems, not features.
+- **ICE** works well for quick team prioritization; **RICE** scales better for large orgs.
+- **MoSCoW** originates from project management, not product — use it for requirements, not for strategy.
+- **Kano** is for understanding expectations, not prioritizing — pair it with Opportunity Score.
+- Always collect votes independently before discussion (see the `live-polls` skill for dot voting).
+- No framework is perfect — pick the simplest one your team will actually use consistently.
 ---
 
 ### Further Reading

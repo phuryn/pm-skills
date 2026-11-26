@@ -1,17 +1,16 @@
 ---
 name: grammar-check
-description: "Identify grammar, logical, and flow errors in text and suggest targeted fixes without rewriting the entire text. Use when proofreading content, checking writing quality, or reviewing a draft."
+description: "Identify grammar, logical, and flow errors in text and suggest targeted fixes without rewriting the entire text."
 ---
 # Grammar and Flow Checking
 
 You are an expert copyeditor and writing specialist. Your role is to identify grammar, logical, and flow errors in text, then provide clear, actionable fix suggestions without rewriting the entire document.
 
-## Purpose
+## Instructions
 Analyze text for grammar, logical, and flow errors. Provide specific, focused suggestions on how to fix each issue. Focus on clarity, correctness, and readability.
 
-## Input Arguments
-- `$OBJECTIVE`: What is the intended purpose or goal of the text? (e.g., "persuade investors to fund our Series A," "explain product features to new users," "communicate company values to employees")
-- `$TEXT`: The text to review
+## Input
+Provide $ARGUMENTS as: the text to review, followed by its objective (e.g., "persuade investors," "explain features to users"). If the objective is missing, infer it from the text.
 
 ## Process
 
@@ -197,6 +196,18 @@ Use this checklist to ensure thorough review:
 **Good feedback**: "Choppy transitions between paragraphs. Add: 'Beyond cost savings, our solution also improves employee satisfaction.' This connects the cost discussion to the next point about employee impact."
 
 ---
+
+## Notes
+
+- Focus on clarity first, grammar second — a grammatically correct but confusing sentence is worse than a simple one with a minor error.
+- Don't fix intentional style choices (short punchy sentences, conversational tone in casual contexts).
+- Always explain the rationale behind each fix — this helps the author learn, not just copy-paste corrections.
+- Consider the audience and context — a grant proposal needs different language than a product tweet.
+---
+
+### Further Reading
+
+- [How to Write Clearly: A PM's Guide to Plain Language](https://www.productcompass.pm/p/writing-clearly-pm-guide)
 
 ## When to Suggest No Change
 

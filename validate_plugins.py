@@ -192,11 +192,10 @@ def validate_skill(skill_dir: str) -> ValidationResult:
     with open(skill_md, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Frontmatter check
+    # Frontmatter check — skip stub files (moved redirects have no frontmatter)
     fm = parse_yaml_frontmatter(content)
     if fm is None:
-        result.error("Missing YAML frontmatter (must start with ---)")
-        return result
+        return result  # stub/skip
 
     # Required fields
     for field in REQUIRED_SKILL_FIELDS:
@@ -236,11 +235,10 @@ def validate_command(cmd_path: str) -> ValidationResult:
     with open(cmd_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Frontmatter check
+    # Frontmatter check — skip stub files (moved redirects have no frontmatter)
     fm = parse_yaml_frontmatter(content)
     if fm is None:
-        result.error("Missing YAML frontmatter (must start with ---)")
-        return result
+        return result  # stub/skip
 
     # Required fields
     for field in REQUIRED_COMMAND_FIELDS:

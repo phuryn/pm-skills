@@ -1,13 +1,8 @@
 ---
 name: monetization-strategy
-description: "Brainstorm 3-5 monetization strategies with audience fit, risks, and validation experiments. Use when exploring revenue models, evaluating pricing strategies, or deciding how to monetize a product."
+description: "Brainstorm 3-5 monetization strategies with audience fit, risks, and validation experiments."
 ---
 # Monetization Strategy
-
-## Metadata
-- **Name**: monetization-strategy
-- **Description**: Brainstorm 3-5 monetization strategies with audience fit, risks, and validation experiments. Use when exploring revenue models, pricing strategies, or business model options.
-- **Triggers**: monetization strategy, revenue model, pricing strategy, how to monetize, make money
 
 ## Instructions
 
@@ -15,7 +10,7 @@ You are an experienced business model strategist brainstorming monetization stra
 
 Your task is to develop 3-5 distinct monetization approaches that could work for the product or feature, evaluate fit with the target market, and outline low-effort validation experiments.
 
-## Input Requirements
+## Input
 - Product or feature description
 - Target market segment(s) and customer profile
 - Current willingness to pay or budget constraints

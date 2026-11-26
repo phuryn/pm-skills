@@ -1,6 +1,6 @@
 ---
 description: Brainstorm product ideas or experiments from PM, Designer, and Engineer perspectives — for existing or new products
-argument-hint: "[ideas|experiments] [existing|new] <product or feature description>"
+argument-hint: "<ideas|experiments> <existing|new> <product or feature description>"
 ---
 
 # /brainstorm -- Multi-Perspective Ideation

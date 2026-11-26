@@ -1,13 +1,14 @@
 ---
 name: swot-analysis
-description: "Perform a detailed SWOT analysis — strengths, weaknesses, opportunities, and threats with actionable recommendations. Use when doing strategic assessment, competitive analysis, or evaluating a product or business position."
+description: "Perform a detailed SWOT analysis — strengths, weaknesses, opportunities, and threats with actionable recommendations. Use when doing strategic asse..."
 ---
-# SWOT Analysis
 
-## Metadata
-- **Name**: swot-analysis
-- **Description**: Perform a detailed SWOT analysis for a product. Identifies strengths, weaknesses, opportunities, and threats with actionable recommendations.
-- **Triggers**: SWOT analysis, strengths weaknesses, SWOT matrix, strategic assessment
+---
+
+### Further Reading
+
+- [How to Do a SWOT Analysis for Product Strategy](https://www.productcompass.pm/p/swot-analysis-product-strategy)
+# SWOT Analysis
 
 ## Instructions
 
@@ -15,7 +16,7 @@ You are a strategic analyst conducting a SWOT analysis for $ARGUMENTS.
 
 Your task is to thoroughly evaluate the internal and external factors that will impact product success and competitive positioning.
 
-## Input Requirements
+## Input
 - Product description and current state
 - Competitive landscape and market context
 - Company capabilities, resources, and constraints

@@ -1,6 +1,6 @@
 ---
 name: analyze-feature-requests
-description: "Analyze and prioritize a list of feature requests by theme, strategic alignment, impact, effort, and risk. Use when reviewing customer feature requests, triaging a backlog, or making prioritization decisions."
+description: "Analyze and prioritize a list of feature requests by theme, strategic alignment, impact, effort, and risk."
 ---
 
 ## Analyze Feature Requests
@@ -41,6 +41,13 @@ The user will describe their product goal and provide feature requests. Work thr
 
 Think step by step. Save as markdown or create a structured output document.
 
+## Notes
+
+- Group requests into themes BEFORE prioritizing — a theme with 20 requests from 3 different customers is more important than one unique request.
+- Never build exactly what customers ask for. They design solutions; your job is to understand the underlying problem and design a better one.
+- Use Opportunity Score (Importance × (1 − Satisfaction)) to rank customer-reported problems objectively.
+- If a feature request comes from a single customer in a small segment, flag it as "one-off" and check if others have the same need.
+- Track which feature requests you decline and why — customers appreciate transparency, and you'll spot patterns when the same request comes back.
 ---
 
 ### Further Reading

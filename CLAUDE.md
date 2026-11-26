@@ -58,6 +58,27 @@ pm-skills/                           <- repo root
 - Skills can be force-loaded with `/plugin-name:skill-name` or `/skill-name`.
 - Keep frontmatter lean (always loaded); put detail in the SKILL.md body (loaded when triggered) — progressive disclosure.
 
+## Skill Canonical Template
+
+Every `SKILL.md` should follow this structure for consistency:
+
+1. **Frontmatter**: `name` + `description` (required). Description should be 50-150 chars, include trigger phrases (`Use when...`, `Triggers:...`).
+2. **`## Purpose`**: One sentence — what this skill does and for whom.
+3. **`## Instructions`**: Step-by-step process. Use `**Step N:**` bold labels. Reference skills by `**skill-name**` format.
+4. **`## Output`**: Expected output format or template. Use code blocks for templates.
+5. **`## Notes`** (optional): Caveats, edge cases, or pro-tips. Minimum ~40 words of body content.
+6. **`### Further Reading`**: Links to relevant Product Compass articles. Neutral tone — title + URL only. Tag video courses as `(video course)`.
+
+Skills should use `$ARGUMENTS` for the single positional argument placeholder. Do not invent custom variables (`$RESUME`, `$COMPANY_ONE_NAME`, etc.) — let the command layer or the skill's natural context handle named inputs.
+
+Commands should follow this structure:
+
+1. **Frontmatter**: `description` + `argument-hint` (required).
+2. **`## Invocation`**: Code block showing valid invocations.
+3. **`## Modes`** or **`## Workflow`**: Step-by-step workflow referencing skills by `**skill-name**` format.
+4. **`## Notes`**: Caveats and pro-tips.
+
+
 ## What's Visible Where
 
 | Location | Visible in | Notes |

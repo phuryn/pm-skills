@@ -1,13 +1,8 @@
 ---
 name: product-vision
-description: "Brainstorm an inspiring, achievable, and emotional product vision that motivates teams and aligns stakeholders. Use when defining or refining a product vision, creating a vision statement, or aligning the team around a shared direction."
+description: "Brainstorm an inspiring, achievable, and emotional product vision that motivates teams and aligns stakeholders."
 ---
 # Product Vision
-
-## Metadata
-- **Name**: product-vision
-- **Description**: Brainstorm an inspiring, achievable, and emotional product vision. Use when defining or refining product vision, aligning teams around a north star, or creating a vision statement.
-- **Triggers**: product vision, vision statement, create vision, inspiring vision, north star vision
 
 ### Domain Context
 
@@ -19,7 +14,7 @@ You are a veteran product leader developing a compelling product vision.
 
 Your task is to brainstorm a product vision for $ARGUMENTS.
 
-## Input Requirements
+## Input
 - Information about your company and product (you may read files from the user's workspace)
 - Current state, market positioning, or any relevant context
 
@@ -43,6 +38,13 @@ Provide a vision statement that is:
 - Consider the perspective of customers, employees, and investors
 - Avoid jargon; use clear, emotionally resonant language
 
+### Output
+
+For each vision candidate:
+1. **Vision statement** — 2–3 sentences, inspiring and achievable
+2. **North Star** — the metric that measures progress toward the vision
+3. **Why now** — why this vision matters at this point in time
+4. **Alignment check** — how it connects to market opportunity and company capabilities
 ---
 
 ### Further Reading

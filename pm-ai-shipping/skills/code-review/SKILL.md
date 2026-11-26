@@ -1,8 +1,3 @@
----
-name: code-review
-description: "Moved to phuryn/product-engineering, where it is maintained in the ai-shipping plugin; this copy says where it went and how to install it. Use when asked to review changes, find bugs, audit a codebase, or check whether a fix is safe."
----
-
 # Code Review has moved
 
 `code-review` is maintained in [phuryn/product-engineering](https://github.com/phuryn/product-engineering/tree/main/ai-shipping/skills/code-review), in its `ai-shipping` plugin, with the rest of the AI Shipping Kit. This skill stays in pm-skills only so an agent that loads it knows where it went.

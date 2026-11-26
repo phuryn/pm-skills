@@ -1,26 +1,19 @@
 ---
 name: draft-nda
-description: "Draft a detailed Non-Disclosure Agreement between two parties covering information types, jurisdiction, and clauses needing legal review. Use when creating confidentiality agreements or preparing an NDA for a partnership."
+description: "Draft a detailed Non-Disclosure Agreement between two parties covering information types, jurisdiction, and clauses needing legal review."
 ---
 # NDA (Non-Disclosure Agreement) Drafting
 
 You are an experienced legal document specialist with expertise in confidentiality agreements. Your role is to help draft detailed, clear, and professional Non-Disclosure Agreements between parties.
 
-## Purpose
+## Instructions
 Draft a comprehensive Non-Disclosure Agreement (NDA) between two parties. The NDA covers information types, jurisdiction, and clearly marks clauses that require legal review. Provide plain-language explanations to make the document accessible.
 
 ## Important Disclaimer
 **This is for informational purposes only and does not constitute legal advice. Always have a licensed attorney review the final document before execution. NDAs are legally binding contracts; professional legal review is essential.**
 
-## Input Arguments
-- `$COMPANY_ONE_NAME`: Name of the first party/company
-- `$COMPANY_ONE_ADDRESS`: Address of the first party/company
-- `$COMPANY_ONE_REPS`: Names and titles of representatives (e.g., "John Smith, CEO; Jane Doe, General Counsel")
-- `$COMPANY_TWO_NAME`: Name of the second party/company
-- `$COMPANY_TWO_ADDRESS`: Address of the second party/company
-- `$COMPANY_TWO_REPS`: Names and titles of representatives
-- `$INFORMATION_TYPES`: Types of information to be shared (e.g., "business plans, customer lists, technical specifications, pricing data, source code")
-- `$JURISDICTION`: Governing jurisdiction (e.g., "State of California, United States" or "England and Wales")
+## Input
+Provide the following in $ARGUMENTS: both party names, addresses, representatives, types of confidential information, governing jurisdiction. If any detail is missing, ask for it.
 
 ## Process
 
@@ -149,6 +142,18 @@ Guidance on:
 - Next steps (legal review, signing process)
 
 ---
+
+## Notes
+
+- Always have a licensed attorney review the final document before execution — this skill provides a starting point, not legal advice.
+- Choose mutual vs. one-way carefully: if both parties share confidential info, a mutual NDA is simpler and fairer.
+- The definition of "Confidential Information" is the most negotiated clause — be specific about what's included and excluded.
+- Consider different durations for different information types (trade secrets may need perpetual protection).
+---
+
+### Further Reading
+
+- [How to Draft a Mutual NDA for Startup Partnerships](https://www.productcompass.pm/p/how-to-draft-nda)
 
 ## Important Reminders
 

@@ -1,8 +1,3 @@
----
-name: intended-vs-implemented
-description: "Moved to phuryn/product-engineering, where it is maintained in the ai-shipping plugin; this copy says where it went and how to install it. Use when asked to find where the code does something other than its docs say."
----
-
 # Intended vs Implemented has moved
 
 `intended-vs-implemented` is maintained in [phuryn/product-engineering](https://github.com/phuryn/product-engineering/tree/main/ai-shipping/skills/intended-vs-implemented), in its `ai-shipping` plugin, with the rest of the AI Shipping Kit. This skill stays in pm-skills only so an agent that loads it knows where it went.

@@ -1,20 +1,12 @@
 ---
 name: positioning-ideas
-description: "Brainstorm product positioning ideas differentiated from competitors. Identifies top competitors and generates positioning statements with rationale. Use when developing product positioning, differentiating from competitors, or crafting brand positioning strategy."
+description: "Brainstorm product positioning ideas differentiated from competitors."
 ---
 # Positioning Ideas
 
 Brainstorm product positioning ideas differentiated from competitors. Identifies top competitors and generates positioning statements with strategic rationale. Use when developing product positioning, differentiating from competitors, or crafting brand positioning strategy.
 
-## When to Use
-
-- Developing product positioning strategy
-- Differentiating from competitors
-- Crafting brand positioning statements
-- Identifying market positioning gaps
-- Triggers: positioning, brand positioning, differentiation, how to position, positioning statement
-
-## Prompt
+## Instructions
 
 You are an experienced brand strategist with expertise in competitive positioning, market differentiation, and brand strategy.
 
@@ -44,7 +36,7 @@ For each idea, provide:
 3. **Supporting Message**: Key supporting messages that reinforce this positioning
 4. **Competitive Advantage**: What specific advantages enable this positioning claim
 
-## Tips for Best Results
+## Notes
 
 - Provide detailed target audience profiles and their pain points
 - Share your product's unique capabilities and differentiators
@@ -53,6 +45,13 @@ For each idea, provide:
 - Describe what market segment or niche you want to own
 - Share your long-term vision and business strategy
 
+### Output
+
+For each positioning idea:
+1. **Positioning statement** — "For [who] who [need], [product] is [category] that [benefit] unlike [alternative] we [differentiator]"
+2. **Key differentiator** — the one thing no competitor claims
+3. **Proof point** — evidence that supports the claim
+4. **Channel fit** — where this positioning works best (content, paid, PR, social)
 ---
 
 ### Further Reading

@@ -1,13 +1,8 @@
 ---
 name: product-strategy
-description: "Create a comprehensive product strategy using the 9-section Product Strategy Canvas — vision, segments, costs, value propositions, trade-offs, metrics, growth, capabilities, and defensibility. Use when building a product strategy, creating a strategic plan, or defining product direction."
+description: "Create a comprehensive product strategy using the 9-section Product Strategy Canvas"
 ---
 # Product Strategy Canvas
-
-## Metadata
-- **Name**: product-strategy
-- **Description**: Generate a comprehensive product strategy using the 9-section Product Strategy Canvas. Covers vision, market segments, costs, value propositions, trade-offs, metrics, growth, capabilities, and defensibility.
-- **Triggers**: product strategy, strategy canvas, strategic plan, product strategy document
 
 ## Instructions
 
@@ -15,7 +10,7 @@ You are an experienced product strategist developing a comprehensive product str
 
 Your task is to create a detailed Product Strategy Canvas that outlines how the product will compete, win, and grow in the market.
 
-## Input Requirements
+## Input
 - Product description and current positioning
 - Market context, competitors, and customer insights
 - Company resources, constraints, and priorities

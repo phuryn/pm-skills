@@ -1,7 +1,13 @@
 ---
 name: dummy-dataset
-description: "Generate realistic dummy datasets for testing with customizable columns, constraints, and output formats (CSV, JSON, SQL, Python script). Use when creating test data, building mock datasets, or generating sample data for development and demos."
+description: "Generate realistic dummy datasets for testing with customizable columns, constraints, and output formats (CSV, JSON, SQL, Python script)."
 ---
+
+---
+
+### Further Reading
+
+- [How to Create Realistic Test Data for Product Development](https://www.productcompass.pm/p/how-to-create-test-data)
 # Dummy Dataset Generation
 
 Generate realistic dummy datasets for testing with customizable columns, constraints, and output formats (CSV, JSON, SQL, Python script). Creates executable scripts or direct data files for immediate use.
@@ -9,14 +15,9 @@ Generate realistic dummy datasets for testing with customizable columns, constra
 **Use when:** Creating test data, generating sample datasets, building realistic mock data for development, or populating test environments.
 
 **Arguments:**
-- `$PRODUCT`: The product or system name
-- `$DATASET_TYPE`: Type of data (e.g., customer feedback, transactions, user profiles)
-- `$ROWS`: Number of rows to generate (default: 100)
-- `$COLUMNS`: Specific columns or fields to include
-- `$FORMAT`: Output format (CSV, JSON, SQL, Python script)
-- `$CONSTRAINTS`: Additional constraints or business rules
+- `$ARGUMENTS`: Product/system name, dataset type, row count, columns, format (CSV/JSON/SQL/Python), and any constraints
 
-## Step-by-Step Process
+## Instructions
 
 1. **Identify dataset type** - Understand the data domain
 2. **Define column specifications** - Names, data types, and value ranges
@@ -36,8 +37,8 @@ from datetime import datetime, timedelta
 import random
 
 # Configuration
-ROWS = $ROWS
-FILENAME = "$DATASET_TYPE.csv"
+ROWS = 100  # set from arguments
+FILENAME = "dataset.csv"  # set from arguments
 
 # Column definitions with realistic value generators
 columns = {

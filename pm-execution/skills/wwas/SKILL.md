@@ -1,6 +1,6 @@
 ---
 name: wwas
-description: "Create product backlog items in Why-What-Acceptance format — independent, valuable, testable items with strategic context. Use when writing structured backlog items, breaking features into work items, or using the WWA format."
+description: "Create product backlog items in Why-What-Acceptance format"
 ---
 # Why-What-Acceptance (WWA)
 
@@ -9,12 +9,9 @@ Create product backlog items in Why-What-Acceptance format. Produces independent
 **Use when:** Writing backlog items, creating product increments, breaking features into work items, or communicating strategic intent to teams.
 
 **Arguments:**
-- `$PRODUCT`: The product or system name
-- `$FEATURE`: The new feature or capability
-- `$DESIGN`: Link to design files (Figma, Miro, etc.)
-- `$ASSUMPTIONS`: Key assumptions and strategic context
+- `$ARGUMENTS`: The product, feature, and any context (design links, assumptions)
 
-## Step-by-Step Process
+## Instructions
 
 1. **Define the strategic Why** - Connect work to business and team objectives
 2. **Describe the What** - Keep descriptions concise, reference designs

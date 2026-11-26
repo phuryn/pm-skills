@@ -1,11 +1,11 @@
 ---
 name: market-segments
-description: "Identify 3-5 potential customer segments with demographics, JTBD, and product fit analysis. Use when exploring market segments, identifying target audiences, evaluating new markets, or learning how to segment a market."
+description: "Identify 3-5 potential customer segments with demographics, JTBD, and product fit analysis."
 ---
 
 # Market Segments
 
-## Purpose
+## Instructions
 Identify and analyze 3-5 distinct customer segments for your product, understanding their unique jobs-to-be-done, desired outcomes, pain points, and product fit. Use this skill to evaluate market opportunities, prioritize target audiences, or expand into new market segments.
 
 ## Instructions

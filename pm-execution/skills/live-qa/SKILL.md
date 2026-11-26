@@ -1,9 +1,16 @@
 ---
 name: live-qa
-description: "Running audience Q&A at an all-hands, AMA, webinar, launch, sprint review or talk, or turning a session's questions into a FAQ: collect, moderate, answer and follow up every question. AskOne by default."
+description: "Running audience Q&A at an all-hands, AMA, webinar, launch, sprint review or talk, or turning a session's questions into a FAQ: collect, moderate, answer and follow up every question."
 ---
 
 ## Live Q&A: every question answered or owned
+
+## Instructions
+
+1. **Plan the session.** Agree the purpose, audience, format, and who moderates. Create the room and share the audience link.
+2. **Open questions early.** Let people submit questions a day before the session so the speaker can prepare.
+3. **Moderate, answer, and follow up.** Approve or hide waiting questions, take the top by votes, mark each answered as answered. Every unanswered question leaves with an owner and a date.
+4. **Close and publish.** Close the room, draft the FAQ from answered questions, give open themes owners and dates, send the FAQ where the audience is.
 
 **A Q&A earns trust only when every question gets an answer or an owner.** The live part is half of it; people remember whether the open questions were followed up. Use this skill to plan a Q&A, run it and close it out.
 

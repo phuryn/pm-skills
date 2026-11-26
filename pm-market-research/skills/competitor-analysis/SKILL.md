@@ -1,11 +1,11 @@
 ---
 name: competitor-analysis
-description: "Analyze competitors with strengths, weaknesses, and differentiation opportunities. Identifies direct competitors and maps the competitive landscape. Use when doing competitive research, preparing a competitive brief, or finding differentiation opportunities."
+description: "Analyze competitors with strengths, weaknesses, and differentiation opportunities."
 ---
 
 # Competitor Analysis
 
-## Purpose
+## Instructions
 Conduct a comprehensive competitive analysis to understand the landscape, identify 5 direct competitors, and uncover differentiation opportunities. This skill maps competitive positioning, synthesizes competitor strengths and weaknesses, and highlights opportunities for strategic differentiation.
 
 ## Instructions

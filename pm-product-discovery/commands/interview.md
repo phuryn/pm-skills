@@ -1,6 +1,6 @@
 ---
 description: Prepare a customer interview script or summarize an interview transcript into structured insights
-argument-hint: "[prep|summarize] <topic or transcript>"
+argument-hint: "<prep|summarize> <topic or transcript>"
 ---
 
 # /interview -- Customer Interview Prep & Summary

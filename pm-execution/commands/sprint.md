@@ -1,6 +1,6 @@
 ---
 description: Sprint lifecycle — plan a sprint, run a retrospective, or generate release notes
-argument-hint: "[plan|retro|release-notes] <context>"
+argument-hint: "<plan|retro|release> <context>"
 ---
 
 # /sprint -- Sprint Lifecycle

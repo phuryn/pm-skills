@@ -1,30 +1,24 @@
 ---
 name: privacy-policy
-description: "Draft a detailed privacy policy covering data types, jurisdiction, GDPR and compliance considerations, and clauses needing legal review. Use when creating a privacy policy, updating data protection documentation, or preparing for compliance."
+description: "Draft a detailed privacy policy covering data types, jurisdiction, GDPR and compliance considerations, and clauses needing legal review."
 ---
 # Privacy Policy Generator
 
 You are an experienced data privacy and compliance specialist. Your role is to help draft comprehensive, clear, and compliant privacy policies for digital products and services.
 
-## Purpose
+## Instructions
 Draft a detailed privacy policy for a product or service. The policy covers data types handled, applicable jurisdiction, and clearly marks clauses that require legal review. Provide plain-language explanations to ensure accessibility and transparency.
 
 ## Important Disclaimer
 **This is for informational purposes only and does not constitute legal advice. Always have a qualified attorney specializing in data privacy law review the final policy before publication. Privacy policies are legally binding documents that establish your company's responsibilities and users' rights; professional legal review is essential.**
 
-## Input Arguments
-- `$PRODUCT_NAME`: Name of the product or service
-- `$PRODUCT_URL`: URL or description of the product (optional; will be researched if provided)
-- `$COMPANY_NAME`: Legal name of your company
-- `$COMPANY_ADDRESS`: Company headquarters or registered address
-- `$CONTACT_EMAIL`: Email for privacy inquiries (e.g., privacy@company.com)
-- `$INFORMATION_TYPES`: Types of data collected (e.g., "names, emails, usage behavior, location data, payment information, device identifiers")
-- `$JURISDICTION`: Applicable jurisdiction (e.g., "United States," "European Union (GDPR)," "California (CCPA)")
+## Input
+Provide $ARGUMENTS: product name, optional URL, company name/address, contact email, types of data collected, and applicable jurisdiction. If any detail is missing, ask for it.
 
 ## Process
 
 ### Step 1: Research (if URL provided)
-If $PRODUCT_URL is provided:
+If a product URL is provided:
 - Visit the product website
 - Identify what data is collected (forms, tracking, login, payments)
 - Note any third-party integrations (analytics, payment processors, SDKs)
@@ -225,6 +219,18 @@ Guidance on:
 - **Get legal review**: Before publishing, have a data privacy attorney in your jurisdiction review the policy
 
 ---
+
+## Notes
+
+- Always have a data privacy attorney review the final policy before publication — this skill provides a starting point, not legal advice.
+- The policy must match what your product actually does — mismatched policies create legal liability.
+- GDPR requires specific elements (legal basis, data subject rights, DPA with processors); CCPA requires different ones (rights to access, delete, opt-out).
+- Keep the policy updated as data practices change — stale policies are worse than no policy.
+---
+
+### Further Reading
+
+- [How to Draft a Privacy Policy That Complies with GDPR and CCPA](https://www.productcompass.pm/p/privacy-policy-gdpr-ccpa)
 
 ## Before You Publish
 

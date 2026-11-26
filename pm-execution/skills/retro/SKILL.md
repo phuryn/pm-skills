@@ -1,6 +1,6 @@
 ---
 name: retro
-description: "Facilitate a structured sprint retrospective — what went well, what didn't, and prioritized action items with owners and deadlines. Use when running a retrospective, reflecting on a sprint, creating action items from team feedback, or learning how to run effective retros."
+description: "Facilitate a structured sprint retrospective — what went well, what didn't, and prioritized action items with owners and deadlines. Use when runnin..."
 ---
 
 ## Sprint Retrospective Facilitator
@@ -51,6 +51,12 @@ If the user provides files (sprint data, velocity charts, team feedback, or prev
 
    | Priority | Action Item | Owner | Deadline | Success Metric |
    |---|---|---|---|---|
+
+---
+
+### Further Reading
+
+- [How to Run Effective Sprint Retrospectives](https://www.productcompass.pm/p/how-to-run-effective-retrospectives)
    | 1 | [Specific, actionable improvement] | [Name/Role] | [Date] | [How we'll know it worked] |
 
    - Limit to 2-3 action items (more won't get done)

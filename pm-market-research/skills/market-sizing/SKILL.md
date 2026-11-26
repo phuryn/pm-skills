@@ -1,11 +1,11 @@
 ---
 name: market-sizing
-description: "Estimate market size using TAM, SAM, and SOM with top-down and bottom-up approaches. Use when sizing a market opportunity, estimating addressable market, preparing for investor pitches, or evaluating market entry."
+description: "Estimate market size using TAM, SAM, and SOM with top-down and bottom-up approaches."
 ---
 
 # Estimate Market Size (TAM, SAM, SOM)
 
-## Purpose
+## Instructions
 Estimate the Total Addressable Market (TAM), Serviceable Addressable Market (SAM), and Serviceable Obtainable Market (SOM) for a product. Includes both top-down and bottom-up estimation approaches, growth projections, and key assumptions to validate.
 
 ## Instructions
@@ -80,6 +80,11 @@ If the user provides market research, industry reports, financial data, or compe
 - Flag where estimates have wide confidence intervals
 - Recommend specific data sources or research to sharpen estimates
 
+## Notes
+
+- Always run both top-down and bottom-up estimates — if they differ by more than 2x, you're missing something.
+- Bottom-up (addressable customers × ARPU) is more useful for business planning; top-down (industry reports) is useful for investor conversations.
+- State your assumptions explicitly — TAM/SAM/SOM are only as good as the numbers behind them.
 ---
 
 ### Further Reading

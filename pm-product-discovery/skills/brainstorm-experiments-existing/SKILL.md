@@ -1,6 +1,6 @@
 ---
 name: brainstorm-experiments-existing
-description: "Design experiments to test assumptions for an existing product — prototypes, A/B tests, spikes, and other low-effort validation methods. Use when validating assumptions, testing feature ideas cheaply, or planning product experiments."
+description: "Design experiments to test assumptions for an existing product"
 ---
 
 ## Design Experiments (Existing Product)
@@ -41,6 +41,21 @@ The user will describe their idea and assumptions. Work through these steps:
 
 Think step by step. Present experiments in a clear table or structured format. Save as markdown if substantial.
 
+## Notes
+
+- Design experiments to answer ONE question each — multi-purpose experiments measure nothing clearly.
+- Prefer "skin-in-the-game" experiments (pre-orders, sign-ups) over opinion-based ones (surveys about interest).
+- The fastest experiments are usually landing pages, prototypes, or fake-door tests.
+- Define success criteria before running an experiment — otherwise you can't tell if it succeeded.
+- Chain experiments by dependency: learnings from one should inform the next.
+### Output
+
+For each experiment:
+1. **Hypothesis** — XYZ+S format: "At least X% of Y will do Z by S"
+2. **Method** — A/B test, fake door, prototype, concierge MVP, spike, etc.
+3. **Success criteria** — specific, measurable threshold
+4. **Effort estimate** — Low / Medium / High
+5. **Learning goal** — what you'll know if it succeeds or fails
 ---
 
 ### Further Reading

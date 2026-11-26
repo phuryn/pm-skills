@@ -1,6 +1,6 @@
 ---
 name: brainstorm-ideas-existing
-description: "Brainstorm product ideas for an existing product using multi-perspective ideation from PM, Designer, and Engineer viewpoints. Use when generating new feature ideas, brainstorming solutions for an identified opportunity, or ideating with a product trio."
+description: "Brainstorm product ideas for an existing product using multi-perspective ideation from PM, Designer, and Engineer viewpoints."
 ---
 
 ## Brainstorm Product Ideas (Existing Product)
@@ -43,6 +43,20 @@ Think step by step. Present ideas in a clear, structured format.
 
 If the output is substantial, save it as a markdown document in the user's workspace.
 
+## Notes
+
+- The Product Trio (PM + Designer + Engineer) should ideate together — best ideas come from cross-disciplinary collision.
+- Generate quantity first, quality second — aim for 15+ ideas before evaluating.
+- Defer judgment during brainstorming; evaluate in a separate pass.
+- Ground ideas in current user behavior and validated problems, not assumptions.
+- Flag which ideas are quick wins vs strategic bets early, so you can sequence them.
+### Output
+
+Present ideas as:
+1. **PM ideas** (5) — name, one-sentence description, why it was selected, key assumptions
+2. **Designer ideas** (5) — name, one-sentence description, why it was selected, key assumptions
+3. **Engineer ideas** (5) — name, one-sentence description, why it was selected, key assumptions
+4. **Top 5 prioritized** — ranked across all perspectives with rationale
 ---
 
 ### Further Reading

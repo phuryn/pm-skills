@@ -1,6 +1,6 @@
 ---
 name: ab-test-analysis
-description: "Analyze A/B test results with statistical significance, sample size validation, confidence intervals, and ship/extend/stop recommendations. Use when evaluating experiment results, checking if a test reached significance, interpreting split test data, or deciding whether to ship a variant."
+description: "Analyze A/B test results with statistical significance, sample size validation, confidence intervals, and ship/extend/stop recommendations."
 ---
 
 ## A/B Test Analysis
@@ -73,6 +73,13 @@ If the user provides data files (CSV, Excel, or analytics exports), read and ana
 
 Think step by step. Save as markdown. Generate Python scripts for calculations if raw data is provided.
 
+## Notes
+
+- Statistical significance at p < 0.05 is the standard — don't ship on borderline results.
+- Run experiments long enough to capture full business cycles (at least one week, to account for weekday/weekend effects).
+- Never peek early and stop — sequential testing inflates the false positive rate. Use Bayesian methods or pre-specified durations.
+- If a test shows no difference, report that as a result. "No lift" is valuable information.
+- Use the `dummy-dataset` skill to create sample A/B test data for practice.
 ---
 
 ### Further Reading

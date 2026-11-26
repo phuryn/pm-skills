@@ -1,6 +1,6 @@
 ---
 name: summarize-interview
-description: "Summarize a customer interview transcript into a structured template with JTBD, satisfaction signals, and action items. Use when processing interview recordings or transcripts, synthesizing discovery interviews, or creating interview summaries."
+description: "Summarize a customer interview transcript into a structured template with JTBD, satisfaction signals, and action items."
 ---
 
 ## Summarize Customer Interview
@@ -45,6 +45,13 @@ The user will provide an interview transcript — either as an attached file (te
 
 Save the summary as a markdown document in the user's workspace.
 
+## Notes
+
+- The summary is only as good as the interview quality — if the customer gave short answers, note that as a limitation.
+- Look for the gap between what customers SAY and what they DO — this is where the real insights are.
+- "Not satisfied" or "very satisfied" are the strongest signals — double down on those topics in the next round of interviews.
+- Action items should have a specific owner and deadline, not just "follow up."
+- Share summaries with the full team — the most valuable outcome of an interview is shared understanding, not a document.
 ---
 
 ### Further Reading

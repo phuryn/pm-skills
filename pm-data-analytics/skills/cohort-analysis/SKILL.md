@@ -1,14 +1,14 @@
 ---
 name: cohort-analysis
-description: "Perform cohort analysis on user engagement data — retention curves, feature adoption trends, and segment-level insights. Use when analyzing user retention by cohort, studying feature adoption over time, investigating churn patterns, or identifying engagement trends."
+description: "Perform cohort analysis on user engagement data — retention curves, feature adoption trends, and segment-level insights. Use when analyzing user re..."
 ---
 
 # Cohort Analysis & Retention Explorer
 
-## Purpose
+## Instructions
 Analyze user engagement and retention patterns by cohort to identify trends in user behavior, feature adoption, and long-term engagement. Combine quantitative insights with qualitative research recommendations.
 
-## How It Works
+## Instructions
 
 ### Step 1: Read and Validate Your Data
 - Accept CSV, Excel, or JSON data files with user cohort information
@@ -105,6 +105,13 @@ You'll receive:
 - **Analysis Scripts** (if requested): Python code for reproducible analysis
 - **Next Steps**: Prioritized actions based on findings
 
+## Notes
+
+- Cohort analysis reveals patterns that aggregate metrics hide — always segment by acquisition channel, date, or feature adoption.
+- The key question: do later cohorts retain better than earlier ones? If not, the product is getting worse over time.
+- Feature adoption cohorts (users who used feature X vs not) often show the biggest retention gaps — investigate those.
+- Compare cohorts of similar size and duration — comparing a 100-user cohort to a 10,000-user cohort skews results.
+- Retention curves typically follow an 80/20 pattern: the steepest drop is in the first week.
 ---
 
 ### Further Reading

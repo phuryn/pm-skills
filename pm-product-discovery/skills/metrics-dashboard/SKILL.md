@@ -1,6 +1,6 @@
 ---
 name: metrics-dashboard
-description: "Define and design a product metrics dashboard with key metrics, data sources, visualization types, and alert thresholds. Use when creating a metrics dashboard, defining KPIs, setting up product analytics, or building a data monitoring plan."
+description: "Define and design a product metrics dashboard with key metrics, data sources, visualization types, and alert thresholds."
 ---
 
 ## Product Metrics Dashboard
@@ -80,6 +80,13 @@ For case studies and more detail: [Are You Tracking the Right Metrics?](https://
 
 Think step by step. Save the dashboard specification as a markdown document.
 
+## Notes
+
+- The North Star Metric should be a customer-centric outcome, not a business vanity metric.
+- Input metrics (leading indicators) are the levers you can actually pull — focus your team's energy there.
+- Health metrics (guardrails) prevent you from optimizing the wrong thing — e.g., don't increase engagement by showing more ads.
+- Review your dashboard weekly; if you don't act on the data, the dashboard is a wallpaper.
+- Use the `north-star-metric` skill (pm-marketing-growth) to define your North Star.
 ---
 
 ### Further Reading

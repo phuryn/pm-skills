@@ -1,6 +1,6 @@
 ---
 name: brainstorm-ideas-new
-description: "Brainstorm feature ideas for a new product in initial discovery from PM, Designer, and Engineer perspectives. Use when starting product discovery for a new product, exploring features for a startup idea, or doing initial ideation."
+description: "Brainstorm feature ideas for a new product in initial discovery from PM, Designer, and Engineer perspectives."
 ---
 
 ## Brainstorm Product Ideas (New Product)
@@ -37,6 +37,12 @@ The user will describe their target segment, opportunity, and desired outcomes. 
 
 Think step by step. Save substantial output as a markdown document.
 
+## Notes
+
+- For new products, desirability (will users want this?) trumps feasibility (can we build it?).
+- Use the `identify-assumptions` skills to stress-test your top ideas before investing in them.
+- The "new product" context means you're testing whether the product should exist, not iterating on a known product.
+- If the user hasn't defined a target segment, ask for that first — brainstorming without a segment is just guessing.
 ---
 
 ### Further Reading

@@ -1,8 +1,3 @@
----
-description: Moved to phuryn/product-engineering, where it is maintained in the ai-shipping plugin; this copy says where it went and how to install it. Use when asked to audit AI-built code for performance problems.
-argument-hint: "<path or area> | <base>..<head> | changes; defaults to the whole repository"
----
-
 # /performance-audit-static has moved
 
 `performance-audit-static` is maintained in [phuryn/product-engineering](https://github.com/phuryn/product-engineering/tree/main/ai-shipping/skills/performance-audit-static), in its `ai-shipping` plugin, with the rest of the AI Shipping Kit. This command, now a skill there, stays in pm-skills only so an agent that loads it knows where it went.

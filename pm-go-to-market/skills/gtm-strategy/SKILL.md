@@ -1,11 +1,8 @@
 ---
 name: gtm-strategy
-description: "Create a go-to-market strategy covering marketing channels, messaging, success metrics, and launch timeline. Use when planning a product launch, creating a GTM plan from scratch, or defining a launch strategy for a new market."
+description: "Create a go-to-market strategy covering marketing channels, messaging, success metrics, and launch timeline."
 ---
 # GTM Strategy
-
-## Overview
-Create a comprehensive go-to-market strategy for a product launch. This skill covers marketing channels, messaging development, success metrics definition, and launch planning.
 
 ## When to Use
 - Planning a product launch
@@ -14,7 +11,7 @@ Create a comprehensive go-to-market strategy for a product launch. This skill co
 - Developing product-to-market fit strategy
 - Preparing a product go-live roadmap
 
-## How It Works
+## Instructions
 
 ### Step 1: Gather Research Data
 The system will help you load and analyze early research about your product and target market. Provide:
@@ -83,6 +80,12 @@ This skill applies Product Compass GTM strategy methodology, focusing on market 
 - Establish baseline metrics before launch to measure impact
 - Plan for feedback loops and optimization
 
+## Notes
+
+- GTM strategy is a series of linked decisions — channel, pricing, packaging, and launch all affect each other.
+- For B2B, the sales motion (self-serve, inside sales, enterprise) determines everything else — pick it first.
+- For B2C, distribution is everything — without a channel strategy, the best product fails.
+- Launch is not a day — it's a 90-day window. Plan the pre-launch, launch week, and post-launch optimization.
 ---
 
 ### Further Reading

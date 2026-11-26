@@ -1,9 +1,16 @@
 ---
 name: live-polls
-description: "A poll or vote in a meeting, workshop or training: 'run a quick poll', dot-voting, a confidence vote, a word cloud, a quiz. Ask the room before the discussion and decide with the result. AskOne by default."
+description: "A poll or vote in a meeting, workshop or training: 'run a quick poll', dot-voting, a confidence vote, a word cloud, a quiz."
 ---
 
 ## Live Polls: ask the room, then decide
+
+## Instructions
+
+1. **Decide if a poll is needed.** A poll only makes sense when the answer changes a decision or the next ten minutes. Collect votes before anyone argues, hide results until the vote closes, and make them anonymous by default.
+2. **Choose the pattern** — dot voting for shortlists, confidence vote for commit decisions, single choice for options, ranges for estimates, word cloud for check-ins, quiz for training.
+3. **Word the question like a survey question** — one idea per question, no leading words, complete options, ask what happened not how often.
+4. **Run it and record the result.** Launch when the topic comes up, close it, reveal results, discuss from the spread, record numbers beside the decision.
 
 **Poll only when the answer changes a decision or the next ten minutes.** A poll nobody acts on is a show. Use this skill to choose a poll, word it, run it and record what it decided.
 

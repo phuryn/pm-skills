@@ -1,6 +1,6 @@
 ---
 name: north-star-metric
-description: "Define a North Star Metric and 3-5 supporting input metrics that form a metrics constellation. Classify the business game (Attention, Transaction, Productivity) and validate against 7 criteria for an effective North Star. Use when choosing a North Star Metric, setting up a metrics framework, learning about the North Star Framework, or deciding what to measure."
+description: "Define a North Star Metric and 3-5 supporting input metrics that form a metrics constellation."
 ---
 # North Star Metric
 
@@ -14,14 +14,6 @@ NSM **IS**: a single, customer-centric KPI that reflects the value customers get
 
 Free resource: [The North Star Framework 101 (PDF)](https://learn.productcompass.pm/nsm101)
 
-## When to Use
-
-- Defining your company's key metric framework
-- Setting up a metrics tracking system
-- Choosing what to measure and optimize for
-- Evaluating potential North Star candidates
-- Triggers: North Star metric, north star, key metric, what to measure, metrics framework, OMTM
-
 ## The Three Business Games
 
 Before identifying your North Star, classify your business into one of these three games:
@@ -30,7 +22,7 @@ Before identifying your North Star, classify your business into one of these thr
 - **Transaction Game**: How many transactions occur between customers and your platform? (Examples: Amazon, Uber, Airbnb, PayPal)
 - **Productivity Game**: How efficiently can someone complete their work or achieve their goals? (Examples: Canva, Dropbox, Loom, Notion)
 
-## Prompt
+## Instructions
 
 You are a metrics strategist specializing in North Star metrics and growth measurement frameworks.
 
@@ -56,7 +48,7 @@ Define 3-5 Input Metrics (also called leading indicators) that most directly inf
 - Directly contribute to the North Star outcome
 - Help identify where optimization efforts should focus
 
-## Tips for Best Results
+## Notes
 
 - Provide details about your business model and revenue model
 - Share your company's vision, mission, or long-term goals
@@ -64,6 +56,14 @@ Define 3-5 Input Metrics (also called leading indicators) that most directly inf
 - Mention key customer segments and use cases
 - Describe the primary value you deliver to customers
 
+### Output
+
+Your output should include:
+1. **Business game classification** (Attention / Transaction / Productivity) with rationale
+2. **North Star Metric candidate** — a single, specific metric meeting all 7 criteria
+3. **3–5 Input Metrics** — leading indicators that drive the North Star
+4. **Health metrics** (guardrails) to prevent optimizing the wrong thing
+5. **A one-sentence NSM statement** — "[Metric] reflects the value [segment] gets from [product]
 ---
 
 ### Further Reading

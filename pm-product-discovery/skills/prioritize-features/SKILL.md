@@ -1,6 +1,6 @@
 ---
 name: prioritize-features
-description: "Prioritize a backlog of feature ideas based on impact, effort, risk, and strategic alignment with top 5 recommendations. Use when prioritizing a feature backlog, making scope decisions, or ranking product ideas."
+description: "Prioritize a backlog of feature ideas based on impact, effort, risk, and strategic alignment with top 5 recommendations."
 ---
 
 ## Prioritize Feature Backlog
@@ -43,6 +43,12 @@ The user will describe their product objective, desired outcomes, and provide fe
 
 Think step by step. Save as markdown if the output is substantial.
 
+## Notes
+
+- Prioritize problems (opportunities), not features — the feature is a solution, not the problem.
+- Use the `prioritize-assumptions` skill for risky ideas; use this skill for well-validated items ready for sequencing.
+- Strategic alignment should be a hard filter, not a soft weighting — if an idea doesn't align, it goes.
+- Save a copy of your prioritized backlog so you can compare it against future rounds of discovery.
 ---
 
 ### Further Reading

@@ -1,13 +1,8 @@
 ---
 name: value-proposition
-description: "Design a detailed value proposition using a 6-part JTBD template — Who, Why, What before, How, What after, Alternatives. Use when creating a value proposition, analyzing customer value delivery, or articulating why customers should choose your product."
+description: "Design a detailed value proposition using a 6-part JTBD template"
 ---
 # Value Proposition
-
-## Metadata
-- **Name**: value-proposition
-- **Description**: Generate a detailed value proposition using a 6-part template with JTBD framing. Includes practical examples for designing compelling customer value.
-- **Triggers**: value proposition, value prop, customer value, JTBD value, value map
 
 ## Instructions
 
@@ -15,7 +10,7 @@ You are a product strategist designing a clear value proposition for $ARGUMENTS.
 
 Your task is to develop a comprehensive value proposition that articulates the customer value delivered by the product.
 
-## Input Requirements
+## Input
 - Product description and features
 - Target customer segment and their problems
 - Competitive alternatives and current solutions

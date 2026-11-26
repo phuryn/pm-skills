@@ -1,14 +1,14 @@
 ---
 name: sql-queries
-description: "Generate SQL queries from natural language descriptions. Supports BigQuery, PostgreSQL, MySQL, and other dialects. Reads database schemas from uploaded diagrams or documentation. Use when writing SQL, building data reports, exploring databases, or translating business questions into queries."
+description: "Generate SQL queries from natural language descriptions."
 ---
 
 # SQL Query Generator
 
-## Purpose
+## Instructions
 Transform natural language requirements into optimized SQL queries across multiple database platforms. This skill helps product managers, analysts, and engineers generate accurate queries without manual syntax work.
 
-## How It Works
+## Instructions
 
 ### Step 1: Understand Your Database Schema
 - If you provide a schema file (SQL, documentation, or diagram description), I will read and analyze it
@@ -79,6 +79,13 @@ You'll receive:
 - **Performance Notes**: Optimization tips and considerations
 - **Test Script** (if requested): Sample data and validation queries
 
+## Notes
+
+- Always start with a small sample (LIMIT 100) to verify the query logic before running on full data.
+- Use EXPLAIN or equivalent to check query performance before running joins on large tables.
+- Column names can differ between dialects — double-check syntax for your specific database (BigQuery uses backticks, PostgreSQL uses double quotes).
+- Window functions (ROW_NUMBER, RANK, LAG) are powerful for cohort and retention analysis.
+- If the schema is complex, ask for an ERD or schema documentation before writing complex queries.
 ---
 
 ### Further Reading
